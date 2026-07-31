@@ -1,24 +1,69 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteNav, Hero } from "@/components/site/Hero";
+import {
+  WhatIsCordyceps,
+  WhyUnique,
+  Compounds,
+  Evidence,
+  Process,
+  Research,
+  About,
+  FutureRange,
+  FAQ,
+  Newsletter,
+  Footer,
+} from "@/components/site/Sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Radhvan Origins — The Cordyceps Study";
+const DESC =
+  "An educational study of Cordyceps militaris: its biology, key compounds, evidence-based research and lab cultivation, by Radhvan Origins.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Radhvan Origins",
+          slogan: "Welcome. Together.",
+          description: DESC,
+        }),
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="bg-background">
+      <SiteNav />
+      <main>
+        <Hero />
+        <WhatIsCordyceps />
+        <WhyUnique />
+        <Compounds />
+        <Evidence />
+        <Process />
+        <Research />
+        <About />
+        <FutureRange />
+        <FAQ />
+        <Newsletter />
+      </main>
+      <Footer />
     </div>
   );
 }
