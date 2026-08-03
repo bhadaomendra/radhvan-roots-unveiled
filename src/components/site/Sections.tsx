@@ -508,10 +508,10 @@ export function About() {
           <img
             src={logo.url}
             alt="Radhvan Origins logo"
-            width={200}
-            height={200}
+            width={1200}
+            height={214}
             loading="lazy"
-            className="h-28 w-28 object-contain"
+            className="h-14 w-auto object-contain lg:h-16"
           />
           <SectionHead
             eyebrow="Chapter seven"
