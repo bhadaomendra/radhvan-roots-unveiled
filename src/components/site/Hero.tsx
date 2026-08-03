@@ -114,28 +114,28 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative min-h-[100svh] overflow-hidden bg-[#140d06]">
+    <section id="top" className="relative min-h-[100svh] overflow-hidden bg-parchment">
       <img
         src={heroImage}
         alt="Botanical study of Cordyceps militaris fruiting bodies"
         width={1600}
         height={1200}
-        className="absolute inset-0 h-full w-full object-cover opacity-80"
+        className="absolute inset-0 h-full w-full object-cover opacity-60 brightness-125"
         style={{ transform: `translate3d(0, ${offset * 0.18}px, 0) scale(1.08)` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#140d06]/85 via-[#140d06]/45 to-[#140d06]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#140d06]/90 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-parchment/90 via-parchment/60 to-parchment" />
+      <div className="absolute inset-0 bg-gradient-to-r from-parchment/95 via-parchment/40 to-transparent" />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-6 pt-32 pb-16 lg:px-10 lg:pb-24">
         <div className="max-w-2xl">
           <p className="eyebrow text-[color:var(--ember)]">
             Radhvan Origins · Cordyceps militaris
           </p>
-          <h1 className="mt-6 font-display text-[clamp(2.6rem,7vw,5.25rem)] leading-[0.95] text-parchment">
+          <h1 className="mt-6 font-display text-[clamp(2.6rem,7vw,5.25rem)] leading-[0.95] text-bark">
             A fungus that
             <span className="block italic text-ember">rewrote biology</span>
           </h1>
-          <p className="mt-7 max-w-xl text-base leading-relaxed text-parchment/75 lg:text-lg">
+          <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground lg:text-lg">
             Cordyceps begins as a spore and ends as an orange spire. We study it, grow
             it under laboratory control, and explain it plainly — so you can decide
             what the evidence actually says.
@@ -152,14 +152,14 @@ export function Hero() {
             </a>
             <a
               href="#research"
-              className="inline-flex items-center gap-2 border-b border-parchment/30 pb-1 text-xs font-bold tracking-[0.16em] text-parchment/80 uppercase transition-colors hover:border-ember hover:text-ember"
+              className="inline-flex items-center gap-2 border-b border-bark/30 pb-1 text-xs font-bold tracking-[0.16em] text-bark/80 uppercase transition-colors hover:border-ember hover:text-ember"
             >
               Research highlights
             </a>
           </div>
         </div>
 
-        <dl className="mt-16 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-8 border-t border-parchment/15 pt-8 sm:grid-cols-4">
+        <dl className="mt-16 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-8 border-t border-bark/15 pt-8 sm:grid-cols-4">
           {[
             ["~750", "described Cordyceps species"],
             ["3,000 m", "traditional highland habitat"],
@@ -168,7 +168,7 @@ export function Hero() {
           ].map(([value, label]) => (
             <div key={label}>
               <dt className="font-display text-2xl text-ember lg:text-3xl">{value}</dt>
-              <dd className="mt-1 text-[0.72rem] leading-snug tracking-wide text-parchment/55 uppercase">
+              <dd className="mt-1 text-[0.72rem] leading-snug tracking-wide text-muted-foreground uppercase">
                 {label}
               </dd>
             </div>
