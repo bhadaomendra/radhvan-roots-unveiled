@@ -35,9 +35,9 @@ export function SiteNav() {
           <img
             src={logo.url}
             alt="Radhvan Origins — Welcome. Together."
-            width={444}
-            height={100}
-            className="h-10 w-auto object-contain lg:h-12"
+            width={1200}
+            height={214}
+            className="h-9 w-auto object-contain lg:h-11"
           />
         </a>
 
@@ -120,11 +120,11 @@ export function Hero() {
         alt="Botanical study of Cordyceps militaris fruiting bodies"
         width={1600}
         height={1200}
-        className="absolute inset-0 h-full w-full object-cover opacity-60 brightness-125"
+        className="absolute inset-0 h-full w-full object-cover"
         style={{ transform: `translate3d(0, ${offset * 0.18}px, 0) scale(1.08)` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-parchment/90 via-parchment/60 to-parchment" />
-      <div className="absolute inset-0 bg-gradient-to-r from-parchment/95 via-parchment/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-parchment/55 via-parchment/25 to-parchment" />
+      <div className="absolute inset-0 bg-gradient-to-r from-parchment/92 via-parchment/45 to-transparent" />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-6 pt-32 pb-16 lg:px-10 lg:pb-24">
         <div className="max-w-2xl">
