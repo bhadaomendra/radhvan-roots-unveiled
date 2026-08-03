@@ -13,7 +13,7 @@ import {
 } from "./icons";
 import anatomy from "@/assets/anatomy-plate.jpg";
 import lab from "@/assets/lab-cultivation.jpg";
-import logo from "@/assets/radhvan-logo.png.asset.json";
+import logo from "@/assets/radhvan-full-logo.png.asset.json";
 
 function SectionHead({
   eyebrow,
