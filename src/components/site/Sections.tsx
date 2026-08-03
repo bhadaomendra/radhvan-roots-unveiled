@@ -771,14 +771,6 @@ export function Footer() {
     <footer className="bg-[#1b1005] px-6 py-12 lg:px-10">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="flex items-center gap-3">
-          <img
-            src={logo.url}
-            alt=""
-            width={36}
-            height={36}
-            loading="lazy"
-            className="h-9 w-9 object-contain"
-          />
           <span className="font-display text-sm text-parchment/80">
             Radhvan Origins — Welcome. Together.
           </span>
