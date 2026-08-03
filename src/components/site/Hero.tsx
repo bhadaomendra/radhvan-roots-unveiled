@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/radhvan-logo.png.asset.json";
+import logo from "@/assets/radhvan-full-logo.png.asset.json";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
@@ -31,17 +31,14 @@ export function SiteNav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-10">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" className="flex items-center">
           <img
             src={logo.url}
-            alt="Radhvan Origins"
-            width={40}
-            height={40}
-            className="h-9 w-9 object-contain"
+            alt="Radhvan Origins — Welcome. Together."
+            width={444}
+            height={100}
+            className="h-10 w-auto object-contain lg:h-12"
           />
-          <span className="hidden font-display text-lg leading-none text-bark sm:block">
-            Radhvan <span className="text-ember">Origins</span>
-          </span>
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
