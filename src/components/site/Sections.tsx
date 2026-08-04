@@ -395,10 +395,10 @@ export function Process() {
         <Reveal>
           <figure className="grain overflow-hidden rounded-sm border border-border">
             <img
-              src={lab}
-              alt="Controlled cultivation room with jars of Cordyceps militaris under laboratory light"
-              width={1408}
-              height={1008}
+              src={lab.url}
+              alt="Radhvan Origins cultivation room: racks of Cordyceps militaris jars under controlled light"
+              width={1920}
+              height={1440}
               loading="lazy"
               className="w-full"
             />
