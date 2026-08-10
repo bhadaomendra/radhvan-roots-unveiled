@@ -79,6 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Radhvan Origins" },
       { name: "author", content: "Radhvan Origins" },
+      { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
