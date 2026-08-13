@@ -6,6 +6,7 @@ import {
   IconWave,
   IconFlask,
   IconSpore,
+  IconDoctor,
 } from "./icons";
 import sinensisWild from "@/assets/sinensis-wild.jpg";
 import sinensisHabitat from "@/assets/sinensis-habitat.jpg";
@@ -244,6 +245,26 @@ export function Applications() {
           preliminary and largely preclinical. Always consult a qualified healthcare
           professional before use.
         </p>
+      </Reveal>
+
+      <Reveal>
+        <div className="mt-10 flex items-start gap-5 rounded-sm border border-border bg-card p-6 lg:p-8">
+          <span className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-ember/10 text-ember">
+            <IconDoctor className="h-6 w-6" />
+          </span>
+          <div>
+            <h3 className="font-display text-lg text-bark">
+              Please consult your doctor before use
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              If you are pregnant, breastfeeding, taking prescription medicines, or have
+              a long-term health condition, talk to a qualified healthcare professional
+              before adding Cordyceps to your routine. Do not use it as a replacement for
+              prescribed treatment for cancer, depression, blood pressure, arthritis, or
+              skin conditions.
+            </p>
+          </div>
+        </div>
       </Reveal>
     </section>
   );

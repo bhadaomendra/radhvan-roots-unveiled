@@ -98,6 +98,17 @@ export function IconMountain({ className }: IconProps) {
   );
 }
 
+export function IconDoctor({ className }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <circle cx="24" cy="13" r="6" />
+      <path d="M18 30h12" />
+      <path d="M24 19v10" />
+      <path d="M12 38c0-5 5-10 12-10s12 5 12 10" />
+    </svg>
+  );
+}
+
 /** Abstract mark echoing the two-leaf logotype, used for small brand accents. */
 export function BrandLeaves({ className }: IconProps) {
   return (
