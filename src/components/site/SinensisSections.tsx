@@ -6,6 +6,7 @@ import {
   IconWave,
   IconFlask,
   IconSpore,
+  IconDoctor,
 } from "./icons";
 import sinensisWild from "@/assets/sinensis-wild.jpg";
 import sinensisHabitat from "@/assets/sinensis-habitat.jpg";
