@@ -13,6 +13,7 @@ import {
   Newsletter,
   Footer,
 } from "@/components/site/Sections";
+import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
 const TITLE = "Radhvan Origins — The Cordyceps Study";
 const DESC =
@@ -54,7 +55,9 @@ function Index() {
         <Hero />
         <WhatIsCordyceps />
         <WhyUnique />
+        <Sinensis />
         <Compounds />
+        <Applications />
         <Evidence />
         <Process />
         <Research />
