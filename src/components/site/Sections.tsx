@@ -13,7 +13,7 @@ import {
 } from "./icons";
 import anatomy from "@/assets/anatomy-plate.jpg";
 import lab from "@/assets/cultivation-room.jpg.asset.json";
-import logo from "@/assets/radhvan-full-logo.png.asset.json";
+import logo from "@/assets/radhvan-new-logo.png.asset.json";
 
 function SectionHead({
   eyebrow,
@@ -508,8 +508,8 @@ export function About() {
           <img
             src={logo.url}
             alt="Radhvan Origins logo"
-            width={1200}
-            height={214}
+            width={1353}
+            height={408}
             loading="lazy"
             className="h-14 w-auto object-contain lg:h-16"
           />
