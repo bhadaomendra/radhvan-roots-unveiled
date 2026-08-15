@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/radhvan-new-logo.png.asset.json";
+import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
