@@ -77,14 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Radhvan Origins" },
+      { title: "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research" },
       { name: "author", content: "Radhvan Origins" },
+      { name: "keywords", content: "Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordycepin research, cordyceps vs cordyceps sinensis, fungal biotechnology, Radhvan Origins" },
       { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://radhvanorigins.com/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "canonical", href: "https://radhvanorigins.com/" },
       {
         rel: "stylesheet",
         href: appCss,

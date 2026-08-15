@@ -15,9 +15,9 @@ import {
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
-const TITLE = "Radhvan Origins — The Cordyceps Study";
+const TITLE = "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research";
 const DESC =
-  "An educational study of Cordyceps militaris: its biology, key compounds, evidence-based research and lab cultivation, by Radhvan Origins.";
+  "Discover evidence-based research, chemical compounds (Cordycepin, Adenosine), and laboratory growth of Cordyceps militaris by Radhvan Origins.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,22 +25,35 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
+      { name: "keywords", content: "Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordycepin research, cordyceps vs cordyceps sinensis, fungal biotechnology, Radhvan Origins" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://radhvanorigins.com/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESC },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://radhvanorigins.com/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "EducationalOrganization",
           name: "Radhvan Origins",
-          slogan: "Welcome. Together.",
+          url: "https://radhvanorigins.com",
+          logo: "https://radhvanorigins.com/favicon.png",
           description: DESC,
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Radhvan Origins",
+          url: "https://radhvanorigins.com",
         }),
       },
     ],
