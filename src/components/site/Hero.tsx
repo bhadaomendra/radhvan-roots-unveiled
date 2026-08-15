@@ -32,8 +32,8 @@ export function SiteNav() {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-10">
-        <a href="#top" className="flex items-center">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-10">
+        <a href="#top" className="flex min-w-0 items-center">
           <img
             src={logo}
             alt="Radhvan — Rooted in values, Growing with Vision"
@@ -55,17 +55,17 @@ export function SiteNav() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <a
             href="#newsletter"
-            className="rounded-full bg-forest px-5 py-2.5 text-xs font-bold tracking-[0.14em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5"
+            className="shrink-0 whitespace-nowrap rounded-full bg-forest px-3 py-2 text-[0.65rem] font-bold tracking-[0.12em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-xs sm:tracking-[0.14em]"
           >
             Join the list
           </a>
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
-            className="rounded-full border border-border p-2.5 lg:hidden"
+            className="shrink-0 rounded-full border border-border p-2.5 lg:hidden"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
               <path
