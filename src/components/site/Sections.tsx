@@ -395,7 +395,7 @@ export function Process() {
         <Reveal>
           <figure className="grain overflow-hidden rounded-sm border border-border">
             <img
-              src={lab.url}
+              src={lab}
               alt="Radhvan Origins cultivation room: racks of Cordyceps militaris jars under controlled light"
               width={1920}
               height={1440}
@@ -506,7 +506,7 @@ export function About() {
       <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-24">
         <Reveal>
           <img
-            src={logo.url}
+            src={logo}
             alt="Radhvan Origins logo"
             width={1353}
             height={408}

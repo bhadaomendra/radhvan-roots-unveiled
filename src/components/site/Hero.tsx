@@ -35,7 +35,7 @@ export function SiteNav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-10">
         <a href="#top" className="flex items-center">
           <img
-            src={logo.url}
+            src={logo}
             alt="Radhvan — Rooted in values, Growing with Vision"
             width={1353}
             height={408}
