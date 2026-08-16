@@ -25,7 +25,7 @@ jobs:
       - name: Build static site
         run: bunx vite build --config vite.pages.config.ts
 
-      - name: Add SPA fallback (.htaccess)
+      - name: Add SPA fallback and clean URLs (.htaccess)
         run: |
           cp dist/index.html dist/404.html || true
           rm -f dist/CNAME
@@ -34,6 +34,14 @@ jobs:
             RewriteEngine On
             RewriteBase /
             RewriteRule ^index\.html$ - [L]
+
+            # Clean URLs: serve .html file when a matching one exists
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteCond %{REQUEST_FILENAME}.html -f
+            RewriteRule ^(.*)$ $1.html [L]
+
+            # SPA fallback for everything else
             RewriteCond %{REQUEST_FILENAME} !-f
             RewriteCond %{REQUEST_FILENAME} !-d
             RewriteRule . /index.html [L]
