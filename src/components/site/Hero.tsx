@@ -13,9 +13,38 @@ const NAV = [
   { id: "about", label: "About" },
 ];
 
-export function SiteNav() {
+const GUIDES = [
+  {
+    href: "/cordyceps-vs-sinensis",
+    label: "vs Sinensis",
+    description: "Wild vs cultivated species",
+  },
+  {
+    href: "/cordycepin",
+    label: "Cordycepin",
+    description: "The key nucleoside",
+  },
+  {
+    href: "/cordyceps-health-benefits",
+    label: "Health benefits",
+    description: "What the research says",
+  },
+  {
+    href: "/cordyceps-cultivation",
+    label: "Cultivation",
+    description: "Lab-grown, not wild-harvested",
+  },
+  {
+    href: "/cordyceps-faq",
+    label: "FAQ",
+    description: "Common questions",
+  },
+];
+
+export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [guidesOpen, setGuidesOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -33,7 +62,10 @@ export function SiteNav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-10">
-        <a href="#top" className="flex min-w-0 items-center">
+        <a
+          href={variant === "home" ? "#top" : "/"}
+          className="flex min-w-0 items-center"
+        >
           <img
             src={logo}
             alt="Radhvan — Rooted in values, Growing with Vision"
@@ -43,21 +75,85 @@ export function SiteNav() {
           />
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
-          {NAV.map((item) => (
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+          {variant === "home" &&
+            NAV.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="text-sm text-muted-foreground transition-colors hover:text-ember"
+              >
+                {item.label}
+              </a>
+            ))}
+          {variant === "page" && (
             <a
-              key={item.id}
-              href={`#${item.id}`}
+              href="/"
               className="text-sm text-muted-foreground transition-colors hover:text-ember"
             >
-              {item.label}
+              Home
             </a>
-          ))}
+          )}
+
+          <div className="relative">
+            <button
+              onClick={() => setGuidesOpen((v) => !v)}
+              aria-expanded={guidesOpen}
+              className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-ember"
+            >
+              Guides
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                aria-hidden="true"
+                className={`transition-transform duration-200 ${
+                  guidesOpen ? "rotate-180" : ""
+                }`}
+              >
+                <path
+                  d="M2 4l4 4 4-4"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            {guidesOpen && (
+              <div className="absolute top-full right-0 mt-2 w-60 rounded-sm border border-border bg-background/95 p-2 shadow-lg backdrop-blur-xl">
+                {GUIDES.map((g) => (
+                  <a
+                    key={g.href}
+                    href={g.href}
+                    onClick={() => setGuidesOpen(false)}
+                    className="block rounded-sm px-4 py-3 transition-colors hover:bg-accent"
+                  >
+                    <span className="block text-sm font-medium text-foreground">
+                      {g.label}
+                    </span>
+                    <span className="block text-xs text-muted-foreground">
+                      {g.description}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {variant === "page" && (
+            <a
+              href="/#about"
+              className="text-sm text-muted-foreground transition-colors hover:text-ember"
+            >
+              About
+            </a>
+          )}
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href="#newsletter"
+            href={variant === "home" ? "#newsletter" : "/#newsletter"}
             className="shrink-0 whitespace-nowrap rounded-full bg-forest px-3 py-2 text-[0.65rem] font-bold tracking-[0.12em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-xs sm:tracking-[0.14em]"
           >
             Join the list
@@ -82,16 +178,61 @@ export function SiteNav() {
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-2">
-            {NAV.map((item) => (
+            {variant === "page" && (
               <a
-                key={item.id}
-                href={`#${item.id}`}
+                href="/"
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3 text-sm text-muted-foreground last:border-0"
+                className="border-b border-border/60 py-3 text-sm text-muted-foreground"
               >
-                {item.label}
+                Home
               </a>
-            ))}
+            )}
+            {variant === "home" &&
+              NAV.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  onClick={() => setOpen(false)}
+                  className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                >
+                  {item.label}
+                </a>
+              ))}
+
+            <div className="border-b border-border/60 py-3">
+              <p className="text-[0.65rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+                Guides
+              </p>
+              <div className="mt-2 flex flex-col gap-2">
+                {GUIDES.map((g) => (
+                  <a
+                    key={g.href}
+                    href={g.href}
+                    onClick={() => setOpen(false)}
+                    className="text-sm text-muted-foreground transition-colors hover:text-ember"
+                  >
+                    {g.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {variant === "page" && (
+              <a
+                href="/#about"
+                onClick={() => setOpen(false)}
+                className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+              >
+                About
+              </a>
+            )}
+            <a
+              href={variant === "home" ? "#newsletter" : "/#newsletter"}
+              onClick={() => setOpen(false)}
+              className="py-3 text-sm text-muted-foreground"
+            >
+              Join the list
+            </a>
           </nav>
         </div>
       )}
@@ -134,8 +275,8 @@ export function Hero() {
             Radhvan Origins · Cordyceps militaris
           </p>
           <h1 className="mt-6 font-display text-[clamp(2.6rem,7vw,5.25rem)] leading-[0.95] text-bark">
-            A fungus that
-            <span className="block italic text-ember">rewrote biology</span>
+            Cordyceps militaris:
+            <span className="block italic text-ember">a fungus that rewrote biology</span>
           </h1>
           <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground lg:text-lg">
             Cordyceps begins as a spore and ends as an orange spire. We study it, grow

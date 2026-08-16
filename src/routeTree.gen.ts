@@ -10,11 +10,41 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CordycepinRouteImport } from './routes/cordycepin'
+import { Route as CordycepsCultivationRouteImport } from './routes/cordyceps-cultivation'
+import { Route as CordycepsFaqRouteImport } from './routes/cordyceps-faq'
+import { Route as CordycepsHealthBenefitsRouteImport } from './routes/cordyceps-health-benefits'
+import { Route as CordycepsVsSinensisRouteImport } from './routes/cordyceps-vs-sinensis'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CordycepinRoute = CordycepinRouteImport.update({
+  id: '/cordycepin',
+  path: '/cordycepin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CordycepsCultivationRoute = CordycepsCultivationRouteImport.update({
+  id: '/cordyceps-cultivation',
+  path: '/cordyceps-cultivation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CordycepsFaqRoute = CordycepsFaqRouteImport.update({
+  id: '/cordyceps-faq',
+  path: '/cordyceps-faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CordycepsHealthBenefitsRoute = CordycepsHealthBenefitsRouteImport.update({
+  id: '/cordyceps-health-benefits',
+  path: '/cordyceps-health-benefits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CordycepsVsSinensisRoute = CordycepsVsSinensisRouteImport.update({
+  id: '/cordyceps-vs-sinensis',
+  path: '/cordyceps-vs-sinensis',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -25,27 +55,69 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cordycepin': typeof CordycepinRoute
+  '/cordyceps-cultivation': typeof CordycepsCultivationRoute
+  '/cordyceps-faq': typeof CordycepsFaqRoute
+  '/cordyceps-health-benefits': typeof CordycepsHealthBenefitsRoute
+  '/cordyceps-vs-sinensis': typeof CordycepsVsSinensisRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cordycepin': typeof CordycepinRoute
+  '/cordyceps-cultivation': typeof CordycepsCultivationRoute
+  '/cordyceps-faq': typeof CordycepsFaqRoute
+  '/cordyceps-health-benefits': typeof CordycepsHealthBenefitsRoute
+  '/cordyceps-vs-sinensis': typeof CordycepsVsSinensisRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cordycepin': typeof CordycepinRoute
+  '/cordyceps-cultivation': typeof CordycepsCultivationRoute
+  '/cordyceps-faq': typeof CordycepsFaqRoute
+  '/cordyceps-health-benefits': typeof CordycepsHealthBenefitsRoute
+  '/cordyceps-vs-sinensis': typeof CordycepsVsSinensisRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/cordycepin'
+    | '/cordyceps-cultivation'
+    | '/cordyceps-faq'
+    | '/cordyceps-health-benefits'
+    | '/cordyceps-vs-sinensis'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/cordycepin'
+    | '/cordyceps-cultivation'
+    | '/cordyceps-faq'
+    | '/cordyceps-health-benefits'
+    | '/cordyceps-vs-sinensis'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/cordycepin'
+    | '/cordyceps-cultivation'
+    | '/cordyceps-faq'
+    | '/cordyceps-health-benefits'
+    | '/cordyceps-vs-sinensis'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CordycepinRoute: typeof CordycepinRoute
+  CordycepsCultivationRoute: typeof CordycepsCultivationRoute
+  CordycepsFaqRoute: typeof CordycepsFaqRoute
+  CordycepsHealthBenefitsRoute: typeof CordycepsHealthBenefitsRoute
+  CordycepsVsSinensisRoute: typeof CordycepsVsSinensisRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -56,6 +128,41 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cordycepin': {
+      id: '/cordycepin'
+      path: '/cordycepin'
+      fullPath: '/cordycepin'
+      preLoaderRoute: typeof CordycepinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cordyceps-cultivation': {
+      id: '/cordyceps-cultivation'
+      path: '/cordyceps-cultivation'
+      fullPath: '/cordyceps-cultivation'
+      preLoaderRoute: typeof CordycepsCultivationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cordyceps-faq': {
+      id: '/cordyceps-faq'
+      path: '/cordyceps-faq'
+      fullPath: '/cordyceps-faq'
+      preLoaderRoute: typeof CordycepsFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cordyceps-health-benefits': {
+      id: '/cordyceps-health-benefits'
+      path: '/cordyceps-health-benefits'
+      fullPath: '/cordyceps-health-benefits'
+      preLoaderRoute: typeof CordycepsHealthBenefitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cordyceps-vs-sinensis': {
+      id: '/cordyceps-vs-sinensis'
+      path: '/cordyceps-vs-sinensis'
+      fullPath: '/cordyceps-vs-sinensis'
+      preLoaderRoute: typeof CordycepsVsSinensisRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -70,6 +177,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CordycepinRoute: CordycepinRoute,
+  CordycepsCultivationRoute: CordycepsCultivationRoute,
+  CordycepsFaqRoute: CordycepsFaqRoute,
+  CordycepsHealthBenefitsRoute: CordycepsHealthBenefitsRoute,
+  CordycepsVsSinensisRoute: CordycepsVsSinensisRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport

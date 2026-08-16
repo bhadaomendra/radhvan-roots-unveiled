@@ -15,9 +15,10 @@ import {
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
+const BASE_URL = "https://radhvan-roots-unveiled.lovable.app";
 const TITLE = "Radhvan Origins — The Cordyceps Study";
 const DESC =
-  "An educational study of Cordyceps militaris: its biology, key compounds, evidence-based research and lab cultivation, by Radhvan Origins.";
+  "Cordyceps militaris: benefits, research, key compounds (cordycepin, adenosine), lab cultivation, and the difference from Cordyceps sinensis. An educational study by Radhvan Origins.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,19 +29,24 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${BASE_URL}/` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${BASE_URL}/` }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "WebSite",
           name: "Radhvan Origins",
-          slogan: "Welcome. Together.",
+          url: `${BASE_URL}/`,
           description: DESC,
+          publisher: {
+            "@type": "Organization",
+            name: "Radhvan Origins",
+            slogan: "Welcome. Together.",
+          },
         }),
       },
     ],
