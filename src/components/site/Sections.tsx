@@ -511,7 +511,7 @@ export function About() {
             width={1353}
             height={408}
             loading="lazy"
-            className="h-14 w-auto object-contain lg:h-16"
+            className="h-16 w-auto object-contain sm:h-20 lg:h-24"
           />
           <SectionHead
             eyebrow="Chapter seven"
