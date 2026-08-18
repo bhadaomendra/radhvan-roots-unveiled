@@ -14,28 +14,28 @@ const NAV = [
 const GUIDES = [
   {
     href: "/cordyceps-vs-sinensis",
-    label: "vs Sinensis",
-    description: "Wild vs cultivated species",
+    label: "Militaris vs Sinensis",
+    description: "Traditional vs modern cultivation",
   },
   {
     href: "/cordycepin",
-    label: "Cordycepin",
-    description: "The key nucleoside",
+    label: "Cordycepin Deep Dive",
+    description: "Bioactive properties explained",
   },
   {
     href: "/cordyceps-health-benefits",
-    label: "Health benefits",
-    description: "What the research says",
+    label: "Health Benefits",
+    description: "Evidence-based research results",
   },
   {
     href: "/cordyceps-cultivation",
-    label: "Cultivation",
-    description: "Lab-grown, not wild-harvested",
+    label: "Cultivation Process",
+    description: "Our lab-controlled technique",
   },
   {
     href: "/cordyceps-faq",
-    label: "FAQ",
-    description: "Common questions",
+    label: "Knowledge Base (FAQ)",
+    description: "Safety, usage, and science",
   },
 ];
 
