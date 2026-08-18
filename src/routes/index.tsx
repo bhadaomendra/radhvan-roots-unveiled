@@ -11,6 +11,7 @@ import {
   FutureRange,
   FAQ,
   Newsletter,
+  ContactCTA,
   Footer,
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
@@ -50,7 +51,8 @@ export const Route = createFileRoute("/")({
           ],
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "",
+            telephone: "+91-9910565537",
+            email: "info@radhvanorigins.com",
             contactType: "customer service"
           }
         }),
@@ -91,6 +93,7 @@ function Index() {
         <FutureRange />
         <FAQ />
         <Newsletter />
+        <ContactCTA />
       </main>
       <Footer />
     </div>
