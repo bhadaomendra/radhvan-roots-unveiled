@@ -795,7 +795,7 @@ export function ContactCTA() {
               info@radhvanorigins.com
             </a>
             <a
-              href="https://wa.me/919910565537" 
+              href="https://wa.me/919950091528" 
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 text-sm font-bold tracking-[0.15em] text-bark uppercase transition-colors hover:text-ember"
