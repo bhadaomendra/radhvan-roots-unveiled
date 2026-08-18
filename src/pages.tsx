@@ -11,6 +11,7 @@ import {
   FutureRange,
   FAQ,
   Newsletter,
+  ContactCTA,
   Footer,
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
@@ -34,6 +35,7 @@ function App() {
         <FutureRange />
         <FAQ />
         <Newsletter />
+        <ContactCTA />
       </main>
       <Footer />
     </div>
