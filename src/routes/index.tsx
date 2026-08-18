@@ -8,6 +8,7 @@ import {
   Process,
   Research,
   About,
+  WhyRadhvan,
   FutureRange,
   FAQ,
   Newsletter,
@@ -90,6 +91,7 @@ function Index() {
         <Process />
         <Research />
         <About />
+        <WhyRadhvan />
         <FutureRange />
         <FAQ />
         <Newsletter />

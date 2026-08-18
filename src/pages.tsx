@@ -8,6 +8,7 @@ import {
   Process,
   Research,
   About,
+  WhyRadhvan,
   FutureRange,
   FAQ,
   Newsletter,
@@ -32,6 +33,7 @@ function App() {
         <Process />
         <Research />
         <About />
+        <WhyRadhvan />
         <FutureRange />
         <FAQ />
         <Newsletter />
