@@ -59,7 +59,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 lg:px-10">
         <a
           href={variant === "home" ? "#top" : "/"}
           className="flex min-w-0 items-center"
@@ -73,13 +73,13 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           />
         </a>
 
-        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
           {variant === "home" &&
             NAV.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-sm text-muted-foreground transition-colors hover:text-ember"
+                className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
               >
                 {item.label}
               </a>
@@ -87,7 +87,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           {variant === "page" && (
             <a
               href="/"
-              className="text-sm text-muted-foreground transition-colors hover:text-ember"
+              className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               Home
             </a>
@@ -97,12 +97,12 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             <button
               onClick={() => setGuidesOpen((v) => !v)}
               aria-expanded={guidesOpen}
-              className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-ember"
+              className="flex items-center gap-1 text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
-              Guides
+              Resources
               <svg
-                width="12"
-                height="12"
+                width="10"
+                height="10"
                 viewBox="0 0 12 12"
                 aria-hidden="true"
                 className={`transition-transform duration-200 ${
@@ -112,14 +112,14 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                 <path
                   d="M2 4l4 4 4-4"
                   stroke="currentColor"
-                  strokeWidth="1.4"
+                  strokeWidth="1.6"
                   strokeLinecap="round"
                   fill="none"
                 />
               </svg>
             </button>
             {guidesOpen && (
-              <div className="absolute top-full right-0 mt-2 w-60 rounded-sm border border-border bg-background/95 p-2 shadow-lg backdrop-blur-xl">
+              <div className="absolute top-full right-0 mt-4 w-64 rounded-sm border border-border bg-background/95 p-2 shadow-xl backdrop-blur-xl">
                 {GUIDES.map((g) => (
                   <a
                     key={g.href}
@@ -127,10 +127,10 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                     onClick={() => setGuidesOpen(false)}
                     className="block rounded-sm px-4 py-3 transition-colors hover:bg-accent"
                   >
-                    <span className="block text-sm font-medium text-foreground">
+                    <span className="block text-xs font-bold tracking-wide text-foreground uppercase">
                       {g.label}
                     </span>
-                    <span className="block text-xs text-muted-foreground">
+                    <span className="mt-0.5 block text-[10px] leading-relaxed text-muted-foreground">
                       {g.description}
                     </span>
                   </a>
@@ -142,7 +142,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           {variant === "page" && (
             <a
               href="/#about"
-              className="text-sm text-muted-foreground transition-colors hover:text-ember"
+              className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               About
             </a>
