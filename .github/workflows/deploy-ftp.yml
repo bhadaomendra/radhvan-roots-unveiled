@@ -34,13 +34,12 @@ jobs:
             RewriteEngine On
             RewriteBase /
 
-            # Enforce HTTPS
+            # Enforce Primary Domain (radhvanorigins.com) and HTTPS
+            # This handles old domain (radhvan.com) and www redirects
+            RewriteCond %{HTTP_HOST} !^radhvanorigins\.com$ [NC,OR]
             RewriteCond %{HTTPS} off
-            RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+            RewriteRule ^(.*)$ https://radhvanorigins.com/$1 [L,R=301]
 
-            # Redirect www to non-www
-            RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-            RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
             RewriteRule ^index\.html$ - [L]
 
