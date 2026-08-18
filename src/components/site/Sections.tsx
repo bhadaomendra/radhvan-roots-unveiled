@@ -692,10 +692,11 @@ export function FutureRange() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <SectionHead
-            eyebrow="Chapter eight"
+            eyebrow="Chapter nine"
             title={
               <>
                 The range
+
                 <span className="italic text-ember"> we are building</span>
               </>
             }
