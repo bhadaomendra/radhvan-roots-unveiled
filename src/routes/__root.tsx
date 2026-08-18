@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Radhvan Origins" },
       { name: "author", content: "Radhvan Origins" },
       { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
-      { name: "google-site-verification", content: "7fL9Wz4v2Y1i2rX3p4o5u6y7z8a9b0c1d2e3f4g5h6i" },
+      { name: "google-site-verification", content: "ZJ9x0ABTBjkcgpNhF5P6rKOb1jltgmOlXN9704VAsxk" },
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
