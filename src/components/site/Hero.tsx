@@ -175,12 +175,12 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
 
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col px-6 py-2">
+          <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
             {variant === "page" && (
               <a
                 href="/"
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                className="border-b border-border/60 py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
               >
                 Home
               </a>
@@ -191,23 +191,23 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => setOpen(false)}
-                  className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                  className="border-b border-border/60 py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
                 >
                   {item.label}
                 </a>
               ))}
 
-            <div className="border-b border-border/60 py-3">
-              <p className="text-[0.65rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
-                Guides
+            <div className="border-b border-border/60 py-4">
+              <p className="text-[0.6rem] font-black tracking-[0.2em] text-ember uppercase">
+                Resources
               </p>
-              <div className="mt-2 flex flex-col gap-2">
+              <div className="mt-3 flex flex-col gap-3">
                 {GUIDES.map((g) => (
                   <a
                     key={g.href}
                     href={g.href}
                     onClick={() => setOpen(false)}
-                    className="text-sm text-muted-foreground transition-colors hover:text-ember"
+                    className="text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground transition-colors hover:text-ember uppercase"
                   >
                     {g.label}
                   </a>
@@ -219,7 +219,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               <a
                 href="/#about"
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                className="border-b border-border/60 py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
               >
                 About
               </a>
@@ -227,7 +227,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             <a
               href={variant === "home" ? "#newsletter" : "/#newsletter"}
               onClick={() => setOpen(false)}
-              className="py-3 text-sm text-muted-foreground"
+              className="py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
             >
               Join the list
             </a>
