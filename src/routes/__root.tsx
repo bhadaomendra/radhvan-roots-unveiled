@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Radhvan Origins" },
+      { title: "Radhvan Origins | Premium Cordyceps Education" },
       { name: "author", content: "Radhvan Origins" },
       { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
       { name: "google-site-verification", content: "ZJ9x0ABTBjkcgpNhF5P6rKOb1jltgmOlXN9704VAsxk" },
