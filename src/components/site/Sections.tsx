@@ -561,7 +561,123 @@ export function About() {
   );
 }
 
-/* ---------------------------------------------------------------- Product */
+/* ---------------------------------------------------------------- Why Radhvan */
+
+export function WhyRadhvan() {
+  return (
+    <section id="why-radhvan" className="border-y border-border bg-secondary/50 py-24 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <Reveal>
+          <SectionHead
+            eyebrow="Chapter eight"
+            title={
+              <>
+                Why{" "}
+                <span className="italic text-ember">Radhvan?</span>
+              </>
+            }
+            intro="From your first question to your first harvest — we help you understand the journey."
+            align="center"
+          />
+        </Reveal>
+
+        <div className="mt-14 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+          <Reveal>
+            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+              <p>Starting something new usually begins with a simple question.</p>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {["How does it really work?", "What do I need to learn?", "Is this right for me?"].map((q) => (
+                  <p
+                    key={q}
+                    className="rounded-sm border border-border bg-card px-5 py-4 text-center font-display text-base text-bark"
+                  >
+                    {q}
+                  </p>
+                ))}
+              </div>
+              <p>
+                That is where we believe Radhvan can make a difference.
+              </p>
+              <p>
+                At Radhvan Origins, we are building a place where people can{" "}
+                <strong className="text-bark">learn, ask questions, understand the process, and make informed decisions</strong>{" "}
+                about Cordyceps cultivation.
+              </p>
+              <p>
+                We don't believe in making the journey sound easier than it really is. We believe in understanding it properly — one step at a time.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <div className="space-y-px overflow-hidden rounded-sm bg-border">
+              {[
+                [
+                  "Learn Before You Invest",
+                  "Cordyceps cultivation involves knowledge, controlled conditions, patience and attention to detail. Before investing in a lab, equipment or production setup, we believe it is important to understand what you are getting into. Our aim is to help you learn the basics, understand the requirements and explore the possibilities before you take that step.",
+                ],
+                [
+                  "Knowledge That Goes Beyond Theory",
+                  "Reading about Cordyceps is one thing. Understanding how the process works is another. We focus on practical knowledge, research-based information and real cultivation insights — from the basics of cultivation and environmental control to harvesting and post-harvest practices.",
+                ],
+                [
+                  "Honest About the Opportunity — And the Challenges",
+                  "Cordyceps is an exciting field, but it is not a shortcut to success. There are things to learn, mistakes to avoid and challenges to understand. We would rather tell you what we know, acknowledge what we don't, and let you make your own decision.",
+                ],
+              ].map(([title, body]) => (
+                <div key={title} className="bg-card p-8">
+                  <h3 className="font-display text-lg text-bark">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            [
+              "A Place to Ask, Learn & Explore",
+              "You may be completely new to Cordyceps. You may already be researching cultivation. Or you may be thinking about setting up your own unit. Wherever you are in that journey, Radhvan Origins is being built as a place where you can find information, explore learning opportunities and take your next step with greater clarity.",
+            ],
+            [
+              "We Are Learning Too",
+              "We don't want to present ourselves as having all the answers. We are learning, researching, experimenting and growing along the way. And we believe there is something valuable about building a community where questions are welcome, knowledge is shared and learning never stops.",
+            ],
+            [
+              "Our Belief",
+              "We don't just want to grow Cordyceps. We want to grow knowledge, confidence and possibilities. Because every journey starts with a question. And sometimes that question is simply: 'Can I do this?' We want to help you understand the answer.",
+            ],
+          ].map(([title, body], i) => (
+            <Reveal key={title} delay={i * 70}>
+              <article className="grain flex h-full flex-col rounded-sm border border-border bg-card p-7">
+                <BrandLeaves className="h-8 w-12" />
+                <h3 className="mt-6 font-display text-xl text-bark">{title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{body}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={120}>
+          <div className="mt-16 rounded-sm border border-border bg-card p-10 text-center lg:p-16">
+            <h3 className="font-display text-2xl text-bark lg:text-3xl">
+              From your first question to your first harvest —
+              <span className="italic text-ember"> we want to help you understand the journey.</span>
+            </h3>
+            <p className="mt-4 text-sm font-bold tracking-[0.15em] text-muted-foreground uppercase">
+              Radhvan Origins
+            </p>
+            <p className="mt-2 text-sm tracking-wide text-ember">
+              Learn. Understand. Cultivate. Grow.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 
 const PRODUCTS = [
   ["Whole fruiting body", "Dried orange stroma, intact and gradeable by eye.", "In cultivation"],
