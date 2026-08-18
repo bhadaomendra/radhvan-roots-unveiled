@@ -79,7 +79,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
+                className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
               >
                 {item.label}
               </a>
