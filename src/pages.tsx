@@ -33,6 +33,7 @@ function App() {
         <Process />
         <Research />
         <About />
+        <WhyRadhvan />
         <FutureRange />
         <FAQ />
         <Newsletter />
