@@ -3,41 +3,39 @@ import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { id: "what", label: "What it is" },
-  { id: "unique", label: "Why unique" },
+  { id: "what", label: "Overview" },
+  { id: "unique", label: "Purity" },
   { id: "sinensis", label: "Sinensis" },
   { id: "compounds", label: "Compounds" },
-  { id: "applications", label: "Applications" },
   { id: "evidence", label: "Evidence" },
-  { id: "process", label: "Process" },
   { id: "about", label: "About" },
 ];
 
 const GUIDES = [
   {
     href: "/cordyceps-vs-sinensis",
-    label: "vs Sinensis",
-    description: "Wild vs cultivated species",
+    label: "Militaris vs Sinensis",
+    description: "Traditional vs modern cultivation",
   },
   {
     href: "/cordycepin",
-    label: "Cordycepin",
-    description: "The key nucleoside",
+    label: "Cordycepin Deep Dive",
+    description: "Bioactive properties explained",
   },
   {
     href: "/cordyceps-health-benefits",
-    label: "Health benefits",
-    description: "What the research says",
+    label: "Health Benefits",
+    description: "Evidence-based research results",
   },
   {
     href: "/cordyceps-cultivation",
-    label: "Cultivation",
-    description: "Lab-grown, not wild-harvested",
+    label: "Cultivation Process",
+    description: "Our lab-controlled technique",
   },
   {
     href: "/cordyceps-faq",
-    label: "FAQ",
-    description: "Common questions",
+    label: "Knowledge Base (FAQ)",
+    description: "Safety, usage, and science",
   },
 ];
 
@@ -61,7 +59,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 lg:px-10">
         <a
           href={variant === "home" ? "#top" : "/"}
           className="flex min-w-0 items-center"
@@ -75,13 +73,13 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           />
         </a>
 
-        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
           {variant === "home" &&
             NAV.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-sm text-muted-foreground transition-colors hover:text-ember"
+                className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
               >
                 {item.label}
               </a>
@@ -89,7 +87,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           {variant === "page" && (
             <a
               href="/"
-              className="text-sm text-muted-foreground transition-colors hover:text-ember"
+              className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               Home
             </a>
@@ -99,12 +97,12 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             <button
               onClick={() => setGuidesOpen((v) => !v)}
               aria-expanded={guidesOpen}
-              className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-ember"
+              className="flex items-center gap-1 text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
-              Guides
+              Resources
               <svg
-                width="12"
-                height="12"
+                width="10"
+                height="10"
                 viewBox="0 0 12 12"
                 aria-hidden="true"
                 className={`transition-transform duration-200 ${
@@ -114,14 +112,14 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                 <path
                   d="M2 4l4 4 4-4"
                   stroke="currentColor"
-                  strokeWidth="1.4"
+                  strokeWidth="1.6"
                   strokeLinecap="round"
                   fill="none"
                 />
               </svg>
             </button>
             {guidesOpen && (
-              <div className="absolute top-full right-0 mt-2 w-60 rounded-sm border border-border bg-background/95 p-2 shadow-lg backdrop-blur-xl">
+              <div className="absolute top-full right-0 mt-4 w-64 rounded-sm border border-border bg-background/95 p-2 shadow-xl backdrop-blur-xl">
                 {GUIDES.map((g) => (
                   <a
                     key={g.href}
@@ -129,10 +127,10 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                     onClick={() => setGuidesOpen(false)}
                     className="block rounded-sm px-4 py-3 transition-colors hover:bg-accent"
                   >
-                    <span className="block text-sm font-medium text-foreground">
+                    <span className="block text-xs font-bold tracking-wide text-foreground uppercase">
                       {g.label}
                     </span>
-                    <span className="block text-xs text-muted-foreground">
+                    <span className="mt-0.5 block text-[10px] leading-relaxed text-muted-foreground">
                       {g.description}
                     </span>
                   </a>
@@ -144,7 +142,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           {variant === "page" && (
             <a
               href="/#about"
-              className="text-sm text-muted-foreground transition-colors hover:text-ember"
+              className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               About
             </a>
@@ -177,12 +175,12 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
 
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col px-6 py-2">
+          <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
             {variant === "page" && (
               <a
                 href="/"
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                className="border-b border-border/60 py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
               >
                 Home
               </a>
@@ -193,23 +191,23 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => setOpen(false)}
-                  className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                  className="border-b border-border/60 py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
                 >
                   {item.label}
                 </a>
               ))}
 
-            <div className="border-b border-border/60 py-3">
-              <p className="text-[0.65rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
-                Guides
+            <div className="border-b border-border/60 py-4">
+              <p className="text-[0.6rem] font-black tracking-[0.2em] text-ember uppercase">
+                Resources
               </p>
-              <div className="mt-2 flex flex-col gap-2">
+              <div className="mt-3 flex flex-col gap-3">
                 {GUIDES.map((g) => (
                   <a
                     key={g.href}
                     href={g.href}
                     onClick={() => setOpen(false)}
-                    className="text-sm text-muted-foreground transition-colors hover:text-ember"
+                    className="text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground transition-colors hover:text-ember uppercase"
                   >
                     {g.label}
                   </a>
@@ -221,7 +219,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               <a
                 href="/#about"
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3 text-sm text-muted-foreground"
+                className="border-b border-border/60 py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
               >
                 About
               </a>
@@ -229,7 +227,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             <a
               href={variant === "home" ? "#newsletter" : "/#newsletter"}
               onClick={() => setOpen(false)}
-              className="py-3 text-sm text-muted-foreground"
+              className="py-3.5 text-[0.7rem] font-bold tracking-[0.14em] text-muted-foreground uppercase"
             >
               Join the list
             </a>
