@@ -18,9 +18,9 @@ import {
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
 const BASE_URL = "https://radhvanorigins.com";
-const TITLE = "Radhvan Origins | Premium Cordyceps Education & Research | Final v4.0";
+const TITLE = "Radhvan Origins | Reliable Cordyceps Cultivation & Training";
 const DESC =
-  "Discover the science of Cordyceps militaris. Explore bioactive compounds like Cordycepin & Adenosine, health benefits for aging, skin, and arthritis. A premium educational study by Radhvan Origins.";
+  "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey.";
 
 export const Route = createFileRoute("/")({
   component: Index,
