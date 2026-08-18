@@ -80,7 +80,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Radhvan Origins | Premium Cordyceps Education & Research" },
       { name: "description", content: "Radhvan Origins: Leading Cordyceps militaris research and education. Pure, potent, and science-backed." },
       { name: "author", content: "Radhvan Origins" },
-      { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
+      { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" />
+      <meta name="google-site-verification" content="ZJ9x0ABTBjkcgpNhF5P6rKOb1jltgmOlXN9704VAsxk" /> },
       { name: "google-site-verification", content: "ZJ9x0ABTBjkcgpNhF5P6rKOb1jltgmOlXN9704VAsxk" },
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
