@@ -9,6 +9,7 @@ const NAV = [
   { id: "compounds", label: "Compounds" },
   { id: "evidence", label: "Evidence" },
   { id: "about", label: "About" },
+  { id: "why-radhvan", label: "Why Radhvan" },
 ];
 
 const GUIDES = [
