@@ -762,7 +762,7 @@ export function FAQ() {
     <section id="faq" className="mx-auto max-w-4xl px-6 py-24 lg:py-36">
       <Reveal>
         <SectionHead
-          eyebrow="Chapter nine"
+            eyebrow="Chapter ten"
           title={
             <>
               Questions,
