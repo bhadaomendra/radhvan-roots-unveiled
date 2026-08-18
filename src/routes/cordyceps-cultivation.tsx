@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CordycepsCultivationPage } from "@/components/site/GuidePages";
 
-const BASE_URL = "https://radhvan-roots-unveiled.lovable.app";
+const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "How Cordyceps militaris is cultivated in a lab — Radhvan Origins";
 const DESC =
   "From strain selection to verified powder: six controlled stages of Cordyceps militaris cultivation. Lab-grown, traceable and wild-harvest-free.";

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CordycepsFAQPage } from "@/components/site/GuidePages";
 
-const BASE_URL = "https://radhvan-roots-unveiled.lovable.app";
+const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Cordyceps FAQ: common questions answered — Radhvan Origins";
 const DESC =
   "Honest answers about Cordyceps militaris, Cordyceps sinensis, cordycepin, quality markers, safety, cultivation and when Radhvan Origins products will be available.";

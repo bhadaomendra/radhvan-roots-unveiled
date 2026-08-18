@@ -15,10 +15,10 @@ import {
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
-const BASE_URL = "https://radhvan-roots-unveiled.lovable.app";
-const TITLE = "Radhvan Origins — The Cordyceps Study";
+const BASE_URL = "https://radhvanorigins.com";
+const TITLE = "Radhvan Origins | Premium Cordyceps Education & Research";
 const DESC =
-  "Cordyceps militaris: benefits, research, key compounds (cordycepin, adenosine), lab cultivation, and the difference from Cordyceps sinensis. An educational study by Radhvan Origins.";
+  "Discover the science of Cordyceps militaris. Explore bioactive compounds like Cordycepin & Adenosine, health benefits for aging, skin, and arthritis. A premium educational study by Radhvan Origins.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -31,6 +31,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "keywords", content: "Cordyceps, Cordyceps Militaris, Cordycepin, Adenosine, Medicinal Mushrooms, Radhvan Origins, Health Benefits, Sinensis vs Militaris" },
     ],
     links: [{ rel: "canonical", href: `${BASE_URL}/` }],
     scripts: [
@@ -38,17 +39,36 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "WebSite",
+          "@type": "EducationalOrganization",
           name: "Radhvan Origins",
-          url: `${BASE_URL}/`,
+          url: BASE_URL,
+          logo: `${BASE_URL}/favicon.png`,
           description: DESC,
-          publisher: {
-            "@type": "Organization",
-            name: "Radhvan Origins",
-            slogan: "Welcome. Together.",
-          },
+          sameAs: [
+            "https://www.instagram.com/radhvanorigins",
+            // Add other social links if available
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "",
+            contactType: "customer service"
+          }
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Radhvan Origins",
+          url: BASE_URL,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: `${BASE_URL}/search?q={search_term_string}`,
+            "query-input": "required name=search_term_string"
+          }
+        }),
+      }
     ],
   }),
 });

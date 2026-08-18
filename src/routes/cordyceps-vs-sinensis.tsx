@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CordycepsVsSinensisPage } from "@/components/site/GuidePages";
 
-const BASE_URL = "https://radhvan-roots-unveiled.lovable.app";
+const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Cordyceps militaris vs Cordyceps sinensis — Radhvan Origins";
 const DESC =
   "Learn the difference between wild Cordyceps sinensis (yarsagumba) and lab-grown Cordyceps militaris: origin, habitat, appearance, cordycepin content and sustainability.";
