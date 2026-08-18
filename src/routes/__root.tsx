@@ -86,8 +86,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://radhvanorigins.com" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: "#F67304" },
     ],
     links: [
+      {
+        rel: "manifest",
+        href: "/manifest.json",
+      },
       {
         rel: "stylesheet",
         href: appCss,
