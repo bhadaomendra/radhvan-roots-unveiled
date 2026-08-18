@@ -3,13 +3,11 @@ import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { id: "what", label: "What it is" },
-  { id: "unique", label: "Why unique" },
+  { id: "what", label: "Overview" },
+  { id: "unique", label: "Purity" },
   { id: "sinensis", label: "Sinensis" },
   { id: "compounds", label: "Compounds" },
-  { id: "applications", label: "Applications" },
   { id: "evidence", label: "Evidence" },
-  { id: "process", label: "Process" },
   { id: "about", label: "About" },
 ];
 
