@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CordycepsHealthBenefitsPage } from "@/components/site/GuidePages";
 
-const BASE_URL = "https://radhvan-roots-unveiled.lovable.app";
+const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Cordyceps health benefits: what the research says — Radhvan Origins";
 const DESC =
   "A plain-language overview of Cordyceps research areas: cancer cell studies, mood and stress, blood pressure, skin health and arthritis. Includes medical disclaimers.";
