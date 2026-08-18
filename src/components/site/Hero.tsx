@@ -87,7 +87,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           {variant === "page" && (
             <a
               href="/"
-              className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
+              className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               Home
             </a>
@@ -97,12 +97,12 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             <button
               onClick={() => setGuidesOpen((v) => !v)}
               aria-expanded={guidesOpen}
-              className="flex items-center gap-1 text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
+              className="flex items-center gap-1 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               Resources
               <svg
-                width="10"
-                height="10"
+                width="12"
+                height="12"
                 viewBox="0 0 12 12"
                 aria-hidden="true"
                 className={`transition-transform duration-200 ${
@@ -127,10 +127,10 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                     onClick={() => setGuidesOpen(false)}
                     className="block rounded-sm px-4 py-3 transition-colors hover:bg-accent"
                   >
-                    <span className="block text-xs font-bold tracking-wide text-foreground uppercase">
+                    <span className="block text-sm font-bold tracking-wide text-foreground uppercase">
                       {g.label}
                     </span>
-                    <span className="mt-0.5 block text-[10px] leading-relaxed text-muted-foreground">
+                    <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                       {g.description}
                     </span>
                   </a>
@@ -142,7 +142,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           {variant === "page" && (
             <a
               href="/#about"
-              className="text-[0.65rem] font-bold tracking-[0.12em] text-muted-foreground uppercase transition-colors hover:text-ember"
+              className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               About
             </a>
