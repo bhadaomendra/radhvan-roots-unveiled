@@ -127,10 +127,10 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
 
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-3">
           <a
             href="/contact#newsletter"
-            className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-[0.8rem] sm:tracking-[0.12em]"
+            className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3.5 sm:text-[0.8rem] sm:tracking-[0.12em]"
           >
             Join the list
           </a>
