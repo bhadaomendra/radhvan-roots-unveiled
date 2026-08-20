@@ -87,6 +87,21 @@ function Index() {
             </div>
           </Reveal>
         </section>
+
+        <section className="border-y border-border bg-card/30">
+          <div className="mx-auto max-w-3xl px-6 py-16 text-center lg:py-20">
+            <Reveal>
+              <blockquote className="mt-4">
+                <p lang="hi" className="font-display text-[clamp(1.2rem,2.5vw,1.8rem)] leading-relaxed text-bark">
+                  “हर शुरुआत में एक संभावना छिपी होती है।”
+                </p>
+                <footer className="mt-4 text-xs font-medium tracking-wide text-muted-foreground italic opacity-80">
+                  “Every beginning holds a possibility.”
+                </footer>
+              </blockquote>
+            </Reveal>
+          </div>
+        </section>
         
         <WhatIsCordyceps />
         
