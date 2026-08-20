@@ -169,7 +169,7 @@ export function Section({
 
 export function QuoteBlock({ hindi, english }: { hindi: string; english: string }) {
   return (
-    <section className="bg-parchment py-3 lg:py-4">
+    <section className="bg-parchment pt-28 pb-3 lg:pt-32 lg:pb-4">
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <div className="quote-highlight">
