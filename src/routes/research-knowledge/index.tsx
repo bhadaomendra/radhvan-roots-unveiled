@@ -41,15 +41,17 @@ function ResearchKnowledgePage() {
         imageAlt="Cordyceps study"
       />
 
-      <section className="border-b border-border bg-card/40">
+      <section className="bg-parchment py-12">
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
             <div className="quote-highlight">
-              <p lang="hi" className="hindi-quote">
-                “सवाल से शुरू हुई खोज, समझ में बदलती है और समझ ही आगे बढ़ने का रास्ता दिखाती है।”
-              </p>
-              <div className="english-sub-quote">
-                “A search that begins with a question becomes understanding”
+              <div className="quote-dialog">
+                <p lang="hi" className="hindi-quote">
+                  “सवाल से शुरू हुई खोज, समझ में बदलती है और समझ ही आगे बढ़ने का रास्ता दिखाती है।”
+                </p>
+                <div className="english-sub-quote">
+                  “A search that begins with a question becomes understanding”
+                </div>
               </div>
             </div>
           </Reveal>

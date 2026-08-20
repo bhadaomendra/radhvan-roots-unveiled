@@ -41,15 +41,17 @@ function CordycepsStudyPage() {
         imageAlt="Cordyceps anatomy plate"
       />
 
-      <section className="border-b border-border bg-card/40">
+      <section className="bg-parchment py-12">
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
             <div className="quote-highlight">
-              <p lang="hi" className="hindi-quote">
-                “प्रकृति को समझना, उसकी गहराई को जानने की पहली सीढ़ी है।”
-              </p>
-              <div className="english-sub-quote">
-                “Understanding nature is the first step towards discovering its depth”
+              <div className="quote-dialog">
+                <p lang="hi" className="hindi-quote">
+                  “प्रकृति को समझना, उसकी गहराई को जानने की पहली सीढ़ी है।”
+                </p>
+                <div className="english-sub-quote">
+                  “Understanding nature is the first step towards discovering its depth”
+                </div>
               </div>
             </div>
           </Reveal>

@@ -91,15 +91,17 @@ function Index() {
           </Reveal>
         </section>
 
-        <section className="border-y border-border bg-card/40">
+        <section className="bg-parchment py-12">
           <div className="mx-auto max-w-5xl px-6">
             <Reveal>
               <div className="quote-highlight">
-                <p lang="hi" className="hindi-quote">
-                  “हर शुरुआत में एक संभावना छिपी होती है।”
-                </p>
-                <div className="english-sub-quote">
-                  “Every beginning holds a possibility”
+                <div className="quote-dialog">
+                  <p lang="hi" className="hindi-quote">
+                    “हर शुरुआत में एक संभावना छिपी होती है।”
+                  </p>
+                  <div className="english-sub-quote">
+                    “Every beginning holds a possibility”
+                  </div>
                 </div>
               </div>
             </Reveal>
