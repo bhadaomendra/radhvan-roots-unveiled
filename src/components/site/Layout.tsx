@@ -169,21 +169,19 @@ export function Section({
 
 export function QuoteBlock({ hindi, english }: { hindi: string; english: string }) {
   return (
-    <section className="border-y border-border bg-card/60">
-      <div className="mx-auto max-w-3xl px-6 py-20 text-center lg:py-24">
+    <section className="bg-parchment py-4">
+      <div className="mx-auto max-w-5xl px-6">
         <Reveal>
-          <BrandLeaves className="mx-auto h-7 w-11" />
-          <blockquote className="mt-8">
-            <p
-              lang="hi"
-              className="font-display text-[clamp(1.35rem,3vw,2.1rem)] leading-relaxed text-bark"
-            >
-              {hindi}
-            </p>
-            <footer className="mt-5 text-sm leading-relaxed text-muted-foreground italic">
-              {english}
-            </footer>
-          </blockquote>
+          <div className="quote-highlight">
+            <div className="quote-dialog">
+              <p lang="hi" className="hindi-quote">
+                {hindi}
+              </p>
+              <div className="english-sub-quote">
+                {english}
+              </div>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
