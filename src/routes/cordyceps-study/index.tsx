@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, RelatedLinks } from "@/components/site/Layout";
-import { FAQ } from "@/components/site/Sections";
-import heroImage from "@/assets/hero-cordyceps.jpg";
+import { WhatIsCordyceps, WhyUnique } from "@/components/site/Sections";
+import { Sinensis } from "@/components/site/SinensisSections";
+import anatomy from "@/assets/anatomy-plate.jpg";
 
 const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Cordyceps Study | Understanding Cordyceps Militaris & Sinensis";
@@ -30,10 +31,12 @@ function CordycepsStudyPage() {
         eyebrow="The Study"
         title={<>Biology, Morphology & <span className="italic text-ember">Classification</span></>}
         description="Cordyceps is a genus of ascomycete fungi that has fascinated naturalists for centuries. We break down the science behind the spire."
-        image={heroImage}
+        image={anatomy}
         imageAlt="Cordyceps anatomy plate"
       />
-      <FAQ />
+      <WhatIsCordyceps />
+      <WhyUnique />
+      <Sinensis />
       <RelatedLinks 
         items={[
           { href: "/cultivation-training", label: "Cultivation", description: "Learn how we grow it in the lab." },
