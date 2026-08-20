@@ -15,6 +15,11 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/why-radhvan", changefreq: "monthly", priority: "0.8" },
+          { path: "/cordyceps-study", changefreq: "monthly", priority: "0.9" },
+          { path: "/cultivation-training", changefreq: "monthly", priority: "0.9" },
+          { path: "/research-knowledge", changefreq: "monthly", priority: "0.9" },
+          { path: "/contact", changefreq: "monthly", priority: "0.7" },
           { path: "/cordyceps-vs-sinensis", changefreq: "monthly", priority: "0.9" },
           { path: "/cordycepin", changefreq: "monthly", priority: "0.9" },
           { path: "/cordyceps-health-benefits", changefreq: "monthly", priority: "0.9" },
