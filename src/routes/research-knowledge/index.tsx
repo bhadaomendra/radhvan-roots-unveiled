@@ -2,6 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, RelatedLinks } from "@/components/site/Layout";
 import { Compounds, Evidence, Research } from "@/components/site/Sections";
 import { Applications } from "@/components/site/SinensisSections";
+import { Reveal } from "@/components/site/Reveal";
+import { IconFlask, IconMolecule, IconLeafShield } from "@/components/site/icons";
+
+import { Applications } from "@/components/site/SinensisSections";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const BASE_URL = "https://radhvanorigins.com";
