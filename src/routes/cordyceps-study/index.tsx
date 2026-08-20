@@ -99,10 +99,11 @@ function CordycepsStudyPage() {
 
       <RelatedLinks 
         items={[
-          { href: "/cultivation-training", label: "Learn the Process" },
-          { href: "/research-knowledge", label: "Read the Evidence" },
+          { href: "/cultivation-training", label: "Learn the Process", description: "Practical cultivation knowledge." },
+          { href: "/research-knowledge", label: "Read the Evidence", description: "Explore compounds and research." },
         ]} 
       />
+
     </PageShell>
   );
 }
