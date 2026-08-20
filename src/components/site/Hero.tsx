@@ -3,12 +3,12 @@ import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { href: "#overview", label: "Overview" },
-  { href: "#purity", label: "Purity" },
-  { href: "#sinensis", label: "Sinensis" },
-  { href: "#compounds", label: "Compounds" },
-  { href: "#evidence", label: "Evidence" },
-  { href: "#about", label: "About" },
+  { href: "/", label: "Home" },
+  { href: "/why-radhvan", label: "Why Radhvan" },
+  { href: "/cordyceps-study", label: "Cordyceps Study" },
+  { href: "/cultivation-training", label: "Cultivation & Training" },
+  { href: "/research-knowledge", label: "Research & Knowledge" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const GUIDES = [
@@ -69,7 +69,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </a>
 
         <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
-            {NAV.map((item) => (
+            NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -77,7 +77,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               >
                 {item.label}
               </a>
-            ))}
+            ))
 
           <div className="relative">
             <button
@@ -154,7 +154,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
-            {NAV.map((item) => (
+            NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -163,7 +163,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               >
                 {item.label}
               </a>
-            ))}
+            ))
 
             <div className="border-b border-border/60 py-4">
               <p className="text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">

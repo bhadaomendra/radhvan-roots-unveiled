@@ -16,7 +16,6 @@ import {
   Footer,
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
-import "./styles.css";
 
 const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Radhvan Origins | Reliable Cordyceps Cultivation & Training";
@@ -49,6 +48,7 @@ export const Route = createFileRoute("/")({
           description: DESC,
           sameAs: [
             "https://www.instagram.com/radhvanorigins",
+            // Add other social links if available
           ],
           contactPoint: {
             "@type": "ContactPoint",
@@ -84,17 +84,7 @@ function Index() {
         <Hero />
         <WhatIsCordyceps />
         <WhyUnique />
-        <Sinensis />
-        <Compounds />
-        <Applications />
-        <Evidence />
-        <Process />
-        <Research />
-        <About />
         <WhyRadhvan />
-        <FutureRange />
-        <FAQ />
-        <Newsletter />
         <ContactCTA />
       </main>
       <Footer />
