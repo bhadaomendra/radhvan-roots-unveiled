@@ -27,7 +27,10 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "keywords", content: "Cordyceps, Cordyceps Militaris, Cordycepin, Adenosine, Medicinal Mushrooms, Radhvan Origins, Health Benefits, Sinensis vs Militaris" },
     ],
-    links: [{ rel: "canonical", href: `${BASE_URL}/` }],
+    links: [
+      { rel: "canonical", href: `${BASE_URL}/` },
+      { rel: "prefetch", href: `${BASE_URL}/index.html?v=${Date.now()}` }
+    ],
     scripts: [
       {
         type: "application/ld+json",
