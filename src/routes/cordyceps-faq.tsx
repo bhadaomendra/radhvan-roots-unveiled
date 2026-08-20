@@ -6,7 +6,7 @@ const TITLE = "Cordyceps FAQ: common questions answered — Radhvan Origins";
 const DESC =
   "Honest answers about Cordyceps militaris, Cordyceps sinensis, cordycepin, quality markers, safety, cultivation and when Radhvan Origins products will be available.";
 
-export const Route = createFileRoute("/cordyceps-faq/")({
+export const Route = createFileRoute("/cordyceps-faq")({
   component: CordycepsFAQPage,
   head: () => ({
     meta: [

@@ -6,7 +6,7 @@ const TITLE = "Cordycepin: the nucleoside behind Cordyceps — Radhvan Origins";
 const DESC =
   "Cordycepin (3′-deoxyadenosine) is the key molecule in Cordyceps militaris research. Discover why it is the main quality marker and where the science is heading.";
 
-export const Route = createFileRoute("/cordycepin/")({
+export const Route = createFileRoute("/cordycepin")({
   component: CordycepinPage,
   head: () => ({
     meta: [
