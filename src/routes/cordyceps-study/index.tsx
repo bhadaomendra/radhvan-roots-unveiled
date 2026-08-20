@@ -8,7 +8,7 @@ const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Cordyceps Study | Understanding Cordyceps Militaris & Sinensis";
 const DESC = "A deep dive into the biology, morphology, and unique characteristics of Cordyceps fungi. Compare Militaris and Sinensis species.";
 
-export const Route = createFileRoute("/cordyceps-study")({
+export const Route = createFileRoute("/cordyceps-study/")({
   component: CordycepsStudyPage,
   head: () => ({
     meta: [

@@ -7,7 +7,7 @@ const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Cultivation & Training | Professional Cordyceps Growing Techniques";
 const DESC = "Learn the six-stage professional cultivation process for Cordyceps militaris. Training and guidance for your cultivation journey.";
 
-export const Route = createFileRoute("/cultivation-training")({
+export const Route = createFileRoute("/cultivation-training/")({
   component: CultivationTrainingPage,
   head: () => ({
     meta: [

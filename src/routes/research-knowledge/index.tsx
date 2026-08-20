@@ -8,7 +8,7 @@ const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Research & Knowledge | Science-Backed Cordyceps Information";
 const DESC = "Explore the bioactive compounds like Cordycepin and Adenosine, and learn about evidence-based health applications for Cordyceps.";
 
-export const Route = createFileRoute("/research-knowledge")({
+export const Route = createFileRoute("/research-knowledge/")({
   component: ResearchKnowledgePage,
   head: () => ({
     meta: [

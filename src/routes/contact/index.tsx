@@ -7,7 +7,7 @@ const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Contact Us | Connect with Radhvan Origins";
 const DESC = "Connect with Radhvan Origins via Email or WhatsApp. Join our newsletter for cultivation updates and research insights.";
 
-export const Route = createFileRoute("/contact")({
+export const Route = createFileRoute("/contact/")({
   component: ContactPage,
   head: () => ({
     meta: [

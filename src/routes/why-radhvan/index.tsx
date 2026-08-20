@@ -6,7 +6,7 @@ const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Why Radhvan Origins | Reliable Cordyceps Cultivation & Training";
 const DESC = "Discover the emotional brand statement and philosophy of Radhvan Origins. Learn. Understand. Cultivate. Grow.";
 
-export const Route = createFileRoute("/why-radhvan")({
+export const Route = createFileRoute("/why-radhvan/")({
   component: WhyRadhvanPage,
   head: () => ({
     meta: [
