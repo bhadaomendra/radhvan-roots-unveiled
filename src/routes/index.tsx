@@ -91,22 +91,11 @@ function Index() {
           </Reveal>
         </section>
 
-        <section className="bg-parchment py-3 lg:py-4">
-          <div className="mx-auto max-w-5xl px-6">
-            <Reveal>
-              <div className="quote-highlight">
-                <div className="quote-dialog">
-                  <p lang="hi" className="hindi-quote">
-                    “हर शुरुआत में एक संभावना छिपी होती है।”
-                  </p>
-                  <div className="english-sub-quote">
-                    “Every beginning holds a possibility”
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
+        <QuoteBlock 
+          hindi="“हर शुरुआत में एक संभावना छिपी होती है।”"
+          english="“Every beginning holds a possibility”"
+          variant="home"
+        />
         
         <WhatIsCordyceps />
         
