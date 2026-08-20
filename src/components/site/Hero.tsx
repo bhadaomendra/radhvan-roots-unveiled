@@ -84,7 +84,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             <button
               onClick={() => setGuidesOpen((v) => !v)}
               aria-expanded={guidesOpen}
-              className="flex items-center gap-1 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+              className="flex items-center gap-1 whitespace-nowrap text-[0.72rem] font-bold tracking-[0.08em] text-muted-foreground uppercase transition-colors hover:text-ember xl:text-[0.8rem] xl:tracking-[0.1em]"
             >
               Resources
               <svg
