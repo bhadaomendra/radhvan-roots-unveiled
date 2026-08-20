@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, RelatedLinks } from "@/components/site/Layout";
-import { Process } from "@/components/site/Sections";
+import { Process, ContactCTA } from "@/components/site/Sections";
+import { Reveal } from "@/components/site/Reveal";
+import { IconFlask, IconWave, IconLeafShield } from "@/components/site/icons";
+
 import lab from "@/assets/cultivation-room.jpg";
 
 const BASE_URL = "https://radhvanorigins.com";
