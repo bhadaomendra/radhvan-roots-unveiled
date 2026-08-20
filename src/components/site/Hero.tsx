@@ -54,26 +54,26 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 lg:px-10">
+      <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-4 py-3 lg:px-8">
         <a
           href="/"
-          className="flex min-w-0 items-center"
+          className="flex shrink-0 items-center"
         >
           <img
             src={logo}
             alt="Radhvan — Rooted in values, Growing with Vision"
             width={1353}
             height={408}
-            className="h-16 w-auto object-contain sm:h-20 lg:h-24"
+            className="h-20 w-auto object-contain sm:h-24 lg:h-28"
           />
         </a>
 
-        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-10 lg:flex">
             {NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+                className="whitespace-nowrap text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
               >
                 {item.label}
               </a>
