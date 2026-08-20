@@ -37,6 +37,21 @@ function ResearchKnowledgePage() {
         image={heroImage}
         imageAlt="Cordyceps study"
       />
+
+      <section className="border-b border-border bg-card/30">
+        <div className="mx-auto max-w-3xl px-6 py-16 text-center lg:py-20">
+          <Reveal>
+            <blockquote className="mt-4">
+              <p lang="hi" className="font-display text-[clamp(1.2rem,2.5vw,1.8rem)] leading-relaxed text-bark">
+                “सवाल से शुरू हुई खोज, समझ में बदलती है और समझ ही आगे बढ़ने का रास्ता दिखाती है।”
+              </p>
+              <footer className="mt-4 text-xs font-medium tracking-wide text-muted-foreground italic opacity-80">
+                “A search that begins with a question becomes understanding, and understanding shows us the way forward.”
+              </footer>
+            </blockquote>
+          </Reveal>
+        </div>
+      </section>
       
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
         <div className="grid gap-16 lg:grid-cols-2">
