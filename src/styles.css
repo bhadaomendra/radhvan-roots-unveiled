@@ -172,13 +172,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 1rem;
-  @media (min-width: 640px) {
-    padding: 0.5rem 1rem;
-  }
-  @media (min-width: 1024px) {
-    padding: 0.75rem 1rem;
-  }
+  padding: 0; /* Remove padding from highlight container */
+}
 
 }
 
@@ -195,8 +190,9 @@
   }
   border-radius: 1.5rem;
   box-shadow: 
-    0 10px 30px -10px color-mix(in oklab, var(--bark) 20%, transparent),
-    inset 0 1px 0 0 color-mix(in oklab, white 40%, transparent);
+    0 4px 12px -2px color-mix(in oklab, var(--bark) 15%, transparent),
+    0 12px 24px -6px color-mix(in oklab, var(--bark) 10%, transparent),
+    inset 0 1px 0 0 color-mix(in oklab, white 60%, transparent);
   max-width: 48rem;
   margin: 0 auto;
   text-align: center;
