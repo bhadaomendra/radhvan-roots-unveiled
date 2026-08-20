@@ -14,26 +14,26 @@ const NAV = [
 
 const GUIDES = [
   {
-    href: "/cordyceps-study",
+    to: "/cordyceps-study",
     label: "Study Cordyceps",
     description: "What Cordyceps actually is",
   },
   {
-    href: "/cultivation-training",
+    to: "/cultivation-training",
     label: "Cultivation Process",
     description: "Our lab-controlled technique",
   },
   {
-    href: "/research-knowledge",
+    to: "/research-knowledge",
     label: "Evidence & Compounds",
     description: "Bioactive properties explained",
   },
   {
-    href: "/cordyceps-faq",
+    to: "/cordyceps-faq",
     label: "Knowledge Base (FAQ)",
     description: "Safety, usage, and science",
   },
-];
+] as const;
 
 export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
   const [scrolled, setScrolled] = useState(false);
