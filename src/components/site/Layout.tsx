@@ -167,21 +167,23 @@ export function Section({
 
 /* ---------------------------------------------------------- Quote block */
 
-export function QuoteBlock({ hindi, english, variant = "page" }: { hindi: string; english: string; variant?: "home" | "page" }) {
+export function QuoteBlock({ hindi, english }: { hindi: string; english: string }) {
   return (
-    <section className={`bg-parchment py-1 lg:py-2 ${variant === "page" ? "pt-24 lg:pt-28" : ""}`}>
-      <div className="mx-auto max-w-5xl px-6">
+    <section className="border-y border-border bg-card/60">
+      <div className="mx-auto max-w-3xl px-6 py-20 text-center lg:py-24">
         <Reveal>
-          <div className="quote-highlight">
-            <div className="quote-dialog">
-              <p lang="hi" className="hindi-quote">
-                {hindi}
-              </p>
-              <div className="english-sub-quote">
-                {english}
-              </div>
-            </div>
-          </div>
+          <BrandLeaves className="mx-auto h-7 w-11" />
+          <blockquote className="mt-8">
+            <p
+              lang="hi"
+              className="font-display text-[clamp(1.35rem,3vw,2.1rem)] leading-relaxed text-bark"
+            >
+              {hindi}
+            </p>
+            <footer className="mt-5 text-sm leading-relaxed text-muted-foreground italic">
+              {english}
+            </footer>
+          </blockquote>
         </Reveal>
       </div>
     </section>

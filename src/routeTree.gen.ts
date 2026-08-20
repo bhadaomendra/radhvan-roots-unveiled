@@ -16,11 +16,6 @@ import { Route as CordycepsFaqRouteImport } from './routes/cordyceps-faq'
 import { Route as CordycepsHealthBenefitsRouteImport } from './routes/cordyceps-health-benefits'
 import { Route as CordycepsVsSinensisRouteImport } from './routes/cordyceps-vs-sinensis'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ContactIndexRouteImport } from './routes/contact/index'
-import { Route as CordycepsStudyIndexRouteImport } from './routes/cordyceps-study/index'
-import { Route as CultivationTrainingIndexRouteImport } from './routes/cultivation-training/index'
-import { Route as ResearchKnowledgeIndexRouteImport } from './routes/research-knowledge/index'
-import { Route as WhyRadhvanIndexRouteImport } from './routes/why-radhvan/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -57,32 +52,6 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ContactIndexRoute = ContactIndexRouteImport.update({
-  id: '/contact/',
-  path: '/contact/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CordycepsStudyIndexRoute = CordycepsStudyIndexRouteImport.update({
-  id: '/cordyceps-study/',
-  path: '/cordyceps-study/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CultivationTrainingIndexRoute =
-  CultivationTrainingIndexRouteImport.update({
-    id: '/cultivation-training/',
-    path: '/cultivation-training/',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ResearchKnowledgeIndexRoute = ResearchKnowledgeIndexRouteImport.update({
-  id: '/research-knowledge/',
-  path: '/research-knowledge/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const WhyRadhvanIndexRoute = WhyRadhvanIndexRouteImport.update({
-  id: '/why-radhvan/',
-  path: '/why-radhvan/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -92,11 +61,6 @@ export interface FileRoutesByFullPath {
   '/cordyceps-health-benefits': typeof CordycepsHealthBenefitsRoute
   '/cordyceps-vs-sinensis': typeof CordycepsVsSinensisRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/contact/': typeof ContactIndexRoute
-  '/cordyceps-study/': typeof CordycepsStudyIndexRoute
-  '/cultivation-training/': typeof CultivationTrainingIndexRoute
-  '/research-knowledge/': typeof ResearchKnowledgeIndexRoute
-  '/why-radhvan/': typeof WhyRadhvanIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -106,11 +70,6 @@ export interface FileRoutesByTo {
   '/cordyceps-health-benefits': typeof CordycepsHealthBenefitsRoute
   '/cordyceps-vs-sinensis': typeof CordycepsVsSinensisRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/contact': typeof ContactIndexRoute
-  '/cordyceps-study': typeof CordycepsStudyIndexRoute
-  '/cultivation-training': typeof CultivationTrainingIndexRoute
-  '/research-knowledge': typeof ResearchKnowledgeIndexRoute
-  '/why-radhvan': typeof WhyRadhvanIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -121,11 +80,6 @@ export interface FileRoutesById {
   '/cordyceps-health-benefits': typeof CordycepsHealthBenefitsRoute
   '/cordyceps-vs-sinensis': typeof CordycepsVsSinensisRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/contact/': typeof ContactIndexRoute
-  '/cordyceps-study/': typeof CordycepsStudyIndexRoute
-  '/cultivation-training/': typeof CultivationTrainingIndexRoute
-  '/research-knowledge/': typeof ResearchKnowledgeIndexRoute
-  '/why-radhvan/': typeof WhyRadhvanIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -137,11 +91,6 @@ export interface FileRouteTypes {
     | '/cordyceps-health-benefits'
     | '/cordyceps-vs-sinensis'
     | '/sitemap.xml'
-    | '/contact/'
-    | '/cordyceps-study/'
-    | '/cultivation-training/'
-    | '/research-knowledge/'
-    | '/why-radhvan/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -151,11 +100,6 @@ export interface FileRouteTypes {
     | '/cordyceps-health-benefits'
     | '/cordyceps-vs-sinensis'
     | '/sitemap.xml'
-    | '/contact'
-    | '/cordyceps-study'
-    | '/cultivation-training'
-    | '/research-knowledge'
-    | '/why-radhvan'
   id:
     | '__root__'
     | '/'
@@ -165,11 +109,6 @@ export interface FileRouteTypes {
     | '/cordyceps-health-benefits'
     | '/cordyceps-vs-sinensis'
     | '/sitemap.xml'
-    | '/contact/'
-    | '/cordyceps-study/'
-    | '/cultivation-training/'
-    | '/research-knowledge/'
-    | '/why-radhvan/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -180,11 +119,6 @@ export interface RootRouteChildren {
   CordycepsHealthBenefitsRoute: typeof CordycepsHealthBenefitsRoute
   CordycepsVsSinensisRoute: typeof CordycepsVsSinensisRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  ContactIndexRoute: typeof ContactIndexRoute
-  CordycepsStudyIndexRoute: typeof CordycepsStudyIndexRoute
-  CultivationTrainingIndexRoute: typeof CultivationTrainingIndexRoute
-  ResearchKnowledgeIndexRoute: typeof ResearchKnowledgeIndexRoute
-  WhyRadhvanIndexRoute: typeof WhyRadhvanIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -238,41 +172,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact/': {
-      id: '/contact/'
-      path: '/contact'
-      fullPath: '/contact/'
-      preLoaderRoute: typeof ContactIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cordyceps-study/': {
-      id: '/cordyceps-study/'
-      path: '/cordyceps-study'
-      fullPath: '/cordyceps-study/'
-      preLoaderRoute: typeof CordycepsStudyIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cultivation-training/': {
-      id: '/cultivation-training/'
-      path: '/cultivation-training'
-      fullPath: '/cultivation-training/'
-      preLoaderRoute: typeof CultivationTrainingIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/research-knowledge/': {
-      id: '/research-knowledge/'
-      path: '/research-knowledge'
-      fullPath: '/research-knowledge/'
-      preLoaderRoute: typeof ResearchKnowledgeIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/why-radhvan/': {
-      id: '/why-radhvan/'
-      path: '/why-radhvan'
-      fullPath: '/why-radhvan/'
-      preLoaderRoute: typeof WhyRadhvanIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -284,11 +183,6 @@ const rootRouteChildren: RootRouteChildren = {
   CordycepsHealthBenefitsRoute: CordycepsHealthBenefitsRoute,
   CordycepsVsSinensisRoute: CordycepsVsSinensisRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  ContactIndexRoute: ContactIndexRoute,
-  CordycepsStudyIndexRoute: CordycepsStudyIndexRoute,
-  CultivationTrainingIndexRoute: CultivationTrainingIndexRoute,
-  ResearchKnowledgeIndexRoute: ResearchKnowledgeIndexRoute,
-  WhyRadhvanIndexRoute: WhyRadhvanIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
