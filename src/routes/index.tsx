@@ -84,17 +84,7 @@ function Index() {
         <Hero />
         <WhatIsCordyceps />
         <WhyUnique />
-        <Sinensis />
-        <Compounds />
-        <Applications />
-        <Evidence />
-        <Process />
-        <Research />
-        <About />
         <WhyRadhvan />
-        <FutureRange />
-        <FAQ />
-        <Newsletter />
         <ContactCTA />
       </main>
       <Footer />
