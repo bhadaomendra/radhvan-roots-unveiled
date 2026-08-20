@@ -1,47 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { SiteNav, Hero } from "@/components/site/Hero";
-import {
-  WhatIsCordyceps,
-  WhyUnique,
-  Compounds,
-  Evidence,
-  Process,
-  Research,
-  About,
-  WhyRadhvan,
-  FutureRange,
-  FAQ,
-  Newsletter,
-  ContactCTA,
-  Footer,
-} from "@/components/site/Sections";
-import { Sinensis, Applications } from "@/components/site/SinensisSections";
+import { RouterProvider } from "@tanstack/react-router";
+import { getRouter } from "./router";
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="bg-background">
-      <SiteNav />
-      <main>
-        <Hero />
-        <WhatIsCordyceps />
-        <WhyUnique />
-        <Sinensis />
-        <Compounds />
-        <Applications />
-        <Evidence />
-        <Process />
-        <Research />
-        <About />
-        <WhyRadhvan />
-        <FutureRange />
-        <FAQ />
-        <Newsletter />
-        <ContactCTA />
-      </main>
-      <Footer />
-    </div>
-  );
-}
+const router = getRouter();
 
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <RouterProvider router={router} />
+);
