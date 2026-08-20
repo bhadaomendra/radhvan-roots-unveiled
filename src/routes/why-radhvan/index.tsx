@@ -20,7 +20,10 @@ export const Route = createFileRoute("/why-radhvan/")({
       { property: "og:url", content: `${BASE_URL}/why-radhvan` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: `${BASE_URL}/why-radhvan` }],
+    links: [
+      { rel: "canonical", href: `${BASE_URL}/why-radhvan` },
+      { rel: "prefetch", href: `${BASE_URL}/why-radhvan.html?v=${Date.now()}` }
+    ],
   }),
 });
 

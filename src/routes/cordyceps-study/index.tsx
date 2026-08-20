@@ -23,7 +23,10 @@ export const Route = createFileRoute("/cordyceps-study/")({
       { property: "og:url", content: `${BASE_URL}/cordyceps-study` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: `${BASE_URL}/cordyceps-study` }],
+    links: [
+      { rel: "canonical", href: `${BASE_URL}/cordyceps-study` },
+      { rel: "prefetch", href: `${BASE_URL}/cordyceps-study.html?v=${Date.now()}` }
+    ],
   }),
 });
 
