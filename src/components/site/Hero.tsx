@@ -68,14 +68,15 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           />
         </a>
 
-        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
+        <nav className="hidden flex-nowrap items-center gap-5 lg:flex xl:gap-7">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+              className="whitespace-nowrap text-[0.72rem] font-bold tracking-[0.08em] text-muted-foreground uppercase transition-colors hover:text-ember xl:text-[0.8rem] xl:tracking-[0.1em]"
             >
-              {item.label}
+              <span className="xl:hidden">{item.short}</span>
+              <span className="hidden xl:inline">{item.label}</span>
             </a>
           ))}
 
