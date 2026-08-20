@@ -6,7 +6,7 @@ const TITLE = "Cordyceps health benefits: what the research says — Radhvan Ori
 const DESC =
   "A plain-language overview of Cordyceps research areas: cancer cell studies, mood and stress, blood pressure, skin health and arthritis. Includes medical disclaimers.";
 
-export const Route = createFileRoute("/cordyceps-health-benefits")({
+export const Route = createFileRoute("/cordyceps-health-benefits/")({
   component: CordycepsHealthBenefitsPage,
   head: () => ({
     meta: [

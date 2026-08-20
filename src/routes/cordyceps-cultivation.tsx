@@ -6,7 +6,7 @@ const TITLE = "How Cordyceps militaris is cultivated in a lab — Radhvan Origin
 const DESC =
   "From strain selection to verified powder: six controlled stages of Cordyceps militaris cultivation. Lab-grown, traceable and wild-harvest-free.";
 
-export const Route = createFileRoute("/cordyceps-cultivation")({
+export const Route = createFileRoute("/cordyceps-cultivation/")({
   component: CordycepsCultivationPage,
   head: () => ({
     meta: [

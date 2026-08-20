@@ -6,7 +6,7 @@ const TITLE = "Cordyceps militaris vs Cordyceps sinensis — Radhvan Origins";
 const DESC =
   "Learn the difference between wild Cordyceps sinensis (yarsagumba) and lab-grown Cordyceps militaris: origin, habitat, appearance, cordycepin content and sustainability.";
 
-export const Route = createFileRoute("/cordyceps-vs-sinensis")({
+export const Route = createFileRoute("/cordyceps-vs-sinensis/")({
   component: CordycepsVsSinensisPage,
   head: () => ({
     meta: [
