@@ -41,7 +41,7 @@ function CordycepsStudyPage() {
         imageAlt="Cordyceps anatomy plate"
       />
 
-      <section className="bg-parchment py-12">
+      <section className="bg-parchment py-4">
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
             <div className="quote-highlight">
