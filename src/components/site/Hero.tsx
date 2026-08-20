@@ -3,12 +3,12 @@ import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/why-radhvan", label: "Why Radhvan" },
-  { href: "/cordyceps-study", label: "Cordyceps Study" },
-  { href: "/cultivation-training", label: "Cultivation & Training" },
-  { href: "/research-knowledge", label: "Research & Knowledge" },
-  { href: "/contact", label: "Contact" },
+  { href: "#overview", label: "Overview" },
+  { href: "#purity", label: "Purity" },
+  { href: "#sinensis", label: "Sinensis" },
+  { href: "#compounds", label: "Compounds" },
+  { href: "#evidence", label: "Evidence" },
+  { href: "#about", label: "About" },
 ];
 
 const GUIDES = [
