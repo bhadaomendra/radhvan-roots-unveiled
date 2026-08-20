@@ -23,7 +23,10 @@ export const Route = createFileRoute("/research-knowledge/")({
       { property: "og:url", content: `${BASE_URL}/research-knowledge` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: `${BASE_URL}/research-knowledge` }],
+    links: [
+      { rel: "canonical", href: `${BASE_URL}/research-knowledge` },
+      { rel: "prefetch", href: `${BASE_URL}/research-knowledge.html?v=${Date.now()}` }
+    ],
   }),
 });
 
