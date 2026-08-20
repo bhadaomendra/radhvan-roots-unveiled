@@ -40,15 +40,17 @@ function CultivationTrainingPage() {
         imageAlt="Cultivation lab room"
       />
 
-      <section className="border-b border-border bg-card/40">
+      <section className="bg-parchment py-12">
         <div className="mx-auto max-w-5xl px-6">
           <Reveal>
             <div className="quote-highlight">
-              <p lang="hi" className="hindi-quote">
-                “उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समझ का अभ्यास है।”
-              </p>
-              <div className="english-sub-quote">
-                “Cultivation is not just a process; it is an exercise in patience and understanding”
+              <div className="quote-dialog">
+                <p lang="hi" className="hindi-quote">
+                  “उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समझ का अभ्यास है।”
+                </p>
+                <div className="english-sub-quote">
+                  “Cultivation is not just a process; it is an exercise in patience and understanding”
+                </div>
               </div>
             </div>
           </Reveal>
