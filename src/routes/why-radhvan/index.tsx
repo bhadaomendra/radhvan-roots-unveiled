@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, QuoteBlock } from "@/components/site/Layout";
-import { WhyRadhvan, About } from "@/components/site/Sections";
+import { WhyRadhvan } from "@/components/site/Sections";
+import { Reveal } from "@/components/site/Reveal";
+
 
 const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Why Radhvan Origins | Reliable Cordyceps Cultivation & Training";

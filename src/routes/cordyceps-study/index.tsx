@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, RelatedLinks } from "@/components/site/Layout";
-import { WhatIsCordyceps, WhyUnique } from "@/components/site/Sections";
+import { WhatIsCordyceps, WhyUnique, Compounds } from "@/components/site/Sections";
 import { Sinensis } from "@/components/site/SinensisSections";
+import { Reveal } from "@/components/site/Reveal";
+import { IconSpore, IconMycelium, IconMolecule } from "@/components/site/icons";
+
 import anatomy from "@/assets/anatomy-plate.jpg";
 
 const BASE_URL = "https://radhvanorigins.com";
