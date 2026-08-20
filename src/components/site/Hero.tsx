@@ -5,9 +5,9 @@ import heroImage from "@/assets/hero-cordyceps.jpg";
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/why-radhvan", label: "Why Radhvan" },
-  { href: "/cordyceps-study", label: "Cordyceps Study" },
-  { href: "/cultivation-training", label: "Cultivation & Training" },
-  { href: "/research-knowledge", label: "Research & Knowledge" },
+  { href: "/cordyceps-study", label: "Study" },
+  { href: "/cultivation-training", label: "Cultivation" },
+  { href: "/research-knowledge", label: "Research" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -54,26 +54,26 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 lg:px-10">
+      <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-4 py-3 lg:px-8">
         <a
           href="/"
-          className="flex min-w-0 items-center"
+          className="flex shrink-0 items-center"
         >
           <img
             src={logo}
             alt="Radhvan — Rooted in values, Growing with Vision"
             width={1353}
             height={408}
-            className="h-16 w-auto object-contain sm:h-20 lg:h-24"
+            className="h-20 w-auto object-contain sm:h-24 lg:h-28"
           />
         </a>
 
-        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-10 lg:flex">
             {NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+                className="whitespace-nowrap text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
               >
                 {item.label}
               </a>
@@ -127,10 +127,10 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
 
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-3">
           <a
             href="/contact#newsletter"
-            className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-[0.8rem] sm:tracking-[0.12em]"
+            className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3.5 sm:text-[0.8rem] sm:tracking-[0.12em]"
           >
             Join the list
           </a>
