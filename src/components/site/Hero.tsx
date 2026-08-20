@@ -69,7 +69,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </a>
 
         <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
-            NAV.map((item) => (
+            {NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -77,7 +77,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               >
                 {item.label}
               </a>
-            ))
+            ))}
 
           <div className="relative">
             <button
