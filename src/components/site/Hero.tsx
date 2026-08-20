@@ -69,15 +69,15 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </a>
 
         <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
-            NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
-              >
-                {item.label}
-              </a>
-            ))
+          {NAV.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+            >
+              {item.label}
+            </a>
+          ))}
 
           <div className="relative">
             <button
@@ -154,7 +154,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
-            NAV.map((item) => (
+            {NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -163,7 +163,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               >
                 {item.label}
               </a>
-            ))
+            ))}
 
             <div className="border-b border-border/60 py-4">
               <p className="text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">
