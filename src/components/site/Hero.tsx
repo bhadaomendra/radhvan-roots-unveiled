@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import logo from "@/assets/radhvan-new-logo.png";
+import { Link } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/why-radhvan", label: "Why Radhvan" },
-  { href: "/cordyceps-study", label: "Study" },
-  { href: "/cultivation-training", label: "Cultivation" },
-  { href: "/research-knowledge", label: "Research" },
-  { href: "/contact", label: "Contact" },
-];
+  { to: "/", label: "Home" },
+  { to: "/why-radhvan", label: "Why Radhvan" },
+  { to: "/cordyceps-study", label: "Study" },
+  { to: "/cultivation-training", label: "Cultivation" },
+  { to: "/research-knowledge", label: "Research" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 const GUIDES = [
   {
@@ -55,8 +56,8 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       }`}
     >
       <div className="mx-auto flex max-w-[90rem] items-center justify-between gap-4 px-4 py-3 lg:px-8">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="flex shrink-0 items-center"
         >
           <img
@@ -66,17 +67,18 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             height={408}
             className="h-20 w-auto object-contain sm:h-24 lg:h-28"
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-6 xl:gap-10 lg:flex">
             {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
+              <Link
+                key={item.to}
+                to={item.to}
                 className="whitespace-nowrap text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+                activeProps={{ className: "text-ember" }}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
 
           <div className="relative">
@@ -107,9 +109,9 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             {guidesOpen && (
               <div className="absolute top-full right-0 mt-4 w-64 rounded-sm border border-border bg-background/95 p-2 shadow-xl backdrop-blur-xl">
                 {GUIDES.map((g) => (
-                  <a
-                    key={g.href}
-                    href={g.href}
+                  <Link
+                    key={g.to}
+                    to={g.to}
                     onClick={() => setGuidesOpen(false)}
                     className="block rounded-sm px-4 py-3 transition-colors hover:bg-accent"
                   >
@@ -119,7 +121,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                     <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                       {g.description}
                     </span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -128,12 +130,13 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
-          <a
-            href="/contact#newsletter"
+          <Link
+            to="/contact"
+            hash="newsletter"
             className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3.5 sm:text-[0.8rem] sm:tracking-[0.12em]"
           >
             Join the list
-          </a>
+          </Link>
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
@@ -155,14 +158,15 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
             {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
+              <Link
+                key={item.to}
+                to={item.to}
                 onClick={() => setOpen(false)}
                 className="border-b border-border/60 py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
+                activeProps={{ className: "text-ember" }}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
 
             <div className="border-b border-border/60 py-4">
@@ -171,25 +175,26 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               </p>
               <div className="mt-4 flex flex-col gap-4">
                 {GUIDES.map((g) => (
-                  <a
-                    key={g.href}
-                    href={g.href}
+                  <Link
+                    key={g.to}
+                    to={g.to}
                     onClick={() => setOpen(false)}
                     className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground transition-colors hover:text-ember uppercase"
                   >
                     {g.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
 
-            <a
-              href="/contact#newsletter"
+            <Link
+              to="/contact"
+              hash="newsletter"
               onClick={() => setOpen(false)}
               className="py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
             >
               Join the list
-            </a>
+            </Link>
           </nav>
         </div>
       )}
@@ -241,21 +246,21 @@ export function Hero() {
             what the evidence actually says.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="/cordyceps-study"
+            <Link
+              to="/cordyceps-study"
               className="group inline-flex items-center gap-3 rounded-full bg-ember px-7 py-3.5 text-xs font-bold tracking-[0.16em] text-primary-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5"
             >
               Begin the study
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-            </a>
-            <a
-              href="/research-knowledge"
+            </Link>
+            <Link
+              to="/research-knowledge"
               className="inline-flex items-center gap-2 border-b border-bark/30 pb-1 text-xs font-bold tracking-[0.16em] text-bark/80 uppercase transition-colors hover:border-ember hover:text-ember"
             >
               Research highlights
-            </a>
+            </Link>
           </div>
         </div>
 
