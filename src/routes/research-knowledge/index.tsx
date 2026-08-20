@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageShell, PageHero, RelatedLinks } from "@/components/site/Layout";
+import { PageShell, PageHero, RelatedLinks, QuoteBlock } from "@/components/site/Layout";
 import { Compounds, Evidence, Research } from "@/components/site/Sections";
 import { Applications } from "@/components/site/SinensisSections";
 import { Reveal } from "@/components/site/Reveal";

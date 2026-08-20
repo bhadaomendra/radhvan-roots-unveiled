@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { QuoteBlock } from "@/components/site/Layout";
 import { SiteNav, Hero } from "@/components/site/Hero";
 import { Reveal } from "@/components/site/Reveal";
 import {
