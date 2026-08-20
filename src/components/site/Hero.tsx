@@ -5,9 +5,9 @@ import heroImage from "@/assets/hero-cordyceps.jpg";
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/why-radhvan", label: "Why Radhvan" },
-  { href: "/cordyceps-study", label: "Cordyceps Study" },
-  { href: "/cultivation-training", label: "Cultivation & Training" },
-  { href: "/research-knowledge", label: "Research & Knowledge" },
+  { href: "/cordyceps-study", label: "Study" },
+  { href: "/cultivation-training", label: "Cultivation" },
+  { href: "/research-knowledge", label: "Research" },
   { href: "/contact", label: "Contact" },
 ];
 
