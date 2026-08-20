@@ -1,6 +1,7 @@
 import { ReactNode, useState } from "react";
 import { Reveal } from "./Reveal";
 import { SiteNav } from "./Hero";
+import { Link } from "@tanstack/react-router";
 import { Newsletter, Footer } from "./Sections";
 import { BrandLeaves } from "./icons";
 
@@ -19,26 +20,26 @@ export function PageShell({ children }: { children: ReactNode }) {
 
 /* ---------------------------------------------------------- Breadcrumbs */
 
-export type Crumb = { label: string; href?: string };
+export type Crumb = { label: string; to?: string };
 
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-6 pt-28 lg:px-10 lg:pt-32">
       <ol className="flex flex-wrap items-center gap-2 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
         <li>
-          <a href="/" className="transition-colors hover:text-ember">
+          <Link to="/" className="transition-colors hover:text-ember">
             Home
-          </a>
+          </Link>
         </li>
         {items.map((item, i) => (
           <li key={item.label} className="flex items-center gap-2">
             <span aria-hidden="true" className="text-border">
               /
             </span>
-            {item.href && i < items.length - 1 ? (
-              <a href={item.href} className="transition-colors hover:text-ember">
+            {item.to && i < items.length - 1 ? (
+              <Link to={item.to} className="transition-colors hover:text-ember">
                 {item.label}
-              </a>
+              </Link>
             ) : (
               <span aria-current="page" className="text-ember">
                 {item.label}
@@ -217,7 +218,7 @@ export function CardGrid({
   items,
   columns = 3,
 }: {
-  items: { title: string; body: string; href?: string; cta?: string }[];
+  items: { title: string; body: string; to?: string; cta?: string }[];
   columns?: 2 | 3 | 4;
 }) {
   const cols =
@@ -237,7 +238,7 @@ export function CardGrid({
             <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
               {item.body}
             </p>
-            {item.href && (
+            {item.to && (
               <span className="mt-6 inline-flex items-center gap-2 text-[0.7rem] font-bold tracking-[0.16em] text-ember uppercase">
                 {item.cta ?? "Explore"} <span aria-hidden="true">→</span>
               </span>
@@ -246,13 +247,13 @@ export function CardGrid({
         );
         return (
           <Reveal key={item.title} delay={i * 70}>
-            {item.href ? (
-              <a
-                href={item.href}
+            {item.to ? (
+              <Link
+                to={item.to}
                 className="grain flex h-full flex-col rounded-sm border border-border bg-card p-7 transition-transform duration-500 hover:-translate-y-1"
               >
                 {inner}
-              </a>
+              </Link>
             ) : (
               <article className="grain flex h-full flex-col rounded-sm border border-border bg-card p-7">
                 {inner}
@@ -277,8 +278,8 @@ export function CTABlock({
   eyebrow?: string;
   title: ReactNode;
   body: string;
-  primary: { href: string; label: string };
-  secondary?: { href: string; label: string };
+  primary: { to: string; label: string };
+  secondary?: { to: string; label: string };
 }) {
   return (
     <Section>
@@ -289,19 +290,19 @@ export function CTABlock({
             {body}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href={primary.href}
+            <Link
+              to={primary.to}
               className="inline-flex items-center gap-3 rounded-full bg-ember px-7 py-3.5 text-xs font-bold tracking-[0.16em] text-primary-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5"
             >
               {primary.label}
-            </a>
+            </Link>
             {secondary && (
-              <a
-                href={secondary.href}
+              <Link
+                to={secondary.to}
                 className="inline-flex items-center gap-2 border-b border-bark/30 pb-1 text-xs font-bold tracking-[0.16em] text-bark/80 uppercase transition-colors hover:border-ember hover:text-ember"
               >
                 {secondary.label}
-              </a>
+              </Link>
             )}
           </div>
         </div>
@@ -378,7 +379,7 @@ export function FaqAccordion({
 export function RelatedLinks({
   items,
 }: {
-  items: { href: string; label: string; description: string }[];
+  items: { to: string; label: string; description: string }[];
 }) {
   return (
     <Section>
@@ -387,9 +388,9 @@ export function RelatedLinks({
         <h2 className="mt-5 font-display text-2xl text-bark">Related pages</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
+            <Link
+              key={item.to}
+              to={item.to}
               className="group rounded-sm border border-border bg-card p-6 transition-transform duration-300 hover:-translate-y-1"
             >
               <h3 className="font-display text-lg text-bark group-hover:text-ember">
@@ -398,7 +399,7 @@ export function RelatedLinks({
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
