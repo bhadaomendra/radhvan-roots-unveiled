@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageShell, PageHero, RelatedLinks } from "@/components/site/Layout";
+import { PageShell, PageHero, RelatedLinks, QuoteBlock } from "@/components/site/Layout";
 import { Compounds, Evidence, Research } from "@/components/site/Sections";
 import { Applications } from "@/components/site/SinensisSections";
 import { Reveal } from "@/components/site/Reveal";
@@ -41,22 +41,11 @@ function ResearchKnowledgePage() {
         imageAlt="Cordyceps study"
       />
 
-      <section className="bg-parchment py-3 lg:py-4">
-        <div className="mx-auto max-w-5xl px-6">
-          <Reveal>
-            <div className="quote-highlight">
-              <div className="quote-dialog">
-                <p lang="hi" className="hindi-quote">
-                  “सवाल से शुरू हुई खोज, समझ में बदलती है और समझ ही आगे बढ़ने का रास्ता दिखाती है।”
-                </p>
-                <div className="english-sub-quote">
-                  “A search that begins with a question becomes understanding”
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <QuoteBlock 
+        hindi="“सवाल से शुरू हुई खोज, समझ में बदलती है और समझ ही आगे बढ़ने का रास्ता दिखाती है।”"
+        english="“A search that begins with a question becomes understanding”"
+        variant="page"
+      />
       
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
         <div className="grid gap-16 lg:grid-cols-2">

@@ -33,6 +33,7 @@ function WhyRadhvanPage() {
       <QuoteBlock 
         hindi="“राधवन हमारे लिए सिर्फ एक नाम नहीं, एक एहसास है—एक शुरुआत, जो दिल से हुई है। हम इस सफर पर अपनी ऐसी पहचान बनाने निकले हैं, जिस पर आने वाला कल गर्व कर सके।”"
         english="“Radhvan is not just a name for us, it is a feeling—a beginning that comes from the heart. We have set out on this journey to create an identity that the future can be proud of.”"
+        variant="page"
       />
       
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
