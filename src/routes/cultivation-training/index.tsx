@@ -22,7 +22,10 @@ export const Route = createFileRoute("/cultivation-training/")({
       { property: "og:url", content: `${BASE_URL}/cultivation-training` },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: `${BASE_URL}/cultivation-training` }],
+    links: [
+      { rel: "canonical", href: `${BASE_URL}/cultivation-training` },
+      { rel: "prefetch", href: `${BASE_URL}/cultivation-training.html?v=${Date.now()}` }
+    ],
   }),
 });
 
