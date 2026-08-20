@@ -1,21 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, Hero } from "@/components/site/Hero";
+import { Reveal } from "@/components/site/Reveal";
 import {
   WhatIsCordyceps,
-  WhyUnique,
-  Compounds,
-  Evidence,
-  Process,
   Research,
-  About,
-  WhyRadhvan,
-  FutureRange,
-  FAQ,
-  Newsletter,
   ContactCTA,
   Footer,
 } from "@/components/site/Sections";
-import { Sinensis, Applications } from "@/components/site/SinensisSections";
+
 
 const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Radhvan Origins | Reliable Cordyceps Cultivation & Training";
