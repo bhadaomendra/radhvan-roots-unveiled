@@ -3,35 +3,29 @@ import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { id: "what", label: "Overview" },
-  { id: "unique", label: "Purity" },
-  { id: "sinensis", label: "Sinensis" },
-  { id: "compounds", label: "Compounds" },
-  { id: "evidence", label: "Evidence" },
-  { id: "about", label: "About" },
-  { id: "why-radhvan", label: "Why Radhvan" },
+  { href: "/", label: "Home" },
+  { href: "/why-radhvan", label: "Why Radhvan" },
+  { href: "/cordyceps-study", label: "Cordyceps Study" },
+  { href: "/cultivation-training", label: "Cultivation & Training" },
+  { href: "/research-knowledge", label: "Research & Knowledge" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const GUIDES = [
   {
-    href: "/cordyceps-vs-sinensis",
-    label: "Militaris vs Sinensis",
-    description: "Traditional vs modern cultivation",
+    href: "/cordyceps-study",
+    label: "Study Cordyceps",
+    description: "What Cordyceps actually is",
   },
   {
-    href: "/cordycepin",
-    label: "Cordycepin Deep Dive",
-    description: "Bioactive properties explained",
-  },
-  {
-    href: "/cordyceps-health-benefits",
-    label: "Health Benefits",
-    description: "Evidence-based research results",
-  },
-  {
-    href: "/cordyceps-cultivation",
+    href: "/cultivation-training",
     label: "Cultivation Process",
     description: "Our lab-controlled technique",
+  },
+  {
+    href: "/research-knowledge",
+    label: "Evidence & Compounds",
+    description: "Bioactive properties explained",
   },
   {
     href: "/cordyceps-faq",
@@ -62,7 +56,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-4 py-3 lg:px-10">
         <a
-          href={variant === "home" ? "#top" : "/"}
+          href="/"
           className="flex min-w-0 items-center"
         >
           <img
@@ -75,24 +69,15 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </a>
 
         <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
-          {variant === "home" &&
-            NAV.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
-              >
-                {item.label}
-              </a>
-            ))}
-          {variant === "page" && (
+          {NAV.map((item) => (
             <a
-              href="/"
+              key={item.href}
+              href={item.href}
               className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
-              Home
+              {item.label}
             </a>
-          )}
+          ))}
 
           <div className="relative">
             <button
@@ -140,19 +125,11 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             )}
           </div>
 
-          {variant === "page" && (
-            <a
-              href="/#about"
-              className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
-            >
-              About
-            </a>
-          )}
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
           <a
-            href={variant === "home" ? "#newsletter" : "/#newsletter"}
+            href="/contact#newsletter"
             className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-[0.8rem] sm:tracking-[0.12em]"
           >
             Join the list
@@ -177,26 +154,16 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
-            {variant === "page" && (
+            {NAV.map((item) => (
               <a
-                href="/"
+                key={item.href}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="border-b border-border/60 py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
               >
-                Home
+                {item.label}
               </a>
-            )}
-            {variant === "home" &&
-              NAV.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-border/60 py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
-                >
-                  {item.label}
-                </a>
-              ))}
+            ))}
 
             <div className="border-b border-border/60 py-4">
               <p className="text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">
@@ -216,17 +183,8 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               </div>
             </div>
 
-            {variant === "page" && (
-              <a
-                href="/#about"
-                onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
-              >
-                About
-              </a>
-            )}
             <a
-              href={variant === "home" ? "#newsletter" : "/#newsletter"}
+              href="/contact#newsletter"
               onClick={() => setOpen(false)}
               className="py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
             >
@@ -284,16 +242,16 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#what"
+              href="/cordyceps-study"
               className="group inline-flex items-center gap-3 rounded-full bg-ember px-7 py-3.5 text-xs font-bold tracking-[0.16em] text-primary-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5"
             >
               Begin the study
-              <span className="transition-transform duration-300 group-hover:translate-y-0.5">
-                ↓
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
               </span>
             </a>
             <a
-              href="#research"
+              href="/research-knowledge"
               className="inline-flex items-center gap-2 border-b border-bark/30 pb-1 text-xs font-bold tracking-[0.16em] text-bark/80 uppercase transition-colors hover:border-ember hover:text-ember"
             >
               Research highlights

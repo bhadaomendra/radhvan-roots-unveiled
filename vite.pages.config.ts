@@ -11,6 +11,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
+        "why-radhvan": "why-radhvan.html",
+        "cordyceps-study": "cordyceps-study.html",
+        "cultivation-training": "cultivation-training.html",
+        "research-knowledge": "research-knowledge.html",
+        contact: "contact.html",
         "cordyceps-vs-sinensis": "cordyceps-vs-sinensis.html",
         cordycepin: "cordycepin.html",
         "cordyceps-health-benefits": "cordyceps-health-benefits.html",
