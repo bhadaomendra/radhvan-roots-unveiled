@@ -3,12 +3,12 @@ import logo from "@/assets/radhvan-new-logo.png";
 import heroImage from "@/assets/hero-cordyceps.jpg";
 
 const NAV = [
-  { href: "/", label: "Home", short: "Home" },
-  { href: "/why-radhvan", label: "Why Radhvan", short: "Why Radhvan" },
-  { href: "/cordyceps-study", label: "Cordyceps Study", short: "Study" },
-  { href: "/cultivation-training", label: "Cultivation & Training", short: "Cultivation" },
-  { href: "/research-knowledge", label: "Research & Knowledge", short: "Research" },
-  { href: "/contact", label: "Contact", short: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/why-radhvan", label: "Why Radhvan" },
+  { href: "/cordyceps-study", label: "Cordyceps Study" },
+  { href: "/cultivation-training", label: "Cultivation & Training" },
+  { href: "/research-knowledge", label: "Research & Knowledge" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const GUIDES = [
@@ -68,23 +68,22 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           />
         </a>
 
-        <nav className="hidden flex-nowrap items-center gap-5 lg:flex xl:gap-7">
-          {NAV.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="whitespace-nowrap text-[0.72rem] font-bold tracking-[0.08em] text-muted-foreground uppercase transition-colors hover:text-ember xl:text-[0.8rem] xl:tracking-[0.1em]"
-            >
-              <span className="xl:hidden">{item.short}</span>
-              <span className="hidden xl:inline">{item.label}</span>
-            </a>
-          ))}
+        <nav className="hidden items-center gap-4 xl:gap-7 lg:flex">
+            NAV.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
+              >
+                {item.label}
+              </a>
+            ))
 
           <div className="relative">
             <button
               onClick={() => setGuidesOpen((v) => !v)}
               aria-expanded={guidesOpen}
-              className="flex items-center gap-1 whitespace-nowrap text-[0.72rem] font-bold tracking-[0.08em] text-muted-foreground uppercase transition-colors hover:text-ember xl:text-[0.8rem] xl:tracking-[0.1em]"
+              className="flex items-center gap-1 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase transition-colors hover:text-ember"
             >
               Resources
               <svg
@@ -155,7 +154,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
-            {NAV.map((item) => (
+            NAV.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -164,7 +163,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
               >
                 {item.label}
               </a>
-            ))}
+            ))
 
             <div className="border-b border-border/60 py-4">
               <p className="text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">
