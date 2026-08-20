@@ -167,9 +167,9 @@ export function Section({
 
 /* ---------------------------------------------------------- Quote block */
 
-export function QuoteBlock({ hindi, english }: { hindi: string; english: string }) {
+export function QuoteBlock({ hindi, english, variant = "page" }: { hindi: string; english: string; variant?: "home" | "page" }) {
   return (
-    <section className="bg-parchment pt-28 pb-3 lg:pt-32 lg:pb-4">
+    <section className={`bg-parchment py-3 lg:py-4 ${variant === "page" ? "pt-28 lg:pt-32" : ""}`}>
       <div className="mx-auto max-w-5xl px-6">
         <Reveal>
           <div className="quote-highlight">
