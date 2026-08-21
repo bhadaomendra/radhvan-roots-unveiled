@@ -155,7 +155,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[60] bg-background/98 backdrop-blur-2xl lg:hidden">
+        <div className="fixed inset-0 z-[60] flex flex-col bg-background/98 backdrop-blur-2xl lg:hidden">
           <div className="flex h-20 items-center justify-between px-4 sm:px-6">
             <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
               <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
