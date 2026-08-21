@@ -84,7 +84,7 @@ function Index() {
       <main>
         <Hero />
         <QuoteBlock
-          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Add or verify the correct viewport meta tag and responsive layout settings so the mobile navigation renders as intended in mobile browsers.\n\nDebug why the mobile menu button is still not appearing on my device by checking CSS breakpoints, z-index, and overlay stacking order."
+          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            first page quote ko revert karo vo hindi wali hi rakhni hai jo pahle thi"
           english="Every beginning hides a possibility."
           variant="home"
         />
