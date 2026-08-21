@@ -84,7 +84,7 @@ function Index() {
       <main>
         <Hero />
         <QuoteBlock
-          hindi= “हर शुरुआत में एक संभावना छिपी होती है।” 
+          hindi="हर शुरुआत में एक संभावना छिपी होती है।"
           english="Every beginning hides a possibility."
           variant="home"
         />
