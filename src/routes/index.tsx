@@ -1,22 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, Hero } from "@/components/site/Hero";
-import { QuoteBlock } from "@/components/site/Layout";
+import { QuoteBlock, SectionPreview } from "@/components/site/Layout";
 import {
-  WhatIsCordyceps,
-  WhyUnique,
-  Compounds,
-  Evidence,
-  Process,
-  Research,
   About,
-  WhyRadhvan,
   FutureRange,
   FAQ,
   Newsletter,
   ContactCTA,
   Footer,
 } from "@/components/site/Sections";
-import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
 const BASE_URL = "https://radhvanorigins.com";
 const TITLE = "Radhvan Origins | Reliable Cordyceps Cultivation & Training";
@@ -88,16 +80,56 @@ function Index() {
           english="Every beginning hides a possibility."
           variant="home"
         />
-        <WhatIsCordyceps />
-        <WhyUnique />
-        <Sinensis />
-        <Compounds />
-        <Applications />
-        <Evidence />
-        <Process />
-        <Research />
+        <SectionPreview
+          eyebrow="Chapter one"
+          title={
+            <>
+              What Cordyceps
+              <span className="italic text-ember"> actually is</span>
+            </>
+          }
+          intro="A genus of ascomycete fungi grown today on sterile plant-based substrate. Learn its lifecycle, how it compares to the wild Himalayan species, and what makes it different."
+          to="/cordyceps-study"
+          cta="Explore the study"
+        />
+        <SectionPreview
+          eyebrow="Chapter two · five"
+          title={
+            <>
+              How it's grown
+              <span className="italic text-ember"> — and why it's unique</span>
+            </>
+          }
+          intro="Six controlled stages, from spore to verified powder — no wild harvest, nothing rushed."
+          to="/cultivation-training"
+          cta="See the process"
+          tone="dark"
+        />
+        <SectionPreview
+          eyebrow="Chapter three · four · six"
+          title={
+            <>
+              The compounds, the evidence
+              <span className="italic text-ember"> and the research</span>
+            </>
+          }
+          intro="Cordycepin, adenosine and β-glucans — with an honest, graded look at what human evidence actually supports so far."
+          to="/research-knowledge"
+          cta="View the research"
+        />
         <About />
-        <WhyRadhvan />
+        <SectionPreview
+          eyebrow="Chapter eight"
+          title={
+            <>
+              Why <span className="italic text-ember">Radhvan?</span>
+            </>
+          }
+          intro="From your first question to your first harvest — how we help you understand the journey, one step at a time."
+          to="/why-radhvan"
+          cta="Read our story"
+          tone="dark"
+        />
         <FutureRange />
         <FAQ />
         <Newsletter />
