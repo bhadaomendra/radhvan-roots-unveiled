@@ -18,6 +18,67 @@ export function PageShell({ children }: { children: ReactNode }) {
   );
 }
 
+/* ----------------------------------------------------- Section preview */
+
+export function SectionPreview({
+  eyebrow,
+  title,
+  intro,
+  to,
+  cta = "Read more",
+  tone = "light",
+}: {
+  eyebrow: string;
+  title: ReactNode;
+  intro: string;
+  to: string;
+  cta?: string;
+  tone?: "light" | "dark";
+}) {
+  const dark = tone === "dark";
+  return (
+    <section
+      className={`mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28 ${
+        dark ? "border-y border-border" : ""
+      }`}
+      style={dark ? { background: "#241708" } : undefined}
+    >
+      <Reveal>
+        <div className="mx-auto max-w-2xl text-center">
+          <p className={`eyebrow ${dark ? "text-[color:var(--ember)]" : ""}`}>
+            {eyebrow}
+          </p>
+          <h2
+            className={`mt-5 font-display text-[clamp(1.7rem,3.4vw,2.6rem)] leading-[1.05] ${
+              dark ? "text-parchment" : "text-bark"
+            }`}
+          >
+            {title}
+          </h2>
+          <p
+            className={`mt-5 text-base leading-relaxed ${
+              dark ? "text-parchment/65" : "text-muted-foreground"
+            }`}
+          >
+            {intro}
+          </p>
+          <Link
+            to={to}
+            className={`mt-8 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-xs font-bold tracking-[0.16em] uppercase transition-transform duration-300 hover:-translate-y-0.5 ${
+              dark
+                ? "bg-ember text-primary-foreground"
+                : "bg-forest text-accent-foreground"
+            }`}
+          >
+            {cta}
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
 /* ---------------------------------------------------------- Breadcrumbs */
 
 export type Crumb = { label: string; to?: string };
