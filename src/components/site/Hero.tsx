@@ -65,7 +65,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             alt="Radhvan — Rooted in values, Growing with Vision"
             width={1353}
             height={408}
-            className="h-20 w-auto object-contain sm:h-24 lg:h-28"
+            className="h-12 w-auto object-contain sm:h-20 lg:h-28"
           />
         </Link>
 
@@ -133,7 +133,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           <Link
             to="/contact"
             hash="newsletter"
-            className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:px-6 sm:py-3.5 sm:text-[0.8rem] sm:tracking-[0.12em]"
+            className="hidden shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:inline-flex sm:px-6 sm:py-3.5 sm:text-[0.8rem] sm:tracking-[0.12em]"
           >
             Join the list
           </Link>
