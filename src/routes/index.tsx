@@ -84,7 +84,7 @@ function Index() {
       <main>
         <Hero />
         <QuoteBlock
-          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Show me exactly where the homepage code is in my Git repository (file path and branch/commit)."
+          hindi= “हर शुरुआत में एक संभावना छिपी होती है।” 
           english="Every beginning hides a possibility."
           variant="home"
         />
