@@ -155,46 +155,63 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background/95 backdrop-blur-xl lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col px-6 py-4">
-            {NAV.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
-                activeProps={{ className: "text-ember" }}
-              >
-                {item.label}
-              </Link>
-            ))}
-
-            <div className="border-b border-border/60 py-4">
-              <p className="text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">
-                Resources
-              </p>
-              <div className="mt-4 flex flex-col gap-4">
-                {GUIDES.map((g) => (
-                  <Link
-                    key={g.to}
-                    to={g.to}
-                    onClick={() => setOpen(false)}
-                    className="text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground transition-colors hover:text-ember uppercase"
-                  >
-                    {g.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <Link
-              to="/contact"
-              hash="newsletter"
-              onClick={() => setOpen(false)}
-              className="py-4 text-[0.8rem] font-bold tracking-[0.1em] text-muted-foreground uppercase"
-            >
-              Join the list
+        <div className="fixed inset-0 z-50 bg-background/98 backdrop-blur-2xl lg:hidden">
+          <div className="flex h-24 items-center justify-between px-4">
+            <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
+              <img src={logo} alt="Radhvan" className="h-16 w-auto object-contain" />
             </Link>
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+              className="rounded-full border border-border p-2.5"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+
+          <nav className="flex h-[calc(100vh-6rem)] flex-col justify-center px-8 pb-12">
+            <div className="flex flex-col gap-6">
+              {NAV.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="text-2xl font-display text-bark transition-colors hover:text-ember"
+                  activeProps={{ className: "text-ember" }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              
+              <div className="mt-8 border-t border-border pt-8">
+                <p className="text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase mb-4">
+                  Resources
+                </p>
+                <div className="grid grid-cols-1 gap-4">
+                  {GUIDES.map((g) => (
+                    <Link
+                      key={g.to}
+                      to={g.to}
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-display text-bark/70 hover:text-ember"
+                    >
+                      {g.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                to="/contact"
+                hash="newsletter"
+                onClick={() => setOpen(false)}
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-forest px-8 py-4 text-sm font-bold tracking-[0.1em] text-accent-foreground uppercase"
+              >
+                Join the list
+              </Link>
+            </div>
           </nav>
         </div>
       )}
