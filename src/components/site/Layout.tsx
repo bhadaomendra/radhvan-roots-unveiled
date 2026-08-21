@@ -186,7 +186,7 @@ export function QuoteBlock({
             <blockquote className="mt-4">
               <p
                 lang="hi"
-                className="font-display text-[clamp(1.1rem,2.5vw,1.6rem)] leading-relaxed text-ember"
+                className="font-display italic text-[clamp(1.1rem,2.5vw,1.6rem)] leading-relaxed text-ember"
               >
                 {hindi}
               </p>
