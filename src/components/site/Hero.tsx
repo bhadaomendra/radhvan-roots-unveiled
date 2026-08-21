@@ -207,7 +207,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                 to="/contact"
                 hash="newsletter"
                 onClick={() => setOpen(false)}
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-forest px-8 py-4 text-sm font-bold tracking-[0.1em] text-accent-foreground uppercase"
+                className="mt-10 inline-flex items-center justify-center rounded-full bg-forest px-8 py-4 text-sm font-bold tracking-[0.16em] text-accent-foreground uppercase transition-transform active:scale-95"
               >
                 Join the list
               </Link>
