@@ -140,7 +140,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
-            className="shrink-0 rounded-full border border-border p-2.5 lg:hidden"
+            className="relative z-[60] shrink-0 rounded-full border border-border p-2.5 lg:hidden"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
               <path
