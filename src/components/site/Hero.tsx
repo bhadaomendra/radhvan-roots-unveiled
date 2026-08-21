@@ -140,7 +140,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           <button
             onClick={() => setOpen(true)}
             aria-label="Toggle navigation"
-            className="relative z-[60] flex shrink-0 items-center justify-center rounded-full border border-border p-2.5 bg-background/50 backdrop-blur-sm lg:hidden"
+            className="relative z-[60] flex shrink-0 items-center justify-center rounded-full border border-border p-2.5 bg-background shadow-md lg:hidden"
           >
             <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
               <path
@@ -155,7 +155,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[60] flex flex-col bg-background/98 backdrop-blur-2xl lg:hidden">
+        <div className="fixed inset-0 z-[100] flex flex-col bg-background/98 backdrop-blur-2xl lg:hidden">
           <div className="flex h-20 items-center justify-between px-4 sm:px-6">
             <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
               <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
