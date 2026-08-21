@@ -138,13 +138,13 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             Join the list
           </Link>
           <button
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpen(true)}
             aria-label="Toggle navigation"
-            className="relative z-[60] shrink-0 rounded-full border border-border p-2.5 flex lg:hidden items-center justify-center bg-background/50 backdrop-blur-sm"
+            className="relative z-[60] flex shrink-0 items-center justify-center rounded-full border border-border p-2.5 bg-background/50 backdrop-blur-sm lg:hidden"
           >
             <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
               <path
-                d={open ? "M3 3l10 10M13 3L3 13" : "M2 4h12M2 8h12M2 12h12"}
+                d="M2 4h12M2 8h12M2 12h12"
                 stroke="currentColor"
                 strokeWidth="1.8"
                 strokeLinecap="round"
