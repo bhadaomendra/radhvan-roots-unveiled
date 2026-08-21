@@ -11,8 +11,8 @@ function CordycepsStudyPage() {
   return (
     <PageShell>
       <QuoteBlock
-        hindi="राधवन हमारे लिए सिर्फ एक नाम नहीं, एक एहसास है—एक शुरुआत, जो दिल से हुई है। हम इस सफर पर अपनी ऐसी पहचान बनाने निकले हैं, जिस पर आने वाला कल गर्व कर सके।"
-        english="Radhvan is not just a name for us, it is a feeling—a beginning that started from the heart. We have set out to create an identity on this journey that the future can be proud of."
+        hindi="प्रकृति को समझना, उसकी गहराई को जानने की पहली सीढ़ी है।"
+        english="Understanding nature is the first step to knowing its depth."
       />
       <WhatIsCordyceps />
       <Sinensis />

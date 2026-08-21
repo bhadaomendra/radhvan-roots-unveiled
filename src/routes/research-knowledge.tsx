@@ -11,8 +11,8 @@ function ResearchKnowledgePage() {
   return (
     <PageShell>
       <QuoteBlock
-        hindi="राधवन हमारे लिए सिर्फ एक नाम नहीं, एक एहसास है—एक शुरुआत, जो दिल से हुई है। हम इस सफर पर अपनी ऐसी पहचान बनाने निकले हैं, जिस पर आने वाला कल गर्व कर सके।"
-        english="Radhvan is not just a name for us, it is a feeling—a beginning that started from the heart. We have set out to create an identity on this journey that the future can be proud of."
+        hindi="सीखा हुआ ज्ञान तब और बड़ा होता है, जब वह आगे बढ़ता है।"
+        english="Learned knowledge grows even more when it is passed forward."
       />
       <Compounds />
       <Applications />

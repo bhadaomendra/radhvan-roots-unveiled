@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, Hero } from "@/components/site/Hero";
+import { QuoteBlock } from "@/components/site/Layout";
 import {
   WhatIsCordyceps,
   WhyUnique,
@@ -82,6 +83,11 @@ function Index() {
       <SiteNav />
       <main>
         <Hero />
+        <QuoteBlock
+          hindi="हर शुरुआत में एक संभावना छिपी होती है।"
+          english="Every beginning hides a possibility."
+          variant="home"
+        />
         <WhatIsCordyceps />
         <WhyUnique />
         <Sinensis />
