@@ -10,8 +10,8 @@ function CultivationTrainingPage() {
   return (
     <PageShell>
       <QuoteBlock
-        hindi="राधवन हमारे लिए सिर्फ एक नाम नहीं, एक एहसास है—एक शुरुआत, जो दिल से हुई है। हम इस सफर पर अपनी ऐसी पहचान बनाने निकले हैं, जिस पर आने वाला कल गर्व कर सके।"
-        english="Radhvan is not just a name for us, it is a feeling—a beginning that started from the heart. We have set out to create an identity on this journey that the future can be proud of."
+        hindi="उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समझ का अभ्यास है।"
+        english="Cultivation is not just a process, it is a practice of patience and understanding."
       />
       <WhyUnique />
       <Process />
