@@ -84,7 +84,7 @@ function Index() {
       <main>
         <Hero />
         <QuoteBlock
-          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            remove karna hai pura box hi"
+          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            ''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\\n \\n \\n remove karna hai pura box hi\n\nEvery beginning hides a possibility. \niski jagah yaha par “हर शुरुआत में एक संभावना छिपी होती है।” ye likhna hai"
           english="Every beginning hides a possibility."
           variant="home"
         />
