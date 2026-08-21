@@ -10,8 +10,8 @@ function WhyRadhvanPage() {
   return (
     <PageShell>
       <QuoteBlock
-        hindi="मूल्यों में निहित, दृष्टि के साथ बढ़ रहा है"
-        english="Rooted in values, Growing with Vision"
+        hindi="राधवन हमारे लिए सिर्फ एक नाम नहीं, एक एहसास है—एक शुरुआत, जो दिल से हुई है। हम इस सफर पर अपनी ऐसी पहचान बनाने निकले हैं, जिस पर आने वाला कल गर्व कर सके।"
+        english="Radhvan is not just a name for us, it is a feeling—a beginning that started from the heart. We have set out to create an identity on this journey that the future can be proud of."
       />
       <WhyRadhvan />
     </PageShell>
