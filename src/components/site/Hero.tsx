@@ -65,7 +65,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             alt="Radhvan — Rooted in values, Growing with Vision"
             width={1353}
             height={408}
-            className="h-12 w-auto object-contain sm:h-20 lg:h-28"
+            className="h-16 w-auto object-contain sm:h-20 lg:h-28"
           />
         </Link>
 
