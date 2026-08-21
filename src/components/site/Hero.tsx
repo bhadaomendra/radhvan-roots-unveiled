@@ -49,7 +49,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 overflow-visible ${
         scrolled
           ? "border-b border-border/70 bg-background/85 backdrop-blur-xl"
           : "border-b border-transparent"
@@ -140,7 +140,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
-            className="shrink-0 rounded-full border border-border p-2.5 lg:hidden"
+            className="relative z-[60] shrink-0 rounded-full border border-border p-2.5 lg:hidden"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
               <path
@@ -155,18 +155,18 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-background/98 backdrop-blur-2xl lg:hidden">
-          <div className="flex h-24 items-center justify-between px-4">
+        <div className="fixed inset-0 z-[60] bg-background/98 backdrop-blur-2xl lg:hidden">
+          <div className="flex h-20 items-center justify-between px-4 sm:px-6">
             <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
-              <img src={logo} alt="Radhvan" className="h-16 w-auto object-contain" />
+              <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
             </Link>
             <button
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className="rounded-full border border-border p-2.5"
+              className="rounded-full border border-border p-2.5 bg-background shadow-sm"
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+              <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
               </svg>
             </button>
           </div>
