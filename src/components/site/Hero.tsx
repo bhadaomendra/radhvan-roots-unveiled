@@ -171,7 +171,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             </button>
           </div>
 
-          <nav className="flex h-[calc(100vh-6rem)] flex-col justify-center px-8 pb-12">
+          <nav className="flex flex-1 flex-col overflow-y-auto px-8 py-10">
             <div className="flex flex-col gap-6">
               {NAV.map((item) => (
                 <Link
