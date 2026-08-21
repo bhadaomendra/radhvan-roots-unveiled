@@ -49,7 +49,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 overflow-visible ${
         scrolled
           ? "border-b border-border/70 bg-background/85 backdrop-blur-xl"
           : "border-b border-transparent"
