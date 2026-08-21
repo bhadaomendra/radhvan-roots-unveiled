@@ -853,7 +853,13 @@ export function Newsletter() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                if (email.includes("@")) setDone(true);
+                if (email.includes("@")) {
+                  const { pushEvent } = import.meta.glob('../lib/datalayer.ts', { eager: true })['../lib/datalayer.ts'] as any;
+                  if (pushEvent) {
+                    pushEvent("form_submit", { form_name: "newsletter" });
+                  }
+                  setDone(true);
+                }
               }}
               className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row"
             >
