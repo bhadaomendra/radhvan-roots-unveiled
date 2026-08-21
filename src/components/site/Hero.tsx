@@ -155,7 +155,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[60] bg-background/98 backdrop-blur-2xl lg:hidden">
+        <div className="fixed inset-0 z-[60] flex flex-col bg-background/98 backdrop-blur-2xl lg:hidden">
           <div className="flex h-20 items-center justify-between px-4 sm:px-6">
             <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
               <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
@@ -171,7 +171,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
             </button>
           </div>
 
-          <nav className="flex h-[calc(100vh-6rem)] flex-col justify-center px-8 pb-12">
+          <nav className="flex flex-1 flex-col overflow-y-auto px-8 py-10">
             <div className="flex flex-col gap-6">
               {NAV.map((item) => (
                 <Link
@@ -207,7 +207,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                 to="/contact"
                 hash="newsletter"
                 onClick={() => setOpen(false)}
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-forest px-8 py-4 text-sm font-bold tracking-[0.1em] text-accent-foreground uppercase"
+                className="mt-10 inline-flex items-center justify-center rounded-full bg-forest px-8 py-4 text-sm font-bold tracking-[0.16em] text-accent-foreground uppercase transition-transform active:scale-95"
               >
                 Join the list
               </Link>
