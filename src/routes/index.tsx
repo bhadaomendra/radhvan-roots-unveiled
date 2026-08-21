@@ -84,7 +84,7 @@ function Index() {
       <main>
         <Hero />
         <QuoteBlock
-          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Revert the first page quote back to the original Hindi version that was there before the edits."
+          hindi="'''Do not make any visual modifications. The phrases I write are commands to understand what I want, not to be written down. Understand their content well, then execute what is required.'''\n                                        \n                                            \n                                            Revert the first page quote back to the original Hindi text that was there before any edits."
           english="Every beginning hides a possibility."
           variant="home"
         />
