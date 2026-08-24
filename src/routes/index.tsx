@@ -5,7 +5,6 @@ import {
   About,
   FutureRange,
   FAQ,
-  Newsletter,
   ContactCTA,
   Footer,
 } from "@/components/site/Sections";
@@ -132,7 +131,6 @@ function Index() {
         />
         <FutureRange />
         <FAQ />
-        <Newsletter />
         <ContactCTA />
       </main>
       <Footer />
