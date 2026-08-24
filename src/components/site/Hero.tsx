@@ -6,9 +6,9 @@ import heroImage from "@/assets/hero-cordyceps.jpg";
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/why-radhvan", label: "Why Radhvan" },
-  { to: "/cordyceps-study", label: "Study" },
-  { to: "/cultivation-training", label: "Cultivation" },
-  { to: "/research-knowledge", label: "Research" },
+  { to: "/cordyceps-study", label: "Cordyceps Study" },
+  { to: "/cultivation-training", label: "Cultivation & Training" },
+  { to: "/research-knowledge", label: "Research & Knowledge" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -130,13 +130,6 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
-          <Link
-            to="/contact"
-            hash="newsletter"
-            className="hidden shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2.5 text-[0.75rem] font-bold tracking-[0.1em] text-accent-foreground uppercase transition-transform duration-300 hover:-translate-y-0.5 sm:inline-flex sm:px-6 sm:py-3.5 sm:text-[0.8rem] sm:tracking-[0.12em]"
-          >
-            Join the list
-          </Link>
           <button
             onClick={() => setOpen(true)}
             aria-label="Toggle navigation"
@@ -202,15 +195,6 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
                   ))}
                 </div>
               </div>
-
-              <Link
-                to="/contact"
-                hash="newsletter"
-                onClick={() => setOpen(false)}
-                className="mt-10 inline-flex items-center justify-center rounded-full bg-forest px-8 py-4 text-sm font-bold tracking-[0.16em] text-accent-foreground uppercase transition-transform active:scale-95"
-              >
-                Join the list
-              </Link>
             </div>
           </nav>
         </div>
