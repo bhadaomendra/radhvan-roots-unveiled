@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import {
   IconStroma,
@@ -939,15 +940,78 @@ export function ContactCTA() {
 }
 
 export function Footer() {
-
   return (
-    <footer className="bg-[#1b1005] px-6 py-12 lg:px-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-        <div className="flex items-center gap-3">
-          <span className="font-display text-sm text-parchment/80">
-            Radhvan Origins — Welcome. Together.
-          </span>
+    <footer className="bg-[#1b1005] px-6 pt-16 pb-8 lg:px-10 lg:pt-20">
+      <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div>
+          <img
+            src={logo}
+            alt="Radhvan — Rooted in values, Growing with Vision"
+            className="h-14 w-auto object-contain"
+          />
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-parchment/55">
+            Rooted in values, Growing with Vision.
+          </p>
         </div>
+
+        <div>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-parchment/40 uppercase">
+            Explore
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment/60">
+            <li><Link to="/" className="transition-colors hover:text-ember">Home</Link></li>
+            <li><Link to="/cordyceps-study" className="transition-colors hover:text-ember">Cordyceps Study</Link></li>
+            <li><Link to="/cultivation-training" className="transition-colors hover:text-ember">Cultivation &amp; Training</Link></li>
+            <li><Link to="/research-knowledge" className="transition-colors hover:text-ember">Research &amp; Knowledge</Link></li>
+            <li><Link to="/why-radhvan" className="transition-colors hover:text-ember">Why Radhvan</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-parchment/40 uppercase">
+            Guides
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment/60">
+            <li><Link to="/cordyceps-vs-sinensis" className="transition-colors hover:text-ember">Militaris vs Sinensis</Link></li>
+            <li><Link to="/cordyceps-health-benefits" className="transition-colors hover:text-ember">Health Benefits</Link></li>
+            <li><Link to="/cordycepin" className="transition-colors hover:text-ember">Cordycepin</Link></li>
+            <li><Link to="/cordyceps-faq" className="transition-colors hover:text-ember">FAQ</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-parchment/40 uppercase">
+            Get in touch
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment/60">
+            <li>
+              <a href="mailto:info@radhvanorigins.com" className="transition-colors hover:text-ember">
+                info@radhvanorigins.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/919950091528"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-ember"
+              >
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <Link to="/contact" className="transition-colors hover:text-ember">
+                Contact page
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-14 flex max-w-7xl flex-col items-center gap-4 border-t border-parchment/10 pt-6 text-center sm:flex-row sm:justify-between sm:text-left">
+        <span className="font-display text-sm text-parchment/60">
+          Radhvan Origins — Welcome. Together.
+        </span>
         <p className="max-w-md text-[0.68rem] leading-relaxed text-parchment/35">
           Educational content only. Not medical advice. © {new Date().getFullYear()}{" "}
           Radhvan Origins.
