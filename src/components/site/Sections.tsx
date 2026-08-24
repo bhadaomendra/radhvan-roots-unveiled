@@ -944,14 +944,13 @@ export function Footer() {
     <footer className="bg-[#1b1005] px-6 pt-16 pb-8 lg:px-10 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
-          <img
-            src={logo}
-            alt="Radhvan — Rooted in values, Growing with Vision"
-            className="h-14 w-auto object-contain"
-          />
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-parchment/55">
-            Rooted in values, Growing with Vision.
-          </p>
+          <div className="inline-block rounded-2xl bg-parchment px-5 py-4 shadow-sm">
+            <img
+              src={logo}
+              alt="Radhvan — Rooted in values, Growing with Vision"
+              className="h-14 w-auto object-contain"
+            />
+          </div>
         </div>
 
         <div>
