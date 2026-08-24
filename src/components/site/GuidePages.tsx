@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { SiteNav } from "./Hero";
-import { Newsletter, Footer, Compounds, Process, FAQ, ContactCTA } from "./Sections";
+import { Footer, Compounds, Process, FAQ, ContactCTA } from "./Sections";
 import { Link } from "@tanstack/react-router";
 import { Sinensis, Applications } from "./SinensisSections";
 
@@ -48,7 +48,6 @@ function PageShell({
     <div className="bg-background">
       <SiteNav variant={variant} />
       <main>{children}</main>
-      <Newsletter />
       <Footer />
     </div>
   );
