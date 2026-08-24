@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import { Reveal } from "./Reveal";
 import { SiteNav } from "./Hero";
 import { Link } from "@tanstack/react-router";
-import { Newsletter, Footer } from "./Sections";
+import { Footer } from "./Sections";
 import { BrandLeaves } from "./icons";
 
 /* ----------------------------------------------------------- Page shell */
@@ -12,7 +12,6 @@ export function PageShell({ children }: { children: ReactNode }) {
     <div className="bg-background">
       <SiteNav variant="page" />
       <main>{children}</main>
-      <Newsletter />
       <Footer />
     </div>
   );
