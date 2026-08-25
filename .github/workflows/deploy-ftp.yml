@@ -14,6 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2 # Fetch at least 2 commits to see changes
+
+      - name: Show Changed Files
+        run: |
+          echo "### 📄 Files changed in this commit:"
+          git diff --name-status HEAD^ HEAD
 
       - uses: oven-sh/setup-bun@v2
         with:
@@ -25,20 +32,54 @@ jobs:
       - name: Build static site
         run: bunx vite build --config vite.pages.config.ts
 
-      - name: Add SPA fallback (.htaccess)
+      - name: Add SPA fallback and clean URLs (.htaccess)
         run: |
+          echo "### 🛠️ Generating .htaccess..."
           cp dist/index.html dist/404.html || true
           rm -f dist/CNAME
           cat > dist/.htaccess <<'EOF'
           <IfModule mod_rewrite.c>
             RewriteEngine On
             RewriteBase /
+
+            # Enforce Primary Domain (radhvanorigins.com) and HTTPS
+            RewriteCond %{HTTP_HOST} !^radhvanorigins\.com$ [NC,OR]
+            RewriteCond %{HTTPS} off
+            RewriteRule ^(.*)$ https://radhvanorigins.com/$1 [L,R=301]
+
             RewriteRule ^index\.html$ - [L]
+
+            # Clean URLs: serve .html file when a matching one exists
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteCond %{REQUEST_FILENAME}.html -f
+            RewriteRule ^(.*)$ $1.html [L]
+
+            # SPA fallback for everything else
             RewriteCond %{REQUEST_FILENAME} !-f
             RewriteCond %{REQUEST_FILENAME} !-d
             RewriteRule . /index.html [L]
           </IfModule>
+
+          # Cache-busting strategy for static HTML files
+          <IfModule mod_expires.c>
+            ExpiresActive On
+            ExpiresByType text/html "access plus 0 seconds"
+          </IfModule>
+
+          <IfModule mod_headers.c>
+            <FilesMatch "\.(html|htm|xml|json)$">
+              Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+              Header set Pragma "no-cache"
+              Header set Expires "0"
+            </FilesMatch>
+            <FilesMatch "\.(js|css|jpg|jpeg|png|gif|ico|svg|woff|woff2)$">
+              Header set Cache-Control "max-age=31536000, public"
+            </FilesMatch>
+          </IfModule>
           EOF
+          echo "Generated .htaccess rules:"
+          cat dist/.htaccess
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -50,3 +91,4 @@ jobs:
           protocol: ftps
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_DIR }}
+          log-level: verbose # Increased logging for FTP status

@@ -1,0 +1,19 @@
+# Radhvan Origins
+
+> An educational study of Cordyceps militaris: its biology, key compounds (cordycepin, adenosine), evidence-based research, and lab cultivation.
+
+Radhvan Origins is a cultivation and education studio. We grow Cordyceps militaris in a controlled lab and explain the science plainly — without overclaiming.
+
+## Pages
+
+- [/](/): The Cordyceps Study — home page with a cinematic overview of the fungus, its compounds, research highlights and future range.
+- [/cordyceps-vs-sinensis](/cordyceps-vs-sinensis): Cordyceps militaris vs Cordyceps sinensis — explains the difference between wild and cultivated species.
+- [/cordycepin](/cordycepin): Cordycepin explained — the nucleoside behind most Cordyceps research and how it is measured as a quality marker.
+- [/cordyceps-health-benefits](/cordyceps-health-benefits): Evidence-based health benefits — cancer cell studies, mood, blood pressure, skin and joint research directions.
+- [/cordyceps-cultivation](/cordyceps-cultivation): How Cordyceps militaris is cultivated in a controlled lab environment.
+- [/cordyceps-faq](/cordyceps-faq): Frequently asked questions about Cordyceps, cordycepin, safety, sourcing and product availability.
+
+## Optional
+
+- [/sitemap.xml](/sitemap.xml): XML sitemap for search engines.
+- [/robots.txt](/robots.txt): Robots instructions.

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import {
   IconStroma,
@@ -511,7 +512,7 @@ export function About() {
             width={1353}
             height={408}
             loading="lazy"
-            className="h-14 w-auto object-contain lg:h-16"
+            className="h-16 w-auto object-contain sm:h-20 lg:h-24"
           />
           <SectionHead
             eyebrow="Chapter seven"
@@ -561,7 +562,123 @@ export function About() {
   );
 }
 
-/* ---------------------------------------------------------------- Product */
+/* ---------------------------------------------------------------- Why Radhvan */
+
+export function WhyRadhvan() {
+  return (
+    <section id="why-radhvan" className="border-y border-border bg-secondary/50 py-24 lg:py-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <Reveal>
+          <SectionHead
+            eyebrow="Chapter eight"
+            title={
+              <>
+                Why{" "}
+                <span className="italic text-ember">Radhvan?</span>
+              </>
+            }
+            intro="From your first question to your first harvest — we help you understand the journey."
+            align="center"
+          />
+        </Reveal>
+
+        <div className="mt-14 grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+          <Reveal>
+            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+              <p>Starting something new usually begins with a simple question.</p>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {["How does it really work?", "What do I need to learn?", "Is this right for me?"].map((q) => (
+                  <p
+                    key={q}
+                    className="rounded-sm border border-border bg-card px-5 py-4 text-center font-display text-base text-bark"
+                  >
+                    {q}
+                  </p>
+                ))}
+              </div>
+              <p>
+                That is where we believe Radhvan can make a difference.
+              </p>
+              <p>
+                At Radhvan Origins, we are building a place where people can{" "}
+                <strong className="text-bark">learn, ask questions, understand the process, and make informed decisions</strong>{" "}
+                about Cordyceps cultivation.
+              </p>
+              <p>
+                We don't believe in making the journey sound easier than it really is. We believe in understanding it properly — one step at a time.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <div className="space-y-px overflow-hidden rounded-sm bg-border">
+              {[
+                [
+                  "Learn Before You Invest",
+                  "Cordyceps cultivation involves knowledge, controlled conditions, patience and attention to detail. Before investing in a lab, equipment or production setup, we believe it is important to understand what you are getting into. Our aim is to help you learn the basics, understand the requirements and explore the possibilities before you take that step.",
+                ],
+                [
+                  "Knowledge That Goes Beyond Theory",
+                  "Reading about Cordyceps is one thing. Understanding how the process works is another. We focus on practical knowledge, research-based information and real cultivation insights — from the basics of cultivation and environmental control to harvesting and post-harvest practices.",
+                ],
+                [
+                  "Honest About the Opportunity — And the Challenges",
+                  "Cordyceps is an exciting field, but it is not a shortcut to success. There are things to learn, mistakes to avoid and challenges to understand. We would rather tell you what we know, acknowledge what we don't, and let you make your own decision.",
+                ],
+              ].map(([title, body]) => (
+                <div key={title} className="bg-card p-8">
+                  <h3 className="font-display text-lg text-bark">{title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            [
+              "A Place to Ask, Learn & Explore",
+              "You may be completely new to Cordyceps. You may already be researching cultivation. Or you may be thinking about setting up your own unit. Wherever you are in that journey, Radhvan Origins is being built as a place where you can find information, explore learning opportunities and take your next step with greater clarity.",
+            ],
+            [
+              "We Are Learning Too",
+              "We don't want to present ourselves as having all the answers. We are learning, researching, experimenting and growing along the way. And we believe there is something valuable about building a community where questions are welcome, knowledge is shared and learning never stops.",
+            ],
+            [
+              "Our Belief",
+              "We don't just want to grow Cordyceps. We want to grow knowledge, confidence and possibilities. Because every journey starts with a question. And sometimes that question is simply: 'Can I do this?' We want to help you understand the answer.",
+            ],
+          ].map(([title, body], i) => (
+            <Reveal key={title} delay={i * 70}>
+              <article className="grain flex h-full flex-col rounded-sm border border-border bg-card p-7">
+                <BrandLeaves className="h-8 w-12" />
+                <h3 className="mt-6 font-display text-xl text-bark">{title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{body}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={120}>
+          <div className="mt-16 rounded-sm border border-border bg-card p-10 text-center lg:p-16">
+            <h3 className="font-display text-2xl text-bark lg:text-3xl">
+              From your first question to your first harvest —
+              <span className="italic text-ember"> we want to help you understand the journey.</span>
+            </h3>
+            <p className="mt-4 text-sm font-bold tracking-[0.15em] text-muted-foreground uppercase">
+              Radhvan Origins
+            </p>
+            <p className="mt-2 text-sm tracking-wide text-ember">
+              Learn. Understand. Cultivate. Grow.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 
 const PRODUCTS = [
   ["Whole fruiting body", "Dried orange stroma, intact and gradeable by eye.", "In cultivation"],
@@ -576,10 +693,11 @@ export function FutureRange() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <SectionHead
-            eyebrow="Chapter eight"
+            eyebrow="Chapter nine"
             title={
               <>
                 The range
+
                 <span className="italic text-ember"> we are building</span>
               </>
             }
@@ -645,7 +763,7 @@ export function FAQ() {
     <section id="faq" className="mx-auto max-w-4xl px-6 py-24 lg:py-36">
       <Reveal>
         <SectionHead
-          eyebrow="Chapter nine"
+            eyebrow="Chapter ten"
           title={
             <>
               Questions,
@@ -736,7 +854,13 @@ export function Newsletter() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                if (email.includes("@")) setDone(true);
+                if (email.includes("@")) {
+                  const { pushEvent } = import.meta.glob('../lib/datalayer.ts', { eager: true })['../lib/datalayer.ts'] as any;
+                  if (pushEvent) {
+                    pushEvent("form_submit", { form_name: "newsletter" });
+                  }
+                  setDone(true);
+                }
               }}
               className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:flex-row"
             >
@@ -766,15 +890,127 @@ export function Newsletter() {
   );
 }
 
+export function ContactCTA() {
+  return (
+    <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
+      <Reveal>
+        <div className="rounded-sm border border-border bg-card p-10 text-center lg:p-20">
+          <SectionHead
+            align="center"
+            eyebrow="Connect with us"
+            title={
+              <>
+                Learn more or{" "}
+                <span className="italic text-ember">start your training</span>
+              </>
+            }
+          />
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground lg:text-lg">
+            Whether you are looking for deep technical research on Cordyceps or interested in our professional cultivation training, we are here to share our expertise.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
+            <a
+              href="mailto:info@radhvanorigins.com"
+              className="group flex items-center gap-3 text-sm font-bold tracking-[0.15em] text-bark uppercase transition-colors hover:text-ember"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-ember">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              info@radhvanorigins.com
+            </a>
+            <a
+              href="https://wa.me/919950091528" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 text-sm font-bold tracking-[0.15em] text-bark uppercase transition-colors hover:text-ember"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-ember">
+                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                <path d="M9.5 13c.5 1.5 2 2.5 4 2.5s3.5-1 4-2.5" />
+              </svg>
+              WhatsApp Connect
+            </a>
+          </div>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
 export function Footer() {
   return (
-    <footer className="bg-[#1b1005] px-6 py-12 lg:px-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
-        <div className="flex items-center gap-3">
-          <span className="font-display text-sm text-parchment/80">
-            Radhvan Origins — Welcome. Together.
-          </span>
+    <footer className="bg-[#1b1005] px-6 pt-16 pb-8 lg:px-10 lg:pt-20">
+      <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div>
+          <div className="inline-block rounded-2xl bg-parchment px-5 py-4 shadow-sm">
+            <img
+              src={logo}
+              alt="Radhvan — Rooted in values, Growing with Vision"
+              className="h-14 w-auto object-contain"
+            />
+          </div>
         </div>
+
+        <div>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-parchment/40 uppercase">
+            Explore
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment/60">
+            <li><Link to="/" className="transition-colors hover:text-ember">Home</Link></li>
+            <li><Link to="/cordyceps-study" className="transition-colors hover:text-ember">Cordyceps Study</Link></li>
+            <li><Link to="/cultivation-training" className="transition-colors hover:text-ember">Cultivation &amp; Training</Link></li>
+            <li><Link to="/research-knowledge" className="transition-colors hover:text-ember">Research &amp; Knowledge</Link></li>
+            <li><Link to="/why-radhvan" className="transition-colors hover:text-ember">Why Radhvan</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-parchment/40 uppercase">
+            Guides
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment/60">
+            <li><Link to="/cordyceps-vs-sinensis" className="transition-colors hover:text-ember">Militaris vs Sinensis</Link></li>
+            <li><Link to="/cordyceps-health-benefits" className="transition-colors hover:text-ember">Health Benefits</Link></li>
+            <li><Link to="/cordycepin" className="transition-colors hover:text-ember">Cordycepin</Link></li>
+            <li><Link to="/cordyceps-faq" className="transition-colors hover:text-ember">FAQ</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-parchment/40 uppercase">
+            Get in touch
+          </p>
+          <ul className="mt-5 space-y-3 text-sm text-parchment/60">
+            <li>
+              <a href="mailto:info@radhvanorigins.com" className="transition-colors hover:text-ember">
+                info@radhvanorigins.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/919950091528"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-ember"
+              >
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <Link to="/contact" className="transition-colors hover:text-ember">
+                Contact page
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-14 flex max-w-7xl flex-col items-center gap-4 border-t border-parchment/10 pt-6 text-center sm:flex-row sm:justify-between sm:text-left">
+        <span className="font-display text-sm text-parchment/60">
+          Radhvan Origins — Welcome. Together.
+        </span>
         <p className="max-w-md text-[0.68rem] leading-relaxed text-parchment/35">
           Educational content only. Not medical advice. © {new Date().getFullYear()}{" "}
           Radhvan Origins.
