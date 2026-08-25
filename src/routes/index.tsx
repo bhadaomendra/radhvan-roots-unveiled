@@ -15,9 +15,9 @@ import {
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
-const TITLE = "Radhvan Origins | Reliable Cordyceps Cultivation & Training";
+const TITLE = "Radhvan Origins | Cordyceps Research & Cultivation";
 const DESC =
-  "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey.";
+  "Radhvan Origins explores Cordyceps militaris through research, cultivation education and practical knowledge, with a focus on responsible and traceable cultivation.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "Radhvan, Radhvan Origins, Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordyceps training, cordycepin research, fungal biotechnology, Cordyceps training India" },
+      { name: "keywords", content: "Radhvan Origins, Cordyceps militaris, Cordyceps research, Cordyceps cultivation, Cordyceps India, lab grown cordyceps, fungal biotechnology" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: "https://radhvanorigins.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
+      { property: "og:image:alt", content: "Radhvan Origins | Cordyceps Research & Cultivation" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESC },
