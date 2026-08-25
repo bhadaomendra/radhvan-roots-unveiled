@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { FloatingContact } from "@/components/site/Layout";
 
 function NotFoundComponent() {
   return (
@@ -77,18 +78,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research" },
+      { title: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
+      { name: "description", content: "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey." },
       { name: "author", content: "Radhvan Origins" },
-      { name: "keywords", content: "Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordycepin research, cordyceps vs cordyceps sinensis, fungal biotechnology, Radhvan Origins" },
+      { name: "keywords", content: "Radhvan, Radhvan Origins, Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordyceps training, cordycepin research, fungal biotechnology" },
       { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://radhvanorigins.com/" },
+      { property: "og:title", content: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
+      { property: "og:description", content: "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey." },
       { property: "og:image", content: "https://radhvanorigins.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research" },
+      { property: "og:image:alt", content: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
+      { name: "twitter:description", content: "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey." },
       { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [
@@ -134,6 +140,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <FloatingContact />
     </QueryClientProvider>
   );
 }

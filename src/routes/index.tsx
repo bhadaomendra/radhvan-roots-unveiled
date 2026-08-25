@@ -15,9 +15,9 @@ import {
 } from "@/components/site/Sections";
 import { Sinensis, Applications } from "@/components/site/SinensisSections";
 
-const TITLE = "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research";
+const TITLE = "Radhvan Origins | Reliable Cordyceps Cultivation & Training";
 const DESC =
-  "Discover evidence-based research, chemical compounds (Cordycepin, Adenosine), and laboratory growth of Cordyceps militaris by Radhvan Origins.";
+  "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "Radhvan, Radhvan Origins, Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordycepin research, cordyceps vs cordyceps sinensis, fungal biotechnology, Cordyceps training India" },
+      { name: "keywords", content: "Radhvan, Radhvan Origins, Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordyceps training, cordycepin research, fungal biotechnology, Cordyceps training India" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: "https://radhvanorigins.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research" },
+      { property: "og:image:alt", content: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESC },
