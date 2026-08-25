@@ -55,13 +55,22 @@ export const Route = createFileRoute("/")({
               "logo": "https://radhvanorigins.com/og-image.png",
               "image": "https://radhvanorigins.com/og-image.png",
               "description": DESC,
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan",
+                "addressCountry": "IN"
+              },
+              "areaServed": ["Jaipur", "Rajasthan", "India", "Worldwide"],
               "sameAs": [
                 "https://www.instagram.com/radhvanorigins",
                 "https://www.linkedin.com/company/radhvanorigins"
               ],
               "knowsAbout": [
                 "Cordyceps militaris",
-                "Cordyceps Cultivation Training",
+                "Cordyceps Training in Jaipur",
+                "Best Cordyceps Training in Jaipur",
+                "Cordyceps Cultivation Jaipur Rajasthan",
                 "Cordyceps Farming India",
                 "Fungal Biotechnology",
                 "Cordycepin & Adenosine Content",
@@ -73,7 +82,7 @@ export const Route = createFileRoute("/")({
               "@type": "WebSite",
               "@id": "https://radhvanorigins.com/#website",
               "name": "Radhvan Origins",
-              "alternateName": ["Radhvan", "Radhvan Origins Studio"],
+              "alternateName": ["Radhvan", "Radhvan Origins Studio", "Radhvan Jaipur"],
               "url": "https://radhvanorigins.com",
               "publisher": {
                 "@id": "https://radhvanorigins.com/#organization"
@@ -81,8 +90,8 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Course",
-              "name": "Scientific Cordyceps Militaris Cultivation & Research Training",
-              "description": "Practical training, research-based knowledge and guidance for your cultivation journey.",
+              "name": "Cordyceps Militaris Cultivation & Research Training in Jaipur",
+              "description": "Practical training, research-based knowledge and guidance for your cultivation journey in Jaipur, Rajasthan.",
               "provider": {
                 "@id": "https://radhvanorigins.com/#organization"
               }

@@ -1003,6 +1003,9 @@ export function Footer() {
                 Contact page
               </Link>
             </li>
+            <li className="text-parchment/40 text-xs">
+              Jaipur, Rajasthan, India
+            </li>
           </ul>
         </div>
       </div>
