@@ -61,9 +61,12 @@ export const Route = createFileRoute("/")({
               ],
               "knowsAbout": [
                 "Cordyceps militaris",
+                "Cordyceps Cultivation Training",
+                "Cordyceps Farming India",
                 "Fungal Biotechnology",
-                "Cordycepin Extraction",
-                "Mycology Research"
+                "Cordycepin & Adenosine Content",
+                "Laboratory Mushroom Growth",
+                "Mycology Research & Spawn Lab"
               ]
             },
             {

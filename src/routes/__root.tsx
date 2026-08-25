@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Radhvan Origins | Reliable Cordyceps Cultivation & Training" },
       { name: "description", content: "Learn Cordyceps cultivation through practical training, research-based knowledge and guidance for your cultivation journey." },
       { name: "author", content: "Radhvan Origins" },
-      { name: "keywords", content: "Radhvan, Radhvan Origins, Cordyceps militaris, Cordyceps cultivation, lab grown cordyceps, cordyceps training, cordycepin research, fungal biotechnology" },
+      { name: "keywords", content: "Radhvan, Radhvan Origins, Cordyceps militaris, Cordyceps cultivation, Cordyceps training India, Cordyceps farming course, lab grown cordyceps, cordycepin research, Cordyceps spawn lab, cordyceps vs cordyceps sinensis, fungal biotechnology, commercial mushroom cultivation" },
       { name: "google-site-verification", content: "TOeuUC9K53wc-Yi2ceu98o_IP7JI0imwygi-ZtiSlqI" },
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
