@@ -84,7 +84,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Radhvan Origins" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://radhvanorigins.com/" },
+      { property: "og:image", content: "https://radhvanorigins.com/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Radhvan Origins — Scientific Cordyceps Militaris Cultivation & Research" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [
       { rel: "canonical", href: "https://radhvanorigins.com/" },
