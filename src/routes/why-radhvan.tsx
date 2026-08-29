@@ -32,15 +32,25 @@ export const Route = createFileRoute("/why-radhvan")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "AboutPage",
-          name: TITLE,
-          description: DESC,
-          mainEntity: {
-            "@type": "EducationalOrganization",
-            name: "Radhvan Origins",
-            url: "https://radhvanorigins.com/",
-            logo: "https://radhvanorigins.com/favicon.png",
-          },
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: TITLE,
+              description: DESC,
+              author: { "@type": "Organization", name: "Radhvan Origins" },
+              publisher: { "@type": "Organization", name: "Radhvan Origins" },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://radhvanorigins.com/why-radhvan",
+              },
+            },
+            {
+              "@type": "EducationalOrganization",
+              name: "Radhvan Origins",
+              url: "https://radhvanorigins.com/",
+              logo: "https://radhvanorigins.com/favicon.png",
+            },
+          ],
         }),
       },
     ],
