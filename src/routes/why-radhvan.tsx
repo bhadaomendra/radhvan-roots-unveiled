@@ -27,6 +27,23 @@ export const Route = createFileRoute("/why-radhvan")({
       { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://radhvanorigins.com/why-radhvan" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: TITLE,
+          description: DESC,
+          mainEntity: {
+            "@type": "EducationalOrganization",
+            name: "Radhvan Origins",
+            url: "https://radhvanorigins.com/",
+            logo: "https://radhvanorigins.com/favicon.png",
+          },
+        }),
+      },
+    ],
   }),
 });
 

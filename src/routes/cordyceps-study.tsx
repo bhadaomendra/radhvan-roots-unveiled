@@ -28,6 +28,23 @@ export const Route = createFileRoute("/cordyceps-study")({
       { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://radhvanorigins.com/cordyceps-study" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: TITLE,
+          description: DESC,
+          author: { "@type": "Organization", name: "Radhvan Origins" },
+          publisher: { "@type": "Organization", name: "Radhvan Origins" },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": "https://radhvanorigins.com/cordyceps-study",
+          },
+        }),
+      },
+    ],
   }),
 });
 

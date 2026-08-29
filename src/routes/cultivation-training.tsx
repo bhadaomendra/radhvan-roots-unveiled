@@ -27,6 +27,22 @@ export const Route = createFileRoute("/cultivation-training")({
       { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://radhvanorigins.com/cultivation-training" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: TITLE,
+          description: DESC,
+          provider: {
+            "@type": "Organization",
+            name: "Radhvan Origins",
+            sameAs: "https://radhvanorigins.com/",
+          },
+        }),
+      },
+    ],
   }),
 });
 
