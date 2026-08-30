@@ -53,11 +53,27 @@ function PageShell({
   );
 }
 
+
+function DirectAnswerCard({ title = "Direct Answer / Key Summary", children }: { title?: string; children: ReactNode }) {
+  return (
+    <div className="mt-8 rounded-lg border border-ember/30 bg-ember/5 p-5 text-bark shadow-sm max-w-3xl">
+      <div className="flex items-center gap-2 text-ember font-semibold text-xs uppercase tracking-wider">
+        <span className="inline-block h-2 w-2 rounded-full bg-ember animate-pulse" />
+        {title}
+      </div>
+      <div className="mt-2 text-sm leading-relaxed text-bark/90 font-medium">
+        {children}
+      </div>
+    </div>
+  );
+}
+
 function GuideHero({
   eyebrow,
   title,
   description,
   intro,
+  directAnswer,
   image,
   imageAlt,
 }: {
@@ -65,6 +81,7 @@ function GuideHero({
   title: ReactNode;
   description: string;
   intro?: string;
+  directAnswer?: ReactNode;
   image?: string;
   imageAlt?: string;
 }) {
@@ -90,6 +107,11 @@ function GuideHero({
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
             {intro}
           </p>
+        )}
+        {directAnswer && (
+          <DirectAnswerCard>
+            {directAnswer}
+          </DirectAnswerCard>
         )}
       </div>
     </section>
@@ -128,6 +150,7 @@ function GuidePage({
   title,
   description,
   intro,
+  directAnswer,
   image,
   imageAlt,
   children,
@@ -137,6 +160,7 @@ function GuidePage({
   title: ReactNode;
   description: string;
   intro?: string;
+  directAnswer?: ReactNode;
   image?: string;
   imageAlt?: string;
   children: ReactNode;
@@ -148,6 +172,7 @@ function GuidePage({
         title={title}
         description={description}
         intro={intro}
+        directAnswer={directAnswer}
         image={image}
         imageAlt={imageAlt}
       />
