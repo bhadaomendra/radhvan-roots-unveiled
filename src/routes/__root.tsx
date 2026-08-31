@@ -100,7 +100,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [
-      { rel: "canonical", href: "https://radhvanorigins.com/" },
+      // Note: no default canonical here — every route already defines its
+      // own correct canonical link, and having one here too caused every
+      // non-home page to render two <link rel="canonical"> tags (a real
+      // SEO duplicate-canonical issue).
       {
         rel: "stylesheet",
         href: appCss,
