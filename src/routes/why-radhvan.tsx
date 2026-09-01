@@ -50,6 +50,13 @@ export const Route = createFileRoute("/why-radhvan")({
               url: "https://radhvanorigins.com/",
               logo: "https://radhvanorigins.com/favicon.png",
             },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://radhvanorigins.com/" },
+                { "@type": "ListItem", position: 2, name: "Why Radhvan", item: "https://radhvanorigins.com/why-radhvan" }
+              ]
+            }
           ],
         }),
       },

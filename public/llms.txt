@@ -27,5 +27,6 @@ Radhvan Origins is a cultivation and education studio based in India. We grow Co
 
 ## Optional
 
+- [/llms-full.txt](/llms-full.txt): Complete detailed reference text of all research, cultivation guides and FAQ for AI models.
 - [/sitemap.xml](/sitemap.xml): XML sitemap for search engines.
 - [/robots.txt](/robots.txt): Robots instructions.

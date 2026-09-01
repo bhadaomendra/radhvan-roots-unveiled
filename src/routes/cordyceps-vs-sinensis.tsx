@@ -24,15 +24,35 @@ export const Route = createFileRoute("/cordyceps-vs-sinensis")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Article",
-          headline: "Cordyceps militaris vs Cordyceps sinensis",
-          description: DESC,
-          author: { "@type": "Organization", name: "Radhvan Origins" },
-          publisher: { "@type": "Organization", name: "Radhvan Origins" },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${BASE_URL}/cordyceps-vs-sinensis`,
-          },
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: "Cordyceps militaris vs Cordyceps sinensis",
+              description: DESC,
+              author: { "@type": "Organization", name: "Radhvan Origins" },
+              publisher: { "@type": "Organization", name: "Radhvan Origins" },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${BASE_URL}/cordyceps-vs-sinensis`,
+              },
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${BASE_URL}/cordyceps-vs-sinensis`,
+              "name": "Cordyceps militaris vs Cordyceps sinensis",
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".direct-answer-summary", "h1", "h2"]
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` },
+                { "@type": "ListItem", position: 2, name: "Militaris vs Sinensis", item: `${BASE_URL}/cordyceps-vs-sinensis` }
+              ]
+            }
+          ]
         }),
       },
     ],

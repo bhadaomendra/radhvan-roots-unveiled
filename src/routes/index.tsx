@@ -52,7 +52,8 @@ export const Route = createFileRoute("/")({
               "areaServed": ["Jaipur", "Rajasthan", "India", "Worldwide"],
               "sameAs": [
                 "https://www.instagram.com/radhvanorigins",
-                "https://www.linkedin.com/company/radhvanorigins"
+                "https://www.linkedin.com/company/radhvanorigins",
+                "https://en.wikipedia.org/wiki/Cordyceps_militaris"
               ],
               "knowsAbout": [
                 "Cordyceps militaris",

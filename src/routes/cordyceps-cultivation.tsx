@@ -24,15 +24,26 @@ export const Route = createFileRoute("/cordyceps-cultivation")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Article",
-          headline: "How Cordyceps militaris is cultivated in a lab",
-          description: DESC,
-          author: { "@type": "Organization", name: "Radhvan Origins" },
-          publisher: { "@type": "Organization", name: "Radhvan Origins" },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${BASE_URL}/cordyceps-cultivation`,
-          },
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: "How Cordyceps militaris is cultivated in a lab",
+              description: DESC,
+              author: { "@type": "Organization", name: "Radhvan Origins" },
+              publisher: { "@type": "Organization", name: "Radhvan Origins" },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${BASE_URL}/cordyceps-cultivation`,
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` },
+                { "@type": "ListItem", position: 2, name: "Cultivation", item: `${BASE_URL}/cordyceps-cultivation` }
+              ]
+            }
+          ]
         }),
       },
     ],
