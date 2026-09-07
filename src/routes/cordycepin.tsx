@@ -24,15 +24,35 @@ export const Route = createFileRoute("/cordycepin")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Article",
-          headline: "Cordycepin: the nucleoside behind Cordyceps",
-          description: DESC,
-          author: { "@type": "Organization", name: "Radhvan Origins" },
-          publisher: { "@type": "Organization", name: "Radhvan Origins" },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${BASE_URL}/cordycepin`,
-          },
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: "Cordycepin: the nucleoside behind Cordyceps",
+              description: DESC,
+              author: { "@type": "Organization", name: "Radhvan Origins" },
+              publisher: { "@type": "Organization", name: "Radhvan Origins" },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${BASE_URL}/cordycepin`,
+              },
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${BASE_URL}/cordycepin`,
+              "name": TITLE,
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".direct-answer-summary", "h1", "h2"]
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` },
+                { "@type": "ListItem", position: 2, name: "Cordycepin", item: `${BASE_URL}/cordycepin` }
+              ]
+            }
+          ]
         }),
       },
     ],

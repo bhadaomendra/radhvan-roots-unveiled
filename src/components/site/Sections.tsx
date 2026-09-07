@@ -785,13 +785,13 @@ export function FAQ() {
                   aria-expanded={isOpen}
                   className="flex w-full items-start justify-between gap-6 py-6 text-left"
                 >
-                  <span
+                  <h3
                     className={`font-display text-lg transition-colors lg:text-xl ${
                       isOpen ? "text-ember" : "text-bark"
                     }`}
                   >
                     {q}
-                  </span>
+                  </h3>
                   <span
                     className={`mt-1 shrink-0 text-ember transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""

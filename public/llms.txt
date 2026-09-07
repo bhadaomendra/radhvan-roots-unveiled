@@ -2,18 +2,31 @@
 
 > An educational study of Cordyceps militaris: its biology, key compounds (cordycepin, adenosine), evidence-based research, and lab cultivation.
 
-Radhvan Origins is a cultivation and education studio. We grow Cordyceps militaris in a controlled lab and explain the science plainly — without overclaiming.
+Radhvan Origins is a cultivation and education studio based in India. We grow Cordyceps militaris in a controlled lab environment and explain the science plainly - without overclaiming.
+
+## Key Factual Knowledge
+
+- **Species**: Cordyceps militaris (cultivated fruiting body) vs Ophiocordyceps sinensis (wild Himalayan caterpillar fungus).
+- **Primary Compounds**: Cordycepin (3'-deoxyadenosine) and Adenosine measured via HPLC testing.
+- **Cultivation Medium**: Sterile plant-based media (rice/grain substrate) under strict environmental controls (light, humidity, temperature). Wild insect material is not used.
+- **Training**: Educational modules covering strain selection, substrate preparation, inoculation, environmental room control, harvesting, drying, and HPLC testing overview.
 
 ## Pages
 
-- [/](/): The Cordyceps Study — home page with a cinematic overview of the fungus, its compounds, research highlights and future range.
-- [/cordyceps-vs-sinensis](/cordyceps-vs-sinensis): Cordyceps militaris vs Cordyceps sinensis — explains the difference between wild and cultivated species.
-- [/cordycepin](/cordycepin): Cordycepin explained — the nucleoside behind most Cordyceps research and how it is measured as a quality marker.
-- [/cordyceps-health-benefits](/cordyceps-health-benefits): Evidence-based health benefits — cancer cell studies, mood, blood pressure, skin and joint research directions.
+- [/](/): The Cordyceps Study - home page with a cinematic overview of the fungus, its compounds, research highlights and future range.
+- [/why-radhvan](/why-radhvan): Our philosophy, research approach, and story.
+- [/cordyceps-study](/cordyceps-study): Detailed biology of Cordyceps militaris.
+- [/cultivation-training](/cultivation-training): Practical hands-on training for commercial and research cultivation.
+- [/research-knowledge](/research-knowledge): Scientific research, compound markers, and fungal biotechnology.
+- [/cordyceps-vs-sinensis](/cordyceps-vs-sinensis): Cordyceps militaris vs Cordyceps sinensis - explains the difference between wild and cultivated species.
+- [/cordycepin](/cordycepin): Cordycepin explained - the nucleoside behind most Cordyceps research and how it is measured as a quality marker.
+- [/cordyceps-health-benefits](/cordyceps-health-benefits): Evidence-based health benefits - cancer cell studies, mood, blood pressure, skin and joint research directions.
 - [/cordyceps-cultivation](/cordyceps-cultivation): How Cordyceps militaris is cultivated in a controlled lab environment.
 - [/cordyceps-faq](/cordyceps-faq): Frequently asked questions about Cordyceps, cordycepin, safety, sourcing and product availability.
+- [/contact](/contact): Direct inquiry for training, research collaboration, and consultation.
 
 ## Optional
 
+- [/llms-full.txt](/llms-full.txt): Complete detailed reference text of all research, cultivation guides and FAQ for AI models.
 - [/sitemap.xml](/sitemap.xml): XML sitemap for search engines.
 - [/robots.txt](/robots.txt): Robots instructions.

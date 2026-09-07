@@ -1,19 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, Hero } from "@/components/site/Hero";
-import {
-  WhatIsCordyceps,
-  WhyUnique,
-  Compounds,
-  Evidence,
-  Process,
-  Research,
-  About,
-  FutureRange,
-  FAQ,
-  Newsletter,
-  Footer,
-} from "@/components/site/Sections";
-import { Sinensis, Applications } from "@/components/site/SinensisSections";
+import { SectionPreview, QuoteBlock } from "@/components/site/Layout";
+import { ContactCTA, Footer } from "@/components/site/Sections";
 
 const TITLE = "Radhvan Origins | Cordyceps Research & Cultivation";
 const DESC =
@@ -64,7 +52,8 @@ export const Route = createFileRoute("/")({
               "areaServed": ["Jaipur", "Rajasthan", "India", "Worldwide"],
               "sameAs": [
                 "https://www.instagram.com/radhvanorigins",
-                "https://www.linkedin.com/company/radhvanorigins"
+                "https://www.linkedin.com/company/radhvanorigins",
+                "https://en.wikipedia.org/wiki/Cordyceps_militaris"
               ],
               "knowsAbout": [
                 "Cordyceps militaris",
@@ -95,59 +84,6 @@ export const Route = createFileRoute("/")({
               "provider": {
                 "@id": "https://radhvanorigins.com/#organization"
               }
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "Is Cordyceps militaris the same as the wild caterpillar fungus?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. The wild Himalayan species is Ophiocordyceps sinensis. C. militaris is a related species that can be grown on plant substrate and produces a true fruiting body, which is why it is used in modern products."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Does it really grow on insects?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "In nature, yes — Cordyceps species parasitise insect larvae. Cultivated C. militaris for nutritional use is grown on sterile plant-based media, with no insect material involved."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "What does 'fruiting body' mean and why does it matter?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The fruiting body is the visible orange structure, distinct from the mycelium that grows underneath. Products made from mycelium grown on grain have a different composition, so the distinction changes what you are actually buying."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Is cordycepin content a reliable quality signal?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "It is the most useful single marker, but not the whole picture. Reputable material reports cordycepin alongside adenosine, moisture and contaminant testing from an accredited laboratory."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "Are there people who should avoid it?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Anyone pregnant or nursing, on immunosuppressants or anticoagulants, or preparing for surgery should speak with a clinician first. Fungal allergies are also a consideration."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "When will Radhvan Origins products be available?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We are still in the cultivation and verification phase. Joining the list is the only way to be notified when the first batch is released."
-                  }
-                }
-              ]
             }
           ]
         }),
@@ -162,18 +98,42 @@ function Index() {
       <SiteNav />
       <main>
         <Hero />
-        <WhatIsCordyceps />
-        <WhyUnique />
-        <Sinensis />
-        <Compounds />
-        <Applications />
-        <Evidence />
-        <Process />
-        <Research />
-        <About />
-        <FutureRange />
-        <FAQ />
-        <Newsletter />
+        <QuoteBlock
+          variant="home"
+          hindi="हर शुरुआत में एक संभावना छिपी होती है।"
+          english="Every beginning hides a possibility."
+        />
+        <SectionPreview
+          eyebrow="Our story"
+          title="Why Radhvan"
+          intro="Radhvan is more than a name — it is a beginning from the heart. Discover the philosophy, values and purpose behind our Cordyceps journey."
+          to="/why-radhvan"
+          cta="Discover our story"
+        />
+        <SectionPreview
+          eyebrow="The species"
+          title="What is Cordyceps?"
+          intro="Cordyceps militaris is a remarkable fungus with a fascinating biology. Learn how it differs from wild Cordyceps sinensis and why cultivation matters."
+          to="/cordyceps-study"
+          cta="Study Cordyceps"
+          tone="dark"
+        />
+        <SectionPreview
+          eyebrow="Hands-on learning"
+          title="Cultivation & Training"
+          intro="Practical, research-based training for your cultivation journey — from substrate preparation to fruiting body development, taught step by step."
+          to="/cultivation-training"
+          cta="Explore training"
+        />
+        <SectionPreview
+          eyebrow="Evidence & knowledge"
+          title="Research & Knowledge"
+          intro="Evidence-based insight into cordycepin, adenosine and the documented applications of Cordyceps militaris across health and wellbeing research."
+          to="/research-knowledge"
+          cta="Read the research"
+          tone="dark"
+        />
+        <ContactCTA />
       </main>
       <Footer />
     </div>

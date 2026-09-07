@@ -27,6 +27,40 @@ export const Route = createFileRoute("/why-radhvan")({
       { name: "twitter:image", content: "https://radhvanorigins.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://radhvanorigins.com/why-radhvan" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: TITLE,
+              description: DESC,
+              author: { "@type": "Organization", name: "Radhvan Origins" },
+              publisher: { "@type": "Organization", name: "Radhvan Origins" },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://radhvanorigins.com/why-radhvan",
+              },
+            },
+            {
+              "@type": "EducationalOrganization",
+              name: "Radhvan Origins",
+              url: "https://radhvanorigins.com/",
+              logo: "https://radhvanorigins.com/favicon.png",
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://radhvanorigins.com/" },
+                { "@type": "ListItem", position: 2, name: "Why Radhvan", item: "https://radhvanorigins.com/why-radhvan" }
+              ]
+            }
+          ],
+        }),
+      },
+    ],
   }),
 });
 

@@ -24,15 +24,35 @@ export const Route = createFileRoute("/cordyceps-health-benefits")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Article",
-          headline: "Cordyceps health benefits: what the research says",
-          description: DESC,
-          author: { "@type": "Organization", name: "Radhvan Origins" },
-          publisher: { "@type": "Organization", name: "Radhvan Origins" },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${BASE_URL}/cordyceps-health-benefits`,
-          },
+          "@graph": [
+            {
+              "@type": "Article",
+              headline: "Cordyceps health benefits: what the research says",
+              description: DESC,
+              author: { "@type": "Organization", name: "Radhvan Origins" },
+              publisher: { "@type": "Organization", name: "Radhvan Origins" },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${BASE_URL}/cordyceps-health-benefits`,
+              },
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${BASE_URL}/cordyceps-health-benefits`,
+              "name": "Cordyceps health benefits: what the research says",
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": [".direct-answer-summary", "h1", "h2"]
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` },
+                { "@type": "ListItem", position: 2, name: "Health Benefits", item: `${BASE_URL}/cordyceps-health-benefits` }
+              ]
+            }
+          ]
         }),
       },
     ],

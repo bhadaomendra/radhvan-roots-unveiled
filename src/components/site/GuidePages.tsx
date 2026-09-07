@@ -53,27 +53,11 @@ function PageShell({
   );
 }
 
-
-function DirectAnswerCard({ title = "Direct Answer / Key Summary", children }: { title?: string; children: ReactNode }) {
-  return (
-    <div className="mt-8 rounded-lg border border-ember/30 bg-ember/5 p-5 text-bark shadow-sm max-w-3xl">
-      <div className="flex items-center gap-2 text-ember font-semibold text-xs uppercase tracking-wider">
-        <span className="inline-block h-2 w-2 rounded-full bg-ember animate-pulse" />
-        {title}
-      </div>
-      <div className="mt-2 text-sm leading-relaxed text-bark/90 font-medium">
-        {children}
-      </div>
-    </div>
-  );
-}
-
 function GuideHero({
   eyebrow,
   title,
   description,
   intro,
-  directAnswer,
   image,
   imageAlt,
 }: {
@@ -81,7 +65,6 @@ function GuideHero({
   title: ReactNode;
   description: string;
   intro?: string;
-  directAnswer?: ReactNode;
   image?: string;
   imageAlt?: string;
 }) {
@@ -107,11 +90,6 @@ function GuideHero({
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
             {intro}
           </p>
-        )}
-        {directAnswer && (
-          <DirectAnswerCard>
-            {directAnswer}
-          </DirectAnswerCard>
         )}
       </div>
     </section>
@@ -144,6 +122,24 @@ function RelatedGuides({ current }: { current: string }) {
   );
 }
 
+function DirectAnswerCallout({ text }: { text: string }) {
+  return (
+    <div className="direct-answer-summary mx-auto max-w-7xl px-6 pt-8 lg:px-10">
+      <div className="rounded-sm border border-ember/30 bg-card p-6 shadow-sm lg:p-8">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-ember"></span>
+          <p className="text-[0.68rem] font-bold tracking-[0.2em] text-ember uppercase">
+            Quick Answer / Summary
+          </p>
+        </div>
+        <p className="mt-3 text-sm leading-relaxed text-bark/90 lg:text-base font-medium">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function GuidePage({
   path,
   eyebrow,
@@ -160,7 +156,7 @@ function GuidePage({
   title: ReactNode;
   description: string;
   intro?: string;
-  directAnswer?: ReactNode;
+  directAnswer?: string;
   image?: string;
   imageAlt?: string;
   children: ReactNode;
@@ -172,10 +168,10 @@ function GuidePage({
         title={title}
         description={description}
         intro={intro}
-        directAnswer={directAnswer}
         image={image}
         imageAlt={imageAlt}
       />
+      {directAnswer && <DirectAnswerCallout text={directAnswer} />}
       {children}
       <RelatedGuides current={path} />
     </PageShell>
@@ -195,6 +191,7 @@ export function CordycepsVsSinensisPage() {
       }
       description="Wild yarsagumba and lab-grown Cordyceps militaris share a genus, but not the same chemistry, sourcing or ecological impact."
       intro="Both are called Cordyceps, yet their species differ in origin, cordycepin content, and how they reach the market. This guide explains why we cultivate C. militaris."
+      directAnswer="Cordyceps militaris and wild Cordyceps sinensis (yarsagumba) belong to the same genus but differ in origin, chemistry, and sustainability. C. militaris is cultivated in sterile lab conditions on plant-based substrates, yielding higher, standardized levels of cordycepin without harming high-altitude wild ecosystems."
       image={sinensisComparison}
       imageAlt="Comparison plate showing orange Cordyceps militaris beside dried wild Cordyceps sinensis"
     >
@@ -216,6 +213,7 @@ export function CordycepinPage() {
       }
       description="Cordycepin (3′-deoxyadenosine) is the most studied compound in Cordyceps militaris. Learn why it is used as a quality marker and where research is heading."
       intro="Structurally close to adenosine, cordycepin appears in cell-growth, mood, circulation, skin and joint studies. Its content is measured, not assumed."
+      directAnswer="Cordycepin (3′-deoxyadenosine) is a natural purine nucleoside analogue found in high concentrations in Cordyceps militaris. It serves as the primary scientific quality marker because of its active role in cellular growth regulation, inflammation, and metabolic research, quantified via HPLC testing."
       image={anatomyImage}
       imageAlt="Botanical anatomy plate of Cordyceps militaris showing stroma, ascus and spore detail"
     >
@@ -237,6 +235,7 @@ export function CordycepsHealthBenefitsPage() {
       }
       description="A plain-language overview of Cordyceps research: cancer cell studies, mood and stress, blood pressure, skin health, and joint comfort."
       intro="Cordyceps is a food-grade fungus, not a medicine. The evidence is mostly preclinical or early human. Always consult a doctor before use."
+      directAnswer="Scientific interest in Cordyceps militaris centers on cordycepin and adenosine nucleosides. Preclinical and early clinical research investigates applications in cellular health, circulation, mood resilience, and topical antioxidant protection. Cordyceps is a food-grade fungus, and material quality depends on laboratory compound verification."
       image={heroImage}
       imageAlt="Botanical study of Cordyceps militaris fruiting bodies"
     >
@@ -258,6 +257,7 @@ export function CordycepsCultivationPage() {
       }
       description="From verified strain to dried fruiting body: six controlled stages that make Cordyceps militaris reproducible, traceable and wild-harvest-free."
       intro="Lab cultivation replaces alpine harvesting with sterile substrate, controlled light, and verified drying. No insects, no fragile ecosystems."
+      directAnswer="Cordyceps militaris lab cultivation involves six sterile stages: parent strain culture, liquid spawn propagation, substrate formulation (organic grains), sterile inoculation under laminar airflow, dark incubational colonization, and photo-induced fruiting under regulated light, temperature, and humidity."
       image={labImage}
       imageAlt="Radhvan Origins cultivation room with Cordyceps militaris jars under controlled light"
     >
@@ -279,6 +279,7 @@ export function CordycepsFAQPage() {
       }
       description="Answers to frequently asked questions about Cordyceps militaris, cordycepin, Cordyceps sinensis, safety, cultivation and product availability."
       intro="Quick, honest answers about species, fruiting bodies, quality markers, who should avoid it, and when Radhvan Origins products will be available."
+      directAnswer="Cordyceps militaris is a lab-cultivated functional fungus grown on sterile plant-based media. It produces a true fruiting body rich in cordycepin and adenosine. It differs from wild caterpillar-dependent Cordyceps sinensis and requires no wild insect material."
       image={heroImage}
       imageAlt="Botanical study of Cordyceps militaris fruiting bodies"
     >

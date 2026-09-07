@@ -32,6 +32,16 @@ jobs:
       - name: Build static site
         run: bunx vite build --config vite.pages.config.ts
 
+      - name: Verify GTM in built index
+        run: |
+          echo "🔎 Checking dist/index.html for GTM..."
+          if grep -q "GTM-KGKT3H4T" dist/index.html; then
+            echo "✅ GTM-KGKT3H4T FOUND in dist/index.html"
+          else
+            echo "❌ GTM-KGKT3H4T NOT FOUND in dist/index.html"
+            exit 1
+          fi
+
       - name: Add SPA fallback and clean URLs (.htaccess)
         run: |
           echo "### 🛠️ Generating .htaccess..."
