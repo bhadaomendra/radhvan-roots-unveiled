@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import lab from "@/assets/cultivation-room.jpg";
 
@@ -9,8 +10,25 @@ export function TrainingHero() {
     <section className="relative overflow-hidden bg-parchment py-24 lg:py-36">
       <div className="absolute inset-0 bg-gradient-to-b from-parchment/80 via-parchment/60 to-parchment" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+        <nav aria-label="Breadcrumb">
+          <ol className="flex flex-wrap items-center gap-2 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
+            <li>
+              <Link to="/" className="transition-colors hover:text-ember">
+                Home
+              </Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <span aria-hidden="true" className="text-border">
+                /
+              </span>
+              <span aria-current="page" className="text-ember">
+                Cultivation Training
+              </span>
+            </li>
+          </ol>
+        </nav>
         <Reveal>
-          <p className="eyebrow text-ember">Practical & Theoretical Training</p>
+          <p className="mt-10 eyebrow text-ember">Practical & Theoretical Training</p>
           <h1 className="mt-6 font-display text-[clamp(2.3rem,5.5vw,4.5rem)] leading-[0.98] text-bark">
             Cordyceps Militaris Cultivation Training
           </h1>

@@ -30,7 +30,7 @@ jobs:
         run: bun install
 
       - name: Build static site
-        run: bunx vite build --config vite.pages.config.ts
+        run: bun run build
 
       - name: Verify GTM in built index
         run: |

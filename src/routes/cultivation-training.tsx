@@ -19,6 +19,11 @@ import {
 const TITLE = "Cordyceps Militaris Cultivation Training in Jaipur | Radhvan Origins";
 const DESC =
   "Learn Cordyceps militaris cultivation with Radhvan Origins in Jaipur through a 2-day theory and practical training program. Enquire about upcoming batches.";
+const PAGE_URL = "https://radhvanorigins.com/cultivation-training";
+const ORGANIZATION_ID = "https://radhvanorigins.com/#organization";
+const COURSE_ID = `${PAGE_URL}#course`;
+const COURSE_INSTANCE_ID = `${PAGE_URL}#course-instance`;
+const VENUE_ID = `${PAGE_URL}#venue`;
 
 const FAQS_SCHEMA = [
   {
@@ -108,27 +113,108 @@ export const Route = createFileRoute("/cultivation-training")({
           "@graph": [
             {
               "@type": "Course",
+              "@id": COURSE_ID,
+              "url": PAGE_URL,
               "name": "Cordyceps Militaris Cultivation Training",
               "description": DESC,
-              "provider": {
-                "@type": "EducationalOrganization",
-                "name": "Radhvan Origins",
-                "url": "https://radhvanorigins.com/",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Jaipur",
-                  "addressRegion": "Rajasthan",
-                  "addressCountry": "India"
-                }
+              "provider": { "@id": ORGANIZATION_ID },
+              "inLanguage": "en-IN",
+              "timeRequired": "P2D",
+              "educationalLevel": "Beginner to existing cultivator",
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student"
               },
-              "hasCourseInstance": {
-                "@type": "CourseInstance",
-                "courseMode": "Offline",
-                "location": "Radhvan Origins Facility & Laboratory, Jaipur"
+              "about": [
+                "Cordyceps militaris",
+                "Controlled environment mushroom cultivation"
+              ],
+              "teaches": [
+                "Cordyceps militaris fundamentals",
+                "Controlled cultivation stages",
+                "Cultivation environment observation",
+                "Growth and development",
+                "Harvest and post-harvest understanding"
+              ],
+              "educationalCredentialAwarded": "Certificate issued by Radhvan Origins",
+              "hasCourseInstance": { "@id": COURSE_INSTANCE_ID },
+              "mainEntityOfPage": { "@id": `${PAGE_URL}#webpage` }
+            },
+            {
+              "@type": "CourseInstance",
+              "@id": COURSE_INSTANCE_ID,
+              "name": "2-Day Cordyceps Militaris Cultivation Training — Jaipur",
+              "description": "One day of theory and one full day of practical learning at the Radhvan Origins facility and laboratory in Jaipur.",
+              "courseMode": "onsite",
+              "courseWorkload": "P2D",
+              "inLanguage": "en-IN",
+              "location": { "@id": VENUE_ID },
+              "maximumAttendeeCapacity": 12,
+              "url": `${PAGE_URL}#inquire`
+            },
+            {
+              "@type": "EducationalOrganization",
+              "@id": ORGANIZATION_ID,
+              "name": "Radhvan Origins",
+              "url": "https://radhvanorigins.com/",
+              "logo": "https://radhvanorigins.com/og-image.png",
+              "email": "info@radhvanorigins.com",
+              "telephone": "+91 99500 91528",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "course enquiries",
+                "email": "info@radhvanorigins.com",
+                "telephone": "+91 99500 91528",
+                "availableLanguage": ["English", "Hindi"]
               }
             },
             {
+              "@type": "Place",
+              "@id": VENUE_ID,
+              "name": "Radhvan Origins Facility & Laboratory",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan",
+                "addressCountry": "IN"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${PAGE_URL}#webpage`,
+              "url": PAGE_URL,
+              "name": TITLE,
+              "description": DESC,
+              "breadcrumb": { "@id": `${PAGE_URL}#breadcrumb` },
+              "mainEntity": { "@id": COURSE_ID }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `${PAGE_URL}#breadcrumb`,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://radhvanorigins.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Cultivation Training",
+                  "item": PAGE_URL
+                }
+              ]
+            },
+            {
               "@type": "FAQPage",
+              "@id": `${PAGE_URL}#faq`,
               "mainEntity": FAQS_SCHEMA.map((item) => ({
                 "@type": "Question",
                 "name": item.q,

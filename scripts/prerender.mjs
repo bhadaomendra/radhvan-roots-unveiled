@@ -154,6 +154,13 @@ async function bakeFile(fileName, { bodyHtml, headExtras }) {
   );
 
   if (headExtras && updated.includes("</head>")) {
+    // Route head() is the canonical source after prerendering. Remove JSON-LD
+    // from the static fallback template before inserting the rendered graph,
+    // otherwise crawlers receive duplicate, potentially divergent entities.
+    updated = updated.replace(
+      /\s*<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
+      "",
+    );
     // Some static templates already hardcode their own (correct) canonical
     // link — don't add a second one on top of it.
     const extras = updated.includes('rel="canonical"')
