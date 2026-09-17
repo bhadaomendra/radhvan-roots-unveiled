@@ -46,13 +46,11 @@
 
 :root {
   --radius: 0.25rem;
-
   --ember: oklch(0.685 0.203 43.5);
   --bark: oklch(0.36 0.088 55);
   --forest: oklch(0.33 0.056 122);
   --parchment: oklch(0.977 0.007 95);
   --ink: oklch(0.22 0.03 60);
-
   --background: var(--parchment);
   --foreground: var(--ink);
   --card: oklch(0.995 0.004 95);
@@ -75,20 +73,35 @@
 }
 
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
     border-color: var(--color-border);
   }
 
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body {
+    margin: 0;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-synthesis-weight: none;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
   }
 
   h1,
@@ -171,20 +184,18 @@
   border: 1px solid var(--color-border);
   border-radius: 1.5rem;
   padding: 1.5rem 2rem;
-  box-shadow: 
+  box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.05),
     0 4px 6px -2px rgba(0, 0, 0, 0.025),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
       0 20px 25px -5px rgba(0, 0, 0, 0.08),
       0 8px 10px -6px rgba(0, 0, 0, 0.04);
   }
-
   &::after {
     content: "";
     position: absolute;
@@ -195,7 +206,6 @@
     border-right: 10px solid transparent;
     border-top: 10px solid var(--color-border);
   }
-
   &::before {
     content: "";
     position: absolute;
@@ -214,7 +224,6 @@
   padding-bottom: 0.75rem;
   position: relative;
   overflow: hidden;
-  
   &::before {
     content: "";
     position: absolute;
