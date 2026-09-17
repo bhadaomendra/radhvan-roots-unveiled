@@ -1,14 +1,17 @@
 import { readFile } from "node:fs/promises";
 
-const files = ["cultivation-training.html", "dist/cultivation-training.html"];
-const requiredTypes = [
+const files = process.argv.slice(2);
+if (files.length === 0) {
+  files.push("cultivation-training.html", "dist/cultivation-training.html");
+}
+
+const coreTypes = [
   "Course",
   "CourseInstance",
   "EducationalOrganization",
   "Place",
   "WebPage",
   "BreadcrumbList",
-  "FAQPage",
 ];
 
 function extractJsonLd(html) {
@@ -25,6 +28,7 @@ for (const file of files) {
   const blocks = extractJsonLd(html);
   const entities = entitiesFrom(blocks);
 
+  const requiredTypes = file.startsWith("dist/") ? [...coreTypes, "FAQPage"] : coreTypes;
   for (const type of requiredTypes) {
     if (!entities.some((entity) => entity["@type"] === type)) {
       throw new Error(`${file}: missing ${type} structured data`);
