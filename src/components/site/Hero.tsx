@@ -164,7 +164,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-parchment/55 via-parchment/25 to-parchment" />
       <div className="absolute inset-0 bg-gradient-to-r from-parchment/95 via-parchment/70 to-parchment/10 lg:from-parchment/96 lg:via-parchment/58 lg:to-transparent" />
 
-      <div className="relative mx-auto grid min-h-[100svh] w-full max-w-7xl grid-cols-1 items-end gap-8 px-5 pt-28 pb-12 sm:px-6 sm:pb-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(260px,0.92fr)] lg:items-end lg:gap-10 lg:px-10 lg:pb-20">
+      <div className="relative mx-auto grid min-h-[100svh] w-full max-w-[90rem] grid-cols-1 items-end gap-8 px-5 pt-28 pb-12 sm:px-6 sm:pb-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(260px,0.92fr)] lg:items-end lg:gap-10 lg:px-8 lg:pb-20">
         <div className="w-full max-w-3xl pb-2">
           <p className="eyebrow text-[color:var(--ember)]">Radhvan Origins · Cordyceps militaris</p>
           <h1 className="mt-5 max-w-3xl font-display text-[clamp(2.7rem,6.2vw,5.25rem)] leading-[0.94] text-bark">
