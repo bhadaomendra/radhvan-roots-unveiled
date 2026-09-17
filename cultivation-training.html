@@ -36,16 +36,90 @@
   "@graph": [
     {
       "@type": "Course",
+      "@id": "https://radhvanorigins.com/cultivation-training#course",
+      "url": "https://radhvanorigins.com/cultivation-training",
       "name": "Cordyceps Militaris Cultivation Training",
       "description": "Learn Cordyceps militaris cultivation with Radhvan Origins in Jaipur through a 2-day theory and practical training program.",
-      "provider": {
-        "@type": "EducationalOrganization",
-        "name": "Radhvan Origins",
-        "sameAs": "https://radhvanorigins.com/"
+      "provider": { "@id": "https://radhvanorigins.com/#organization" },
+      "inLanguage": "en-IN",
+      "timeRequired": "P2D",
+      "educationalLevel": "Beginner to existing cultivator",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "about": [
+        "Cordyceps militaris",
+        "Controlled environment mushroom cultivation"
+      ],
+      "teaches": [
+        "Cordyceps militaris fundamentals",
+        "Controlled cultivation stages",
+        "Cultivation environment observation",
+        "Growth and development",
+        "Harvest and post-harvest understanding"
+      ],
+      "educationalCredentialAwarded": "Certificate issued by Radhvan Origins",
+      "hasCourseInstance": { "@id": "https://radhvanorigins.com/cultivation-training#course-instance" },
+      "mainEntityOfPage": { "@id": "https://radhvanorigins.com/cultivation-training#webpage" }
+    },
+    {
+      "@type": "CourseInstance",
+      "@id": "https://radhvanorigins.com/cultivation-training#course-instance",
+      "name": "2-Day Cordyceps Militaris Cultivation Training — Jaipur",
+      "description": "One day of theory and one full day of practical learning at the Radhvan Origins facility and laboratory in Jaipur.",
+      "courseMode": "onsite",
+      "courseWorkload": "P2D",
+      "inLanguage": "en-IN",
+      "location": { "@id": "https://radhvanorigins.com/cultivation-training#venue" },
+      "maximumAttendeeCapacity": 12,
+      "url": "https://radhvanorigins.com/cultivation-training#inquire"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://radhvanorigins.com/#organization",
+      "name": "Radhvan Origins",
+      "url": "https://radhvanorigins.com/",
+      "logo": "https://radhvanorigins.com/og-image.png",
+      "email": "info@radhvanorigins.com",
+      "telephone": "+91 99500 91528",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "course enquiries",
+        "email": "info@radhvanorigins.com",
+        "telephone": "+91 99500 91528",
+        "availableLanguage": ["English", "Hindi"]
       }
     },
     {
+      "@type": "Place",
+      "@id": "https://radhvanorigins.com/cultivation-training#venue",
+      "name": "Radhvan Origins Facility & Laboratory",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jaipur",
+        "addressRegion": "Rajasthan",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://radhvanorigins.com/cultivation-training#webpage",
+      "url": "https://radhvanorigins.com/cultivation-training",
+      "name": "Cordyceps Militaris Cultivation Training in Jaipur | Radhvan Origins",
+      "description": "Learn Cordyceps militaris cultivation with Radhvan Origins in Jaipur through a 2-day theory and practical training program. Enquire about upcoming batches.",
+      "breadcrumb": { "@id": "https://radhvanorigins.com/cultivation-training#breadcrumb" },
+      "mainEntity": { "@id": "https://radhvanorigins.com/cultivation-training#course" }
+    },
+    {
       "@type": "BreadcrumbList",
+      "@id": "https://radhvanorigins.com/cultivation-training#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -60,6 +134,11 @@
           "item": "https://radhvanorigins.com/cultivation-training"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://radhvanorigins.com/cultivation-training#faq",
+      "mainEntity": []
     }
   ]
 }
