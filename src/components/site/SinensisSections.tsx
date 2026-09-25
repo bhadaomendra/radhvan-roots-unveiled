@@ -67,7 +67,7 @@ const COMPARE = [
 export function Sinensis() {
   return (
     <section id="sinensis" className="border-y border-border bg-secondary/40 py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <Head
             eyebrow="Field notes"

@@ -146,7 +146,7 @@ export function WhyUnique() {
 
   return (
     <section id="unique" className="border-y border-border bg-[#241708] py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <p className="eyebrow text-[color:var(--ember)]">Chapter two</p>
           <h2 className="mt-5 max-w-2xl font-display text-[clamp(1.9rem,4vw,3.1rem)] leading-[1.05] text-parchment">
@@ -323,7 +323,7 @@ const EVIDENCE = [
 export function Evidence() {
   return (
     <section id="evidence" className="border-y border-border bg-secondary/50 py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHead
             eyebrow="Chapter four"
@@ -468,7 +468,7 @@ const RESEARCH = [
 export function Research() {
   return (
     <section id="research" className="border-y border-border bg-[#2E3B11] py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <p className="eyebrow text-parchment/60">Chapter six</p>
           <h2 className="mt-5 max-w-2xl font-display text-[clamp(1.9rem,4vw,3.1rem)] leading-[1.05] text-parchment">
@@ -567,7 +567,7 @@ export function About() {
 export function WhyRadhvan() {
   return (
     <section id="why-radhvan" className="border-y border-border bg-secondary/50 py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHead
             eyebrow="Chapter eight"
@@ -586,13 +586,13 @@ export function WhyRadhvan() {
           <Reveal>
             <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
               <p>Starting something new usually begins with a simple question.</p>
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 {["How does it really work?", "What do I need to learn?", "Is this right for me?"].map((q) => (
                   <p
                     key={q}
-                    className="rounded-sm border border-border bg-card px-5 py-4 text-center font-display text-base text-bark"
+                    className="flex-1 min-w-[140px] flex items-center justify-center rounded-sm border border-border bg-card px-4 py-3 text-center font-display text-sm font-medium text-bark shadow-xs"
                   >
-                    {q}
+                    "{q}"
                   </p>
                 ))}
               </div>
@@ -690,7 +690,7 @@ const PRODUCTS = [
 export function FutureRange() {
   return (
     <section className="border-y border-border bg-secondary/50 py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHead
             eyebrow="Chapter nine"

@@ -40,13 +40,13 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       }`}
     >
       <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
-        <Link to="/" className="flex min-w-0 shrink-0 items-center">
+        <Link to="/" className="flex min-w-0 shrink-0 items-center transition-opacity hover:opacity-90">
           <img
             src={logo}
             alt="Radhvan — Rooted in values, Growing with Vision"
-            width={1353}
-            height={408}
-            className="h-14 w-auto max-w-[190px] object-contain sm:h-16 sm:max-w-[220px] lg:h-20 lg:max-w-[250px] xl:h-24 xl:max-w-[300px]"
+            width={1739}
+            height={630}
+            className="h-12 w-auto max-w-[190px] object-contain sm:h-14 sm:max-w-[220px] lg:h-16 lg:max-w-[250px] xl:h-20 xl:max-w-[300px]"
           />
         </Link>
 
@@ -166,7 +166,9 @@ export function Hero() {
 
       <div className="relative mx-auto grid min-h-[100svh] w-full max-w-[90rem] grid-cols-1 items-end gap-8 px-5 pt-28 pb-12 sm:px-6 sm:pb-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(260px,0.92fr)] lg:items-end lg:gap-10 lg:px-8 lg:pb-20">
         <div className="w-full max-w-3xl pb-2">
-          <p className="eyebrow text-[color:var(--ember)]">Radhvan Origins · Cordyceps militaris</p>
+          <p className="eyebrow text-[color:var(--ember)]">
+            Radhvan Origins · Cordyceps militaris
+          </p>
           <h1 className="mt-5 max-w-3xl font-display text-[clamp(2.7rem,6.2vw,5.25rem)] leading-[0.94] text-bark">
             Cordyceps militaris:
             <span className="block italic text-ember">a fungus that rewrote biology</span>

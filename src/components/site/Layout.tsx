@@ -115,11 +115,9 @@ export function SectionPreview({
 
 /* ---------------------------------------------------------- Breadcrumbs */
 
-export type Crumb = { label: string; to?: string };
-
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export type Crumb = { label: string; to?: string };export function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-6 pt-28 lg:px-10 lg:pt-32">
+    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 lg:pt-32">
       <ol className="flex flex-wrap items-center gap-2 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
         <li>
           <Link to="/" className="transition-colors hover:text-ember">
@@ -179,7 +177,7 @@ export function PageHero({
       <div className="relative">
         {crumbs && <Breadcrumbs items={crumbs} />}
         <div
-          className={`mx-auto max-w-7xl px-6 pb-20 lg:px-10 lg:pb-28 ${
+          className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28 ${
             crumbs ? "pt-8 lg:pt-10" : "pt-28 lg:pt-36"
           }`}
         >
@@ -247,14 +245,14 @@ export function Section({
         id={id}
         className={`border-y border-border bg-secondary/50 py-20 lg:py-28 ${className}`}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">{children}</div>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
       </section>
     );
   }
   return (
     <section
       id={id}
-      className={`mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28 ${className}`}
+      className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 ${className}`}
     >
       {children}
     </section>

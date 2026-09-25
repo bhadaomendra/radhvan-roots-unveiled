@@ -12,11 +12,21 @@ export function Reveal({
   as?: "div" | "section" | "li" | "span";
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Check if element is already in or near viewport on load
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 100) {
+      setVisible(true);
+      return;
+    }
+
+    // Otherwise reveal on scroll into view
+    setVisible(false);
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -24,7 +34,7 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.05, rootMargin: "50px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();

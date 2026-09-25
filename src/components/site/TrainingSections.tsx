@@ -9,7 +9,7 @@ export function TrainingHero() {
   return (
     <section className="relative overflow-hidden bg-parchment py-24 lg:py-36">
       <div className="absolute inset-0 bg-gradient-to-b from-parchment/80 via-parchment/60 to-parchment" />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2 text-[0.68rem] font-bold tracking-[0.14em] text-muted-foreground uppercase">
             <li>
@@ -41,6 +41,19 @@ export function TrainingHero() {
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground lg:text-base">
             The program combines one day of theoretical learning with one full day of practical training at our own facility and laboratory in Jaipur.
           </p>
+
+          <div className="direct-answer-summary mt-8 rounded-sm border border-ember/30 bg-card p-6 shadow-xs max-w-3xl">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-ember"></span>
+              <p className="text-[0.68rem] font-bold tracking-[0.2em] text-ember uppercase">
+                Quick Course Summary / Direct Overview
+              </p>
+            </div>
+            <p className="mt-2.5 text-sm leading-relaxed text-bark/90 font-medium">
+              Radhvan Origins provides a 2-Day Cordyceps Militaris Cultivation Training program in Jaipur, India. The course delivers comprehensive theoretical mycology instruction and hands-on laboratory practicals covering liquid culture inoculation, substrate compounding, HEPA cleanroom sterilization, climate-controlled incubation, harvesting, and HPLC cordycepin assay verification.
+            </p>
+          </div>
+
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#inquire"
@@ -74,7 +87,7 @@ export function QuickHighlights() {
 
   return (
     <section className="border-y border-border bg-card py-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {highlights.map((h, i) => (
             <Reveal key={h.value} delay={i * 50}>
@@ -176,7 +189,7 @@ export function TwoDayJourney() {
 
   return (
     <section id="journey" className="border-t border-border bg-parchment/40 py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center">
             <p className="eyebrow text-ember">Curriculum Overview</p>
@@ -348,7 +361,7 @@ export function WhoIsThisTrainingFor() {
 export function LearnAtRadhvanJaipur() {
   return (
     <section className="border-t border-border bg-parchment/30 py-24 lg:py-36">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <Reveal>
             <figure className="overflow-hidden rounded-sm border border-border shadow-md">
@@ -632,6 +645,81 @@ export function FinalCTASection() {
           <p className="mt-2 text-sm text-bark/80 font-medium tracking-wide">
             Learn the science. Understand the process. Experience practical cultivation.
           </p>
+
+          <div className="mx-auto mt-10 max-w-xl text-left bg-background/80 p-6 rounded-sm border border-border">
+            <h3 className="font-display text-lg text-bark text-center mb-4">
+              Enquire About Upcoming Training Batches in Jaipur
+            </h3>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+                const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+                const city = (form.elements.namedItem("city") as HTMLInputElement).value;
+                const msg = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+                const text = `Hello Radhvan Origins, I am interested in the Cordyceps Cultivation Training in Jaipur.%0A%0AName: ${encodeURIComponent(name)}%0AMobile/WhatsApp: ${encodeURIComponent(phone)}%0ACity: ${encodeURIComponent(city)}%0AMessage: ${encodeURIComponent(msg)}`;
+                window.open(`https://wa.me/919950091528?text=${text}`, "_blank");
+              }}
+              className="space-y-4"
+            >
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
+                  Your Full Name *
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="e.g. Omendra Bhada"
+                  className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
+                />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
+                    WhatsApp / Phone *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="+91 99500 91528"
+                    className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
+                    Your City / State *
+                  </label>
+                  <input
+                    type="text"
+                    name="city"
+                    required
+                    placeholder="e.g. Jaipur, Rajasthan"
+                    className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
+                  Your Questions / Lab Setup Timeline
+                </label>
+                <textarea
+                  name="message"
+                  rows={3}
+                  placeholder="e.g. I am interested in joining the next weekend batch in Jaipur and exploring lab setup requirements."
+                  className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full rounded-full bg-ember px-6 py-3.5 text-xs font-bold tracking-[0.16em] text-primary-foreground uppercase transition-transform hover:-translate-y-0.5 cursor-pointer shadow-md hover:shadow-lg"
+              >
+                Send Batch Inquiry via WhatsApp →
+              </button>
+            </form>
+          </div>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
             <a
