@@ -39,7 +39,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           : "border-b border-transparent bg-background/70 backdrop-blur-[2px]"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
         <Link to="/" className="flex min-w-0 shrink-0 items-center transition-opacity hover:opacity-90">
           <img
             src={logo}
@@ -50,7 +50,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
           />
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-end gap-5 xl:flex xl:gap-8">
+        <nav className="hidden min-w-0 flex-1 items-center justify-end gap-5 lg:flex xl:gap-8">
           {NAV.map((item) => (
             <Link
               key={item.to}
@@ -89,7 +89,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         <button
           onClick={() => setOpen(true)}
           aria-label="Open navigation"
-          className="relative z-[60] flex shrink-0 items-center justify-center rounded-full border border-border bg-background p-2.5 shadow-md xl:hidden"
+          className="relative z-[60] flex shrink-0 items-center justify-center rounded-full border border-border bg-background p-2.5 shadow-md lg:hidden"
         >
           <svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true">
             <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -98,7 +98,7 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[100] flex flex-col bg-background/98 backdrop-blur-2xl xl:hidden">
+        <div className="fixed inset-0 z-[100] flex flex-col bg-background/98 backdrop-blur-2xl lg:hidden">
           <div className="flex h-20 items-center justify-between px-4 sm:px-6">
             <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
               <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
@@ -162,9 +162,9 @@ export function Hero() {
         style={{ transform: `translate3d(0, ${offset * 0.18}px, 0) scale(1.08)` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-parchment/55 via-parchment/25 to-parchment" />
-      <div className="absolute inset-0 bg-gradient-to-r from-parchment/88 via-parchment/42 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-parchment/95 via-parchment/70 to-parchment/10 lg:from-parchment/96 lg:via-parchment/58 lg:to-transparent" />
 
-      <div className="relative mx-auto grid min-h-[100svh] w-full max-w-7xl grid-cols-1 items-end gap-8 px-4 pt-28 pb-12 sm:px-6 sm:pb-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(260px,0.92fr)] lg:items-end lg:gap-10 lg:px-8 lg:pb-20">
+      <div className="relative mx-auto grid min-h-[100svh] w-full max-w-[90rem] grid-cols-1 items-end gap-8 px-5 pt-28 pb-12 sm:px-6 sm:pb-16 lg:grid-cols-[minmax(0,1.08fr)_minmax(260px,0.92fr)] lg:items-end lg:gap-10 lg:px-8 lg:pb-20">
         <div className="w-full max-w-3xl pb-2">
           <p className="eyebrow text-[color:var(--ember)]">
             Radhvan Origins · Cordyceps militaris

@@ -216,7 +216,7 @@ export function SectionHead({
 }) {
   const Tag = as;
   return (
-    <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
+    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <Tag className="mt-5 font-display text-[clamp(1.9rem,4vw,3.1rem)] leading-[1.05] text-bark">
         {title}
