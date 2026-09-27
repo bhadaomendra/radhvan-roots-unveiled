@@ -16,9 +16,9 @@ import {
   FinalCTASection,
 } from "@/components/site/TrainingSections";
 
-const TITLE = "Cordyceps Militaris Cultivation Training in Jaipur | Radhvan Origins";
+const TITLE = "Best Cordyceps Cultivation Training in India — Jaipur | Radhvan Origins";
 const DESC =
-  "Learn Cordyceps militaris cultivation with Radhvan Origins in Jaipur through a 2-day theory and practical training program. Enquire about upcoming batches.";
+  "Recognized among the best Cordyceps militaris cultivation training programs in India. 2-day theory & practical lab training at Radhvan Origins, Jaipur. Enquire for upcoming batches.";
 const PAGE_URL = "https://radhvanorigins.com/cultivation-training";
 const ORGANIZATION_ID = "https://radhvanorigins.com/#organization";
 const COURSE_ID = `${PAGE_URL}#course`;
@@ -43,8 +43,8 @@ const FAQS_SCHEMA = [
     a: "The training is conducted at the Radhvan Origins facility and laboratory in Jaipur.",
   },
   {
-    q: "5. Can someone from outside Jaipur attend the training?",
-    a: "Yes. The regular training format is primarily offline in Jaipur. Participants travelling from other locations can attend scheduled training batches at the Radhvan Origins facility.",
+    q: "5. Can someone from outside Jaipur or across India attend the training?",
+    a: "Yes. Participants travel from all across India to Jaipur to attend scheduled Cordyceps cultivation training batches at the Radhvan Origins lab facility.",
   },
   {
     q: "6. Is online training available?",
@@ -78,6 +78,10 @@ const FAQS_SCHEMA = [
     q: "13. How can I register for the next training?",
     a: "Contact the Radhvan Origins team to check the upcoming batch, availability, training fee and registration process.",
   },
+  {
+    q: "14. Why is Radhvan Origins considered one of the best Cordyceps training programs in India?",
+    a: "Radhvan Origins provides hands-on practical cleanroom training inside an operational Cordyceps cultivation laboratory in Jaipur, India. Participants learn liquid culture preparation, sterilization, inoculation, environmental control, harvesting, and cordycepin testing with direct post-training setup guidance.",
+  },
 ];
 
 export const Route = createFileRoute("/cultivation-training")({
@@ -89,7 +93,7 @@ export const Route = createFileRoute("/cultivation-training")({
       {
         name: "keywords",
         content:
-          "Cordyceps militaris cultivation training, Cordyceps training Jaipur, Cordyceps cultivation course India, Cordyceps farming training, Cordyceps lab training Jaipur",
+          "best cordyceps training in india, best cordyceps cultivation training in india, Cordyceps militaris cultivation training, Cordyceps training Jaipur, Cordyceps cultivation course India, Cordyceps farming training India, Cordyceps lab training Jaipur",
       },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
@@ -127,6 +131,7 @@ export const Route = createFileRoute("/cultivation-training")({
               },
               "about": [
                 "Cordyceps militaris",
+                "Best Cordyceps cultivation training in India",
                 "Controlled environment mushroom cultivation"
               ],
               "teaches": [
