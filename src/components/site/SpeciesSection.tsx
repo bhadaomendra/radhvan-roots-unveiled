@@ -14,10 +14,10 @@ export function SpeciesSection() {
         <img
           src={speciesBannerImg}
           alt="Cordyceps militaris fruiting bodies in cultivation"
-          className="w-full h-full object-cover object-right sm:object-center pointer-events-none select-none opacity-95"
+          className="w-full h-full object-cover object-left lg:object-center pointer-events-none select-none opacity-100"
         />
-        {/* Gradient overlay to ensure text readability on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#211406] via-[#211406]/85 via-40% to-transparent max-w-3xl pointer-events-none" />
+        {/* Soft subtle ambient shadow ONLY behind text to maintain contrast without hiding the left leaf */}
+        <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-gradient-to-r from-[#211406]/20 via-[#211406]/40 to-transparent pointer-events-none" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
