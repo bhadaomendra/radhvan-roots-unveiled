@@ -275,69 +275,23 @@ export function QuoteBlock({
   if (variant === "home") {
     return (
       <section
-        aria-label="Brand philosophy quote"
-        className="relative w-full overflow-hidden bg-[#251707] py-20 lg:py-28 border-y border-amber-950/40 text-parchment"
+        aria-label="Brand philosophy quote: Cultivation is not just a process, it is a practice of patience and understanding"
+        className="relative w-full overflow-hidden bg-[#251707] py-6 sm:py-10 lg:py-12 border-y border-amber-950/40"
       >
-        {/* Full-bleed Banner Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={quoteBannerImg}
-            alt="Cordyceps cultivation lab and wild sinensis"
-            className="w-full h-full object-cover object-center pointer-events-none select-none opacity-95"
-          />
-          {/* Subtle center overlay gradient to guarantee max contrast for text */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50 pointer-events-none" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <Reveal>
-            {/* Top Leaf Accent Line */}
-            <div className="flex items-center justify-center gap-4 mb-6 sm:mb-8">
-              <span className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent to-amber-500/60 inline-block" />
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-amber-500/50 bg-amber-950/60 text-amber-400 shadow-md backdrop-blur-xs">
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                </svg>
-              </div>
-              <span className="h-[1px] w-16 sm:w-24 bg-gradient-to-l from-transparent to-amber-500/60 inline-block" />
+            {/* Full Composite Visual Banner */}
+            <div className="relative w-full overflow-hidden rounded-md shadow-2xl">
+              <img
+                src={quoteBannerImg}
+                alt="“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समर्पण का अभ्यास है।” - Cultivation is not just a process, it is a practice of patience and understanding."
+                className="w-full h-auto object-cover object-center max-h-[520px]"
+              />
             </div>
-
-            {/* Main Hindi Quote with Stylized Orange Quotes & Highlighted Word */}
-            <blockquote className="max-w-2xl mx-auto">
-              <p
-                lang="hi"
-                className="font-display text-2xl sm:text-3xl lg:text-4xl text-amber-50 font-normal leading-relaxed tracking-wide drop-shadow-md"
-              >
-                <span className="text-[#F15A24] font-serif text-3xl sm:text-4xl lg:text-5xl inline-block mr-1 sm:mr-2 select-none">
-                  “
-                </span>
-                <span>उगाना सिर्फ एक प्रक्रिया नहीं,</span>
-                <br className="hidden sm:inline" />
-                <span className="mt-1 inline-block">
-                  धैर्य और <span className="text-[#F15A24] font-semibold">समर्पण</span> का अभ्यास है।
-                </span>
-                <span className="text-[#F15A24] font-serif text-3xl sm:text-4xl lg:text-5xl inline-block ml-1 sm:ml-2 select-none">
-                  ”
-                </span>
-              </p>
-
-              {/* Sub English Translation */}
-              <footer className="mt-5 text-xs sm:text-sm font-sans italic tracking-wide text-amber-300/85 font-medium drop-shadow-sm">
-                Cultivation is not just a process, it is a practice of patience and understanding.
-              </footer>
-            </blockquote>
-
-            {/* Bottom Leaf Accent Line */}
-            <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8">
-              <span className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent to-amber-500/60 inline-block" />
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border border-amber-500/50 bg-amber-950/60 text-amber-400 shadow-md backdrop-blur-xs">
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                </svg>
-              </div>
-              <span className="h-[1px] w-16 sm:w-24 bg-gradient-to-l from-transparent to-amber-500/60 inline-block" />
+            {/* Accessible screen-reader text for search engines */}
+            <div className="sr-only">
+              <h2>“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समर्पण का अभ्यास है।”</h2>
+              <p>Cultivation is not just a process, it is a practice of patience and understanding.</p>
             </div>
           </Reveal>
         </div>
