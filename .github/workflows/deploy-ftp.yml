@@ -91,7 +91,7 @@ jobs:
           echo "Generated .htaccess rules:"
           cat dist/.htaccess
 
-      - name: Deploy via FTP
+      - name: Deploy via FTP         
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -99,6 +99,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           protocol: ftps
+          security: loose
+          timeout: 120000
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_DIR }}
-          log-level: verbose # Increased logging for FTP status
+          log-level: verbose
+
