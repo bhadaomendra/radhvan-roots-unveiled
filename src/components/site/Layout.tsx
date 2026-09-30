@@ -276,25 +276,22 @@ export function QuoteBlock({
     return (
       <section
         aria-label="Brand philosophy quote: Cultivation is not just a process, it is a practice of patience and understanding"
-        className="relative w-full overflow-hidden bg-[#251707] py-6 sm:py-10 lg:py-12 border-y border-amber-950/40"
+        className="relative w-full overflow-hidden bg-[#251707] border-y border-amber-950/40 p-0 m-0"
       >
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <Reveal>
-            {/* Full Composite Visual Banner */}
-            <div className="relative w-full overflow-hidden rounded-md shadow-2xl">
-              <img
-                src={quoteBannerImg}
-                alt="“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समर्पण का अभ्यास है।” - Cultivation is not just a process, it is a practice of patience and understanding."
-                className="w-full h-auto object-cover object-center max-h-[520px]"
-              />
-            </div>
-            {/* Accessible screen-reader text for search engines */}
-            <div className="sr-only">
-              <h2>“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समर्पण का अभ्यास है।”</h2>
-              <p>Cultivation is not just a process, it is a practice of patience and understanding.</p>
-            </div>
-          </Reveal>
-        </div>
+        <Reveal>
+          <div className="relative w-full overflow-hidden leading-none">
+            <img
+              src={quoteBannerImg}
+              alt="“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समर्पण का अभ्यास है।” - Cultivation is not just a process, it is a practice of patience and understanding."
+              className="w-full h-auto min-h-[220px] sm:min-h-[320px] lg:min-h-[420px] object-cover object-center pointer-events-none select-none block"
+            />
+          </div>
+          {/* Accessible screen-reader text for search engines */}
+          <div className="sr-only">
+            <h2>“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समर्पण का अभ्यास है।”</h2>
+            <p>Cultivation is not just a process, it is a practice of patience and understanding.</p>
+          </div>
+        </Reveal>
       </section>
     );
   }
