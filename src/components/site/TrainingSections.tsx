@@ -105,8 +105,8 @@ export function QuickHighlights() {
   );
 }
 
-import cultivationRoomImg from "@/assets/cultivation-room.jpg";
-import sinensisWildImg from "@/assets/sinensis-wild.jpg";
+import quoteLabLeftImg from "@/assets/quote-lab-left.jpg";
+import quoteSinensisRightImg from "@/assets/quote-sinensis-right.png";
 
 /* ------------------------------------------------- 3. BRAND PHILOSOPHY */
 
@@ -116,24 +116,24 @@ export function BrandPhilosophyQuote() {
       aria-label="Brand philosophy quote: Cultivation is not just a process, it is a practice of patience and understanding"
       className="relative w-full overflow-hidden bg-[#251707] py-16 sm:py-20 lg:py-24 border-y border-amber-950/40 text-parchment"
     >
-      {/* Left Side Artwork: Crystal Clear Lab Cultivation Room */}
+      {/* Left Side Artwork: Exact User Cultivation Lab Room */}
       <div className="absolute left-0 top-0 bottom-0 w-1/3 sm:w-2/5 lg:w-[38%] overflow-hidden pointer-events-none z-0">
         <img
-          src={cultivationRoomImg}
-          alt="Cordyceps militaris cultivation lab shelves"
+          src={quoteLabLeftImg}
+          alt="Cordyceps militaris cultivation laboratory room"
           className="w-full h-full object-cover object-left opacity-95"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#251707]/40 to-[#251707]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#251707]/30 to-[#251707]" />
       </div>
 
-      {/* Right Side Artwork: Crystal Clear Wild Sinensis Mushroom */}
+      {/* Right Side Artwork: Exact User Wild Sinensis Specimen */}
       <div className="absolute right-0 top-0 bottom-0 w-1/3 sm:w-2/5 lg:w-[38%] overflow-hidden pointer-events-none z-0">
         <img
-          src={sinensisWildImg}
-          alt="Wild Cordyceps sinensis specimen"
+          src={quoteSinensisRightImg}
+          alt="Wild Cordyceps sinensis specimen held with chopsticks"
           className="w-full h-full object-cover object-right opacity-95"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#251707]/40 to-[#251707]" />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#251707]/30 to-[#251707]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
