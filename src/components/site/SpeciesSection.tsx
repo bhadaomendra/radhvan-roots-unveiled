@@ -24,9 +24,9 @@ export function SpeciesSection() {
         <Reveal>
           <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12 min-h-[400px]">
             {/* Left Column: Crisp HTML Text Content & Interactive Button */}
-            <div className="relative z-10 lg:col-span-7 flex flex-col items-start text-left py-2">
+            <div className="relative z-10 lg:col-span-7 flex flex-col items-center text-center py-2">
               {/* Eyebrow with horizontal line */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <span className="text-xs font-bold tracking-[0.2em] text-[#F15A24] uppercase">
                   THE SPECIES
                 </span>
@@ -39,12 +39,12 @@ export function SpeciesSection() {
               </h2>
 
               {/* Description Paragraph */}
-              <p className="mt-4 text-base lg:text-lg leading-relaxed text-amber-100/90 max-w-xl drop-shadow-sm">
+              <p className="mt-4 text-base lg:text-lg leading-relaxed text-amber-100/90 max-w-xl text-center mx-auto drop-shadow-sm">
                 Cordyceps militaris is a remarkable fungus with a fascinating biology. Learn how it differs from wild Cordyceps sinensis and why cultivation matters.
               </p>
 
               {/* Pill CTA Button */}
-              <div className="mt-7">
+              <div className="mt-7 flex justify-center w-full">
                 <Link
                   to="/cordyceps-study"
                   className="inline-flex items-center gap-2 rounded-full bg-[#F15A24] px-8 py-3.5 text-xs font-bold tracking-[0.16em] text-white uppercase shadow-lg shadow-[#F15A24]/30 transition-all duration-300 hover:bg-[#d94e1c] hover:shadow-xl hover:-translate-y-0.5"
@@ -54,9 +54,9 @@ export function SpeciesSection() {
               </div>
 
               {/* Bottom 3 Feature Badges */}
-              <div className="mt-10 flex flex-wrap items-center gap-6 sm:gap-8 pt-6 border-t border-white/15 w-full">
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-8 pt-6 border-t border-white/15 w-full">
                 {/* Badge 1: Natural Origin */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 text-left">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-500/50 bg-amber-950/60 text-amber-400 backdrop-blur-sm shadow-md">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                       <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
@@ -72,7 +72,7 @@ export function SpeciesSection() {
                 <div className="hidden sm:block h-7 w-[1px] bg-white/20" />
 
                 {/* Badge 2: Science Backed */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 text-left">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-500/50 bg-amber-950/60 text-amber-400 backdrop-blur-sm shadow-md">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                       <path d="M10 2v7.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 9.5V2" />
@@ -89,7 +89,7 @@ export function SpeciesSection() {
                 <div className="hidden sm:block h-7 w-[1px] bg-white/20" />
 
                 {/* Badge 3: Cultivation Matters */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 text-left">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-500/50 bg-amber-950/60 text-amber-400 backdrop-blur-sm shadow-md">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                       <path d="M12 22V12" />
