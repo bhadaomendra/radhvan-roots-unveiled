@@ -122,8 +122,8 @@ export function BrandPhilosophyQuote() {
           alt="Cordyceps cultivation lab and wild sinensis artwork"
           className="w-full h-full object-cover object-center pointer-events-none select-none opacity-90"
         />
-        {/* Radial Dark Mask Overlay covering center blurry image text while keeping left lab & right mushroom visible */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(25,15,4,0.96)_0%,rgba(25,15,4,0.88)_42%,rgba(25,15,4,0.15)_80%)] pointer-events-none" />
+        {/* 100% Solid Dark Center Overlay completely blocking pre-printed background text underneath while keeping left lab & right mushroom visible */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#251707_0%,#251707_55%,rgba(37,23,7,0)_82%)] pointer-events-none" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
