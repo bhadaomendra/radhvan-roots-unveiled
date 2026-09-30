@@ -1,25 +1,23 @@
 import React from "react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
-import speciesVisual from "@/assets/cordyceps-species-visual.png";
+import speciesVisual from "@/assets/cordyceps-species-seamless.png";
 
 export function SpeciesSection() {
   return (
     <section
-      className="relative w-full overflow-hidden border-y border-amber-900/30 py-16 lg:py-24"
+      className="relative w-full overflow-hidden border-y border-amber-950/40 py-12 lg:py-16"
       style={{
-        background: "linear-gradient(135deg, #1C130B 0%, #140C06 60%, #0E0803 100%)",
+        backgroundColor: "#251707",
+        backgroundImage: "linear-gradient(135deg, #2A1A07 0%, #221405 50%, #1A0F03 100%)",
       }}
     >
-      {/* Ambient background leaf accents */}
-      <div className="pointer-events-none absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_30%,#F15A24_0%,transparent_50%)]" />
-      
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="relative grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
             
-            {/* Left Column: Content & Features */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
+            {/* Left Column: Real HTML Text Content & Interactive Button */}
+            <div className="relative z-10 lg:col-span-7 flex flex-col items-start text-left py-4">
               
               {/* Eyebrow with horizontal line */}
               <div className="flex items-center gap-3">
@@ -30,7 +28,7 @@ export function SpeciesSection() {
               </div>
 
               {/* Title */}
-              <h2 className="mt-4 font-display text-[clamp(2.2rem,4vw,3.6rem)] font-normal leading-[1.08] text-white">
+              <h2 className="mt-3 font-display text-[clamp(2.2rem,4vw,3.6rem)] font-normal leading-[1.05] text-white">
                 What is Cordyceps?
               </h2>
 
@@ -42,17 +40,17 @@ export function SpeciesSection() {
               {/* Pill CTA Button */}
               <Link
                 to="/cordyceps-study"
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#F15A24] px-8 py-3.5 text-xs font-bold tracking-[0.16em] text-white uppercase shadow-lg shadow-[#F15A24]/20 transition-all duration-300 hover:bg-[#d94e1c] hover:-translate-y-0.5"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#F15A24] px-8 py-3.5 text-xs font-bold tracking-[0.16em] text-white uppercase shadow-lg shadow-[#F15A24]/20 transition-all duration-300 hover:bg-[#d94e1c] hover:-translate-y-0.5"
               >
                 STUDY CORDYCEPS <span aria-hidden="true">→</span>
               </Link>
 
               {/* Bottom 3 Feature Badges / Pillars */}
-              <div className="mt-12 flex flex-wrap items-center gap-6 lg:gap-8 pt-6 border-t border-white/10 w-full">
+              <div className="mt-10 flex flex-wrap items-center gap-6 lg:gap-8 pt-6 border-t border-white/10 w-full">
                 
                 {/* Badge 1: Natural Origin */}
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-600/40 bg-amber-950/20 text-amber-500">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-600/40 bg-amber-950/30 text-amber-500">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                       <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
                       <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
@@ -68,7 +66,7 @@ export function SpeciesSection() {
 
                 {/* Badge 2: Science Backed */}
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-600/40 bg-amber-950/20 text-amber-500">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-600/40 bg-amber-950/30 text-amber-500">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                       <path d="M10 2v7.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 9.5V2" />
                       <path d="M8.5 2h7" />
@@ -85,7 +83,7 @@ export function SpeciesSection() {
 
                 {/* Badge 3: Cultivation Matters */}
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-600/40 bg-amber-950/20 text-amber-500">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-600/40 bg-amber-950/30 text-amber-500">
                     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
                       <path d="M12 22V12" />
                       <path d="M12 12C12 7.5 7.5 7.5 7.5 7.5C7.5 12 12 12 12 12Z" />
@@ -102,15 +100,13 @@ export function SpeciesSection() {
 
             </div>
 
-            {/* Right Column: Visual Composition */}
-            <div className="lg:col-span-5 flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-md lg:max-w-none overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
-                <img
-                  src={speciesVisual}
-                  alt="Cordyceps Militaris species cultivation biology"
-                  className="w-full h-auto object-cover rounded-2xl border border-amber-500/20 shadow-amber-950/50"
-                />
-              </div>
+            {/* Right Column: Full-Bleed Seamless Cordyceps Illustration */}
+            <div className="relative z-0 lg:col-span-5 flex items-center justify-end h-full">
+              <img
+                src={speciesVisual}
+                alt="Cordyceps Militaris species illustration"
+                className="w-full h-auto object-cover max-h-[440px] pointer-events-none select-none"
+              />
             </div>
 
           </div>
