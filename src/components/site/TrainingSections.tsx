@@ -105,7 +105,8 @@ export function QuickHighlights() {
   );
 }
 
-import quoteBannerImg from "@/assets/quote-section-banner.png";
+import cultivationRoomImg from "@/assets/cultivation-room.jpg";
+import sinensisWildImg from "@/assets/sinensis-wild.jpg";
 
 /* ------------------------------------------------- 3. BRAND PHILOSOPHY */
 
@@ -115,15 +116,24 @@ export function BrandPhilosophyQuote() {
       aria-label="Brand philosophy quote: Cultivation is not just a process, it is a practice of patience and understanding"
       className="relative w-full overflow-hidden bg-[#251707] py-16 sm:py-20 lg:py-24 border-y border-amber-950/40 text-parchment"
     >
-      {/* Background Banner Artwork: Left Lab Jars & Right Sinensis */}
-      <div className="absolute inset-0 z-0">
+      {/* Left Side Artwork: Crystal Clear Lab Cultivation Room */}
+      <div className="absolute left-0 top-0 bottom-0 w-1/3 sm:w-2/5 lg:w-[38%] overflow-hidden pointer-events-none z-0">
         <img
-          src={quoteBannerImg}
-          alt="Cordyceps cultivation lab and wild sinensis artwork"
-          className="w-full h-full object-cover object-center pointer-events-none select-none opacity-90"
+          src={cultivationRoomImg}
+          alt="Cordyceps militaris cultivation lab shelves"
+          className="w-full h-full object-cover object-left opacity-95"
         />
-        {/* 100% Solid Dark Center Overlay completely blocking pre-printed background text underneath while keeping left lab & right mushroom visible */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#251707_0%,#251707_55%,rgba(37,23,7,0)_82%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#251707]/40 to-[#251707]" />
+      </div>
+
+      {/* Right Side Artwork: Crystal Clear Wild Sinensis Mushroom */}
+      <div className="absolute right-0 top-0 bottom-0 w-1/3 sm:w-2/5 lg:w-[38%] overflow-hidden pointer-events-none z-0">
+        <img
+          src={sinensisWildImg}
+          alt="Wild Cordyceps sinensis specimen"
+          className="w-full h-full object-cover object-right opacity-95"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#251707]/40 to-[#251707]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-10">
