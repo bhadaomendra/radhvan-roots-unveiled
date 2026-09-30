@@ -101,8 +101,8 @@ function Index() {
         <Hero />
         <QuoteBlock
           variant="home"
-          hindi="हर शुरुआत में एक संभावना छिपी होती है।"
-          english="Every beginning hides a possibility."
+          hindi="“उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समझ का अभ्यास है।”"
+          english="“Cultivation is not just a process, it is a practice of patience and understanding.”"
         />
         <SectionPreview
           eyebrow="Our story"

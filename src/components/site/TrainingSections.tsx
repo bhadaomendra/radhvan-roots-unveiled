@@ -109,17 +109,17 @@ export function QuickHighlights() {
 
 export function BrandPhilosophyQuote() {
   return (
-    <section className="bg-[#241708] py-20 lg:py-28 text-parchment">
-      <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
+    <section className="relative w-full overflow-hidden bg-[#251707] py-16 lg:py-24 border-y border-amber-950/40 text-parchment">
+      <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-10">
         <Reveal>
-          <div className="mx-auto h-12 w-px bg-ember/40 mb-8" />
-          <p className="font-display text-2xl leading-snug sm:text-3xl text-parchment/90 font-light">
+          <div className="mx-auto h-12 sm:h-16 w-[1px] bg-[#F15A24]/70 mb-8 sm:mb-10" />
+          <p className="font-display text-2xl sm:text-3xl lg:text-4xl text-amber-50/95 font-normal leading-relaxed tracking-wide drop-shadow-sm">
             “उगाना सिर्फ एक प्रक्रिया नहीं, धैर्य और समझ का अभ्यास है।”
           </p>
-          <p className="mt-6 text-sm font-sans italic tracking-wide text-ember lg:text-base">
+          <p className="mt-5 text-sm sm:text-base font-sans italic tracking-wide text-[#F15A24] font-medium">
             “Cultivation is not just a process, it is a practice of patience and understanding.”
           </p>
-          <div className="mx-auto h-12 w-px bg-ember/40 mt-8" />
+          <div className="mx-auto h-12 sm:h-16 w-[1px] bg-[#F15A24]/70 mt-8 sm:mt-10" />
         </Reveal>
       </div>
     </section>
