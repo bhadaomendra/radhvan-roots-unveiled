@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, Hero } from "@/components/site/Hero";
 import { SectionPreview, QuoteBlock } from "@/components/site/Layout";
+import { SpeciesSection } from "@/components/site/SpeciesSection";
 import { ContactCTA, Footer } from "@/components/site/Sections";
 
 const TITLE = "Radhvan Origins | Cordyceps Research & Cultivation";
@@ -110,14 +111,7 @@ function Index() {
           to="/why-radhvan"
           cta="Discover our story"
         />
-        <SectionPreview
-          eyebrow="The species"
-          title="What is Cordyceps?"
-          intro="Cordyceps militaris is a remarkable fungus with a fascinating biology. Learn how it differs from wild Cordyceps sinensis and why cultivation matters."
-          to="/cordyceps-study"
-          cta="Study Cordyceps"
-          tone="dark"
-        />
+        <SpeciesSection />
         <SectionPreview
           eyebrow="Hands-on learning"
           title="Cultivation & Training"
