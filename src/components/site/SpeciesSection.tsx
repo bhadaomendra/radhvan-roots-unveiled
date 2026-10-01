@@ -25,8 +25,9 @@ export function SpeciesSection() {
           <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12 min-h-[400px]">
             {/* Left Column: Crisp HTML Text Content & Interactive Button */}
             <div className="relative z-10 lg:col-span-7 flex flex-col items-center text-center py-2">
-              {/* Eyebrow with horizontal line */}
-              <div className="flex items-center justify-center gap-3">
+              {/* Eyebrow with horizontal lines on both sides */}
+              <div className="flex items-center justify-center gap-3 w-full">
+                <span className="h-[1px] w-12 bg-[#F15A24]/50 inline-block" />
                 <span className="text-xs font-bold tracking-[0.2em] text-[#F15A24] uppercase">
                   THE SPECIES
                 </span>
