@@ -16,20 +16,37 @@ function doPost(e) {
   lock.waitLock(15000);
   try {
     var p = (e && e.parameter) || {};
-    if (!p.name || !p.phone) {
+
+    // The website form uses friendly field names such as fullName,
+    // location and requirement. Accept those names as well as the
+    // shorter API names so the web form and endpoint stay compatible.
+    var name = p.name || p.fullName || "";
+    var phone = p.phone || p.mobile || p.whatsapp || "";
+    var city = p.city || p.location || "";
+    var message = p.message || p.requirement || "";
+
+    if (!name || !phone) {
       return json_({ result: "error", message: "Missing name or phone" });
     }
+
+    // Preserve the additional website form details in the Message column.
+    var extra = [];
+    if (p.email) extra.push("Email: " + p.email);
+    if (p.interest) extra.push("Interest: " + p.interest);
+    if (p.budget) extra.push("Budget: " + p.budget);
+    if (p.timeline) extra.push("Timeline: " + p.timeline);
+    if (message) extra.push("Requirement: " + message);
 
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = getOrCreateSheet_(ss);
 
     sheet.appendRow([
       new Date(),
-      clean_(p.name),
-      clean_(p.phone),
-      clean_(p.city),
-      clean_(p.message),
-      clean_(p.page),
+      clean_(name),
+      clean_(phone),
+      clean_(city),
+      clean_(extra.join(" | ")),
+      clean_(p.page || "/cultivation-training"),
       clean_(p.source || "Website"),
     ]);
 
