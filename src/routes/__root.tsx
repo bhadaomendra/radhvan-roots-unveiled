@@ -125,6 +125,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  // Static-pages build (cPanel FTP / GitHub Pages): src/pages.tsx mounts the app
+  // into an existing <div id="root">. React 19 treats <html>/<head>/<body> as
+  // singletons bound to the REAL document nodes, which are ancestors of that
+  // container -> React's event dispatch loops forever on the first keystroke
+  // and the whole tab freezes. So on that client, skip the document shell.
+  // (The Node prerender has no `window`, so it still renders the full shell and
+  // the head/body extraction in scripts/prerender.mjs keeps working.)
+  if (
+    typeof window !== "undefined" &&
+    (window as { __STATIC_PAGES__?: boolean }).__STATIC_PAGES__
+  ) {
+    return <>{children}</>;
+  }
+
   return (
     <html lang="en">
       <head>
