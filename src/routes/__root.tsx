@@ -132,7 +132,10 @@ function RootShell({ children }: { children: ReactNode }) {
   // and the whole tab freezes. So on that client, skip the document shell.
   // (The Node prerender has no `window`, so it still renders the full shell and
   // the head/body extraction in scripts/prerender.mjs keeps working.)
-  if (typeof window !== "undefined" && (window as { __STATIC_PAGES__?: boolean }).__STATIC_PAGES__) {
+  if (
+    typeof window !== "undefined" &&
+    (window as { __STATIC_PAGES__?: boolean }).__STATIC_PAGES__
+  ) {
     return <>{children}</>;
   }
 
