@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { INQUIRY_ENDPOINT } from "@/lib/inquiry";
 import { ArrowRight, BookOpen, Building2, FileText, LockKeyhole, Users, Leaf, FlaskConical } from "lucide-react";
 import cordycepsImage from "@/assets/cordyceps-militaris-macro.jpg";
 
-const GOOGLE_SHEETS_ENDPOINT = import.meta.env.VITE_GOOGLE_SHEETS_WEBHOOK_URL ?? "";
+const GOOGLE_SHEETS_ENDPOINT = INQUIRY_ENDPOINT;
 
 export function InquirySection() {
   const [submitted, setSubmitted] = useState(false);
