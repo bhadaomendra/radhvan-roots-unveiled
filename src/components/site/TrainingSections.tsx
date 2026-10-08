@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
+import { BatchInquiryForm } from "./BatchInquiryForm";
 import lab from "@/assets/cultivation-room.jpg";
 
 /* ------------------------------------------------------------- 1. HERO */
@@ -720,75 +721,7 @@ export function FinalCTASection() {
             <h3 className="font-display text-lg text-bark text-center mb-4">
               Enquire About Upcoming Training Batches in Jaipur
             </h3>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const form = e.currentTarget;
-                const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-                const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
-                const city = (form.elements.namedItem("city") as HTMLInputElement).value;
-                const msg = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
-                const text = `Hello Radhvan Origins, I am interested in the Cordyceps Cultivation Training in Jaipur.%0A%0AName: ${encodeURIComponent(name)}%0AMobile/WhatsApp: ${encodeURIComponent(phone)}%0ACity: ${encodeURIComponent(city)}%0AMessage: ${encodeURIComponent(msg)}`;
-                window.open(`https://wa.me/919950091528?text=${text}`, "_blank");
-              }}
-              className="space-y-4"
-            >
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
-                  Your Full Name *
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="e.g. Omendra Bhada"
-                  className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
-                />
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
-                    WhatsApp / Phone *
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder="+91 99500 91528"
-                    className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
-                    Your City / State *
-                  </label>
-                  <input
-                    type="text"
-                    name="city"
-                    required
-                    placeholder="e.g. Jaipur, Rajasthan"
-                    className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1">
-                  Your Questions / Lab Setup Timeline
-                </label>
-                <textarea
-                  name="message"
-                  rows={3}
-                  placeholder="e.g. I am interested in joining the next weekend batch in Jaipur and exploring lab setup requirements."
-                  className="w-full rounded-sm border border-border bg-card px-4 py-2.5 text-sm text-bark focus:border-ember focus:outline-hidden"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-ember px-6 py-3.5 text-xs font-bold tracking-[0.16em] text-primary-foreground uppercase transition-transform hover:-translate-y-0.5 cursor-pointer shadow-md hover:shadow-lg"
-              >
-                Send Batch Inquiry via WhatsApp →
-              </button>
-            </form>
+            <BatchInquiryForm />
           </div>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
