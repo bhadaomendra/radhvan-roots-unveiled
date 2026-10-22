@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import logo from "@/assets/radhvan-new-logo.png";
 import { Link } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-cordyceps.jpg";
@@ -30,6 +31,21 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // While the mobile menu is open: lock the page behind it and let Escape close it.
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
     <header
@@ -97,40 +113,76 @@ export function SiteNav({ variant = "home" }: { variant?: "home" | "page" }) {
         </button>
       </div>
 
-      {open && (
-        <div className="fixed inset-0 z-[100] flex flex-col bg-background/98 backdrop-blur-2xl lg:hidden">
-          <div className="flex h-20 items-center justify-between px-4 sm:px-6">
-            <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
-              <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
-            </Link>
-            <button onClick={() => setOpen(false)} aria-label="Close menu" className="rounded-full border border-border bg-background p-2.5 shadow-sm">
-              <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true">
-                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
+      {/*
+        The mobile menu is portalled to <body> on purpose. This header uses
+        backdrop-blur, and any ancestor with backdrop-filter becomes the containing
+        block for `position: fixed` children — which squashed this full-screen menu
+        into the ~68px header strip, hiding every link except "Home" and leaving the
+        landing page visible behind it. (`open` is only ever true on the client.)
+      */}
+      {open &&
+        createPortal(
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
+            className="fixed inset-0 z-[100] flex h-dvh flex-col bg-background lg:hidden"
+          >
+            <div className="flex h-20 items-center justify-between px-4 sm:px-6">
+              <Link to="/" onClick={() => setOpen(false)} className="flex items-center">
+                <img src={logo} alt="Radhvan" className="h-14 w-auto object-contain" />
+              </Link>
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close menu"
+                className="rounded-full border border-border bg-background p-2.5 shadow-sm"
+              >
+                <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M3 3l10 10M13 3L3 13"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
 
-          <nav className="flex flex-1 flex-col overflow-y-auto px-6 py-8 sm:px-8 sm:py-10">
-            <div className="flex flex-col gap-6">
-              {NAV.map((item) => (
-                <Link key={item.to} to={item.to} onClick={() => setOpen(false)} className="text-2xl font-display text-bark transition-colors hover:text-ember" activeProps={{ className: "text-ember" }}>
-                  {item.label}
-                </Link>
-              ))}
-              <div className="mt-8 border-t border-border pt-8">
-                <p className="mb-4 text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">Resources</p>
-                <div className="grid grid-cols-1 gap-4">
-                  {GUIDES.map((g) => (
-                    <Link key={g.to} to={g.to} onClick={() => setOpen(false)} className="text-lg font-display text-bark/70 hover:text-ember">
-                      {g.label}
-                    </Link>
-                  ))}
+            <nav className="flex flex-1 flex-col overflow-y-auto px-6 py-8 sm:px-8 sm:py-10">
+              <div className="flex flex-col gap-6">
+                {NAV.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    className="text-2xl font-display text-bark transition-colors hover:text-ember"
+                    activeProps={{ className: "text-ember" }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="mt-8 border-t border-border pt-8">
+                  <p className="mb-4 text-[0.7rem] font-black tracking-[0.2em] text-ember uppercase">
+                    Resources
+                  </p>
+                  <div className="grid grid-cols-1 gap-4">
+                    {GUIDES.map((g) => (
+                      <Link
+                        key={g.to}
+                        to={g.to}
+                        onClick={() => setOpen(false)}
+                        className="text-lg font-display text-bark/70 hover:text-ember"
+                      >
+                        {g.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </nav>
-        </div>
-      )}
+            </nav>
+          </div>,
+          document.body,
+        )}
     </header>
   );
 }
