@@ -25,3 +25,7 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Blog & SEO admin
+
+Blog articles and per-page SEO are edited at `/admin/` (Sveltia CMS, Git-based). See [ADMIN_GUIDE.md](ADMIN_GUIDE.md).

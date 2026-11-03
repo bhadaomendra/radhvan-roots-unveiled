@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { getPosts, postPath } from "@/lib/blog";
 
 const BASE_URL = "https://radhvanorigins.com";
 
@@ -26,6 +27,15 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/cordyceps-health-benefits", changefreq: "monthly", priority: "0.9" },
           { path: "/cordyceps-cultivation", changefreq: "monthly", priority: "0.9" },
           { path: "/cordyceps-faq", changefreq: "monthly", priority: "0.8" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          ...getPosts()
+            .filter((p) => !p.noindex)
+            .map((p) => ({
+              path: postPath(p),
+              lastmod: (p.updated ?? p.date).slice(0, 10),
+              changefreq: "monthly" as const,
+              priority: "0.7",
+            })),
         ];
 
         const urls = entries.map((e) =>

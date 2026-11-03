@@ -14,6 +14,7 @@ const NAV = [
 ] as const;
 
 const GUIDES = [
+  { to: "/blog", label: "Blog", description: "Research notes & lab learnings" },
   { to: "/cordyceps-study", label: "Study Cordyceps", description: "What Cordyceps actually is" },
   { to: "/cultivation-training", label: "Cultivation Process", description: "Our lab-controlled technique" },
   { to: "/research-knowledge", label: "Evidence & Compounds", description: "Bioactive properties explained" },

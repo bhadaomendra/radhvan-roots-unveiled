@@ -1,0 +1,112 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "title": "Radhvan Origins | Cordyceps Research & Cultivation",
+      "description": "Radhvan Origins explores Cordyceps militaris through research, cultivation education and practical knowledge, with a focus on responsible and traceable cultivation.",
+      "keywords": "Radhvan Origins, Cordyceps militaris, Cordyceps research, Cordyceps cultivation, Cordyceps India",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/",
+      "noindex": false
+    },
+    {
+      "path": "/why-radhvan",
+      "title": "Why Radhvan Origins | Our Approach to Cordyceps",
+      "description": "Discover the thinking behind Radhvan Origins and our approach to Cordyceps research, cultivation education, scientific learning and responsible knowledge sharing.",
+      "keywords": "Why Radhvan Origins, Radhvan Origins, Cordyceps research, Cordyceps cultivation education, scientific cultivation, Cordyceps education",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/why-radhvan",
+      "noindex": false
+    },
+    {
+      "path": "/cordyceps-study",
+      "title": "What Is Cordyceps? | Cordyceps Militaris Explained — Radhvan Origins",
+      "description": "Learn what Cordyceps is, how Cordyceps militaris differs from other species, and what modern research says about its cultivation and biology.",
+      "keywords": "What is Cordyceps, Cordyceps militaris biology, Cordyceps study, fungal biotechnology",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cordyceps-study",
+      "noindex": false
+    },
+    {
+      "path": "/cultivation-training",
+      "title": "Cordyceps Militaris Cultivation Training in Jaipur | Radhvan Origins",
+      "description": "Learn Cordyceps militaris cultivation with Radhvan Origins in Jaipur through a 2-day theory and practical training program. Enquire about upcoming batches.",
+      "keywords": "Cordyceps militaris cultivation training, Cordyceps training Jaipur, Cordyceps cultivation course India, Cordyceps farming training, Cordyceps lab training Jaipur",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cultivation-training",
+      "noindex": false
+    },
+    {
+      "path": "/research-knowledge",
+      "title": "Cordyceps Research & Knowledge | Radhvan Origins",
+      "description": "Explore research, compounds, applications and scientific knowledge surrounding Cordyceps militaris and modern cultivation.",
+      "keywords": "Cordyceps research, Cordycepin scientific knowledge, Cordyceps compounds, fungal biotech research",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/research-knowledge",
+      "noindex": false
+    },
+    {
+      "path": "/contact",
+      "title": "Contact Us | Connect with Radhvan Origins",
+      "description": "Get in touch with Radhvan Origins for inquiries regarding Cordyceps militaris research, cultivation training programs, or laboratory collaboration.",
+      "keywords": "Contact Radhvan Origins, Cordyceps training inquiry, Cordyceps Jaipur India",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/contact",
+      "noindex": false
+    },
+    {
+      "path": "/cordyceps-vs-sinensis",
+      "title": "Cordyceps militaris vs Cordyceps sinensis — Radhvan Origins",
+      "description": "Detailed comparison between Cordyceps militaris and wild Cordyceps sinensis: differences in biology, cordycepin concentration, lab cultivation, and sustainability.",
+      "keywords": "Cordyceps militaris vs Cordyceps sinensis, wild caterpillar fungus vs lab grown cordyceps, cordycepin comparison",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cordyceps-vs-sinensis",
+      "noindex": false
+    },
+    {
+      "path": "/cordycepin",
+      "title": "Cordycepin: the nucleoside behind Cordyceps — Radhvan Origins",
+      "description": "Understand cordycepin (3'-deoxyadenosine), the bioactive nucleoside compound in Cordyceps militaris, its chemical structure, quality measurement, and scientific research.",
+      "keywords": "Cordycepin, 3-deoxyadenosine, Cordyceps bioactive nucleoside, Cordycepin testing HPLC, Cordyceps quality marker",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cordycepin",
+      "noindex": false
+    },
+    {
+      "path": "/cordyceps-health-benefits",
+      "title": "Cordyceps health benefits: what the research says — Radhvan Origins",
+      "description": "A plain-language overview of Cordyceps research areas: cancer cell studies, mood and stress, blood pressure, skin health and joint research directions.",
+      "keywords": "Cordyceps health benefits, Cordyceps research studies, Cordyceps immune support, Cordycepin scientific research",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cordyceps-health-benefits",
+      "noindex": false
+    },
+    {
+      "path": "/cordyceps-cultivation",
+      "title": "How Cordyceps militaris is cultivated in a lab — Radhvan Origins",
+      "description": "Step-by-step breakdown of controlled Cordyceps militaris laboratory cultivation: substrate preparation, inoculation, incubation, fruiting control, and harvesting.",
+      "keywords": "Cordyceps lab cultivation, Cordyceps militaris growing process, substrate inoculation, fruiting room control, Cordyceps harvest",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cordyceps-cultivation",
+      "noindex": false
+    },
+    {
+      "path": "/cordyceps-faq",
+      "title": "Cordyceps FAQ: common questions answered — Radhvan Origins",
+      "description": "Frequently asked questions about Cordyceps militaris, lab cultivation, cordycepin levels, safety, training courses, and purchasing authentic Cordyceps.",
+      "keywords": "Cordyceps FAQ, Cordyceps questions, Cordyceps militaris safety, Cordycepin FAQ, Cordyceps training FAQ",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/cordyceps-faq",
+      "noindex": false
+    },
+    {
+      "path": "/blog",
+      "title": "Cordyceps Blog: research notes & cultivation guides | Radhvan Origins",
+      "description": "Research notes, cultivation guides and lab learnings on Cordyceps militaris from Radhvan Origins, written plainly and without overclaiming.",
+      "keywords": "Cordyceps blog, Cordyceps militaris articles, Cordyceps cultivation guide, Radhvan Origins blog",
+      "ogImage": "https://radhvanorigins.com/og-image.png",
+      "canonical": "https://radhvanorigins.com/blog",
+      "noindex": false
+    }
+  ]
+}

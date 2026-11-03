@@ -25,6 +25,7 @@ import React from "react";
 import { renderToPipeableStream } from "react-dom/server";
 import { RouterProvider, createMemoryHistory } from "@tanstack/react-router";
 import { getRouter } from "../src/router.tsx";
+import { getPosts } from "../src/lib/blog.ts";
 
 // TanStack Router code-splits each route's component with React.lazy().
 // The classic synchronous `renderToString` doesn't wait for those async
@@ -72,6 +73,9 @@ const ROUTES = {
   "/cordyceps-health-benefits": "cordyceps-health-benefits.html",
   "/cordyceps-cultivation": "cordyceps-cultivation.html",
   "/cordyceps-faq": "cordyceps-faq.html",
+  // Blog pages come from content/blog/*.md (see scripts/blog-entries.mjs).
+  "/blog": "blog.html",
+  ...Object.fromEntries(getPosts().map((p) => [`/blog/${p.slug}`, `blog/${p.slug}.html`])),
 };
 
 async function renderRoute(routePath, attempt = 1) {
@@ -111,6 +115,8 @@ async function finishRenderRoute(router) {
   // tags this route *adds*, so filter those base tags out before merging.
   const headMatch = fullDoc.match(/<head[^>]*>([\s\S]*?)<\/head>/);
   const headInner = headMatch ? headMatch[1] : "";
+  const titleMatch = headInner.match(/<title[^>]*>([\s\S]*?)<\/title>/);
+  const title = titleMatch ? titleMatch[1] : "";
   const headExtras = headInner
     .split(/(?=<(?:meta|link|title|script)\b)/g)
     .filter((tag) => tag.trim())
@@ -130,16 +136,17 @@ async function finishRenderRoute(router) {
     })
     .join("\n    ");
 
-  return { bodyHtml, headExtras };
+  return { bodyHtml, headExtras, title };
 }
 
-async function bakeFile(fileName, { bodyHtml, headExtras }) {
+async function bakeFile(fileName, { bodyHtml, headExtras, title }) {
   const filePath = path.join(DIST_DIR, fileName);
   let source;
   try {
     source = await readFile(filePath, "utf8");
   } catch {
     console.warn(`  ! skipped (not found in dist/): ${fileName}`);
+    if (fileName.startsWith("blog")) process.exitCode = 1;
     return;
   }
 
@@ -152,6 +159,12 @@ async function bakeFile(fileName, { bodyHtml, headExtras }) {
     '<div id="root"></div>',
     `<div id="root">${bodyHtml}</div>`,
   );
+
+  // Generated blog entry files carry a placeholder <title data-prerender>;
+  // the real title comes from the route's head() (post SEO title).
+  if (title && /<title data-prerender[^>]*>/.test(updated)) {
+    updated = updated.replace(/<title data-prerender[^>]*>[\s\S]*?<\/title>/, `<title>${title}</title>`);
+  }
 
   if (headExtras && updated.includes("</head>")) {
     // Route head() is the canonical source after prerendering. Remove JSON-LD

@@ -975,6 +975,7 @@ export function Footer() {
             <li><Link to="/cordyceps-health-benefits" className="transition-colors hover:text-ember">Health Benefits</Link></li>
             <li><Link to="/cordycepin" className="transition-colors hover:text-ember">Cordycepin</Link></li>
             <li><Link to="/cordyceps-faq" className="transition-colors hover:text-ember">FAQ</Link></li>
+            <li><Link to="/blog" className="transition-colors hover:text-ember">Blog</Link></li>
           </ul>
         </div>
 

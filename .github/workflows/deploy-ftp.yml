@@ -59,6 +59,9 @@ jobs:
 
             RewriteRule ^index\.html$ - [L]
 
+            # Blog index: /blog is also a folder (blog/<slug>.html), so serve it explicitly
+            RewriteRule ^blog/?$ /blog.html [L]
+
             # Clean URLs: serve .html file when a matching one exists
             RewriteCond %{REQUEST_FILENAME} !-f
             RewriteCond %{REQUEST_FILENAME} !-d
