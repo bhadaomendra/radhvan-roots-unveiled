@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { generateBlogEntries } from "./scripts/blog-entries.mjs";
 
 // A static-only build used by GitHub Pages / cPanel FTP. The main Vite config
 // remains unchanged for Lovable's TanStack Start runtime.
@@ -21,6 +22,8 @@ export default defineConfig({
         "cordyceps-health-benefits": "cordyceps-health-benefits.html",
         "cordyceps-cultivation": "cordyceps-cultivation.html",
         "cordyceps-faq": "cordyceps-faq.html",
+        // blog.html + blog/<slug>.html, generated from content/blog/*.md
+        ...generateBlogEntries(),
       },
     },
   },

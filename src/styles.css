@@ -243,3 +243,133 @@
     pointer-events: none;
   }
 }
+
+/* ------------------------------------------------------------------
+   Blog article body (rendered from Markdown, see src/lib/blog.ts)
+------------------------------------------------------------------- */
+.blog-prose {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: color-mix(in oklab, var(--color-foreground) 88%, transparent);
+  overflow-wrap: anywhere;
+
+  > :first-child {
+    margin-top: 0;
+  }
+  p,
+  ul,
+  ol,
+  blockquote,
+  pre,
+  figure,
+  .table-wrap {
+    margin-top: 1.4em;
+  }
+  h2 {
+    margin-top: 2.4em;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    line-height: 1.15;
+    color: var(--color-bark);
+    scroll-margin-top: 6rem;
+  }
+  h3 {
+    margin-top: 2em;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    color: var(--color-bark);
+    scroll-margin-top: 6rem;
+  }
+  h4 {
+    margin-top: 1.8em;
+    font-size: 1.1rem;
+    color: var(--color-bark);
+  }
+  a {
+    color: var(--color-ember);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    &:hover {
+      color: var(--color-bark);
+    }
+  }
+  strong {
+    color: var(--color-bark);
+    font-weight: 700;
+  }
+  ul,
+  ol {
+    padding-left: 1.4em;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+  li {
+    margin-top: 0.5em;
+    padding-left: 0.2em;
+  }
+  li::marker {
+    color: var(--color-ember);
+  }
+  blockquote {
+    border-left: 3px solid var(--color-ember);
+    padding: 0.2em 0 0.2em 1.2em;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--color-bark);
+  }
+  img {
+    margin: 2em auto 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    border: 1px solid var(--color-border);
+  }
+  hr {
+    margin: 2.5em 0;
+    border: 0;
+    border-top: 1px solid var(--color-border);
+  }
+  code {
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    background: var(--color-secondary);
+    font-size: 0.9em;
+  }
+  pre {
+    overflow-x: auto;
+    padding: 1.1em 1.3em;
+    border-radius: 3px;
+    background: var(--color-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    code {
+      padding: 0;
+      background: none;
+    }
+  }
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  th,
+  td {
+    padding: 0.7em 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+  }
+  th {
+    background: var(--color-secondary);
+    color: var(--color-bark);
+    font-weight: 700;
+  }
+}

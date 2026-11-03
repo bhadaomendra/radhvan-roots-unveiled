@@ -1,0 +1,196 @@
+# Radhvan Origins admin panel (Sveltia CMS, Git-based).
+# Open https://radhvanorigins.com/admin/ and sign in with GitHub.
+# Every Save commits to the `main` branch; the existing GitHub Action then
+# rebuilds the site and uploads it by FTP (takes a few minutes).
+
+backend:
+  name: github
+  repo: bhadaomendra/radhvan-roots-unveiled
+  branch: main
+  commit_messages:
+    create: "CMS: add {{collection}} “{{slug}}”"
+    update: "CMS: update {{collection}} “{{slug}}”"
+    delete: "CMS: delete {{collection}} “{{slug}}”"
+    uploadMedia: "CMS: upload “{{path}}”"
+    deleteMedia: "CMS: delete “{{path}}”"
+
+site_url: https://radhvanorigins.com
+display_url: https://radhvanorigins.com
+logo_url: https://radhvanorigins.com/favicon-192x192.png
+publish_mode: simple
+locale: en
+
+# Uploaded images are saved in public/uploads and served from /uploads/...
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  # ---------------------------------------------------------------- Blog
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    folder: content/blog
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: [date, title, draft]
+    view_filters:
+      - label: Drafts
+        field: draft
+        pattern: true
+      - label: Published
+        field: draft
+        pattern: false
+    fields:
+      - label: Title (this is the page's H1)
+        name: title
+        widget: string
+        hint: Clear, specific and with the main keyword. Example "How Cordyceps militaris is grown in a lab".
+
+      - label: URL slug
+        name: slug
+        widget: string
+        required: false
+        pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Use only lowercase letters, numbers and hyphens, e.g. cordyceps-lab-cultivation"]
+        hint: The page address is radhvanorigins.com/blog/<slug>. Leave empty to use the file name. Do not change it after publishing, or old links and Google rankings break.
+
+      - label: Draft (ON = not shown on the website)
+        name: draft
+        widget: boolean
+        default: true
+        hint: Turn this OFF when the article is ready to publish.
+
+      - label: Publish date
+        name: date
+        widget: datetime
+        hint: Shown on the article and in Google.
+
+      - label: Last updated
+        name: updated
+        widget: datetime
+        required: false
+        hint: Set this when you make a meaningful update to an old article.
+
+      - label: Author
+        name: author
+        widget: string
+        default: Radhvan Origins
+
+      - label: Summary (excerpt)
+        name: excerpt
+        widget: text
+        hint: 1 to 2 sentences, about 150 to 160 characters. Shown on the blog page and used as the Google description if you do not write one below.
+
+      - label: Cover image
+        name: cover
+        widget: image
+        required: false
+        hint: 1200 x 630 px works best for social sharing. Use WebP or a compressed JPG under 200 KB.
+
+      - label: Cover image description (alt text)
+        name: coverAlt
+        widget: string
+        required: false
+        hint: Describe the image in a few words. It helps Google Images and accessibility.
+
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+        hint: 1 to 3 short topics, e.g. Cultivation, Cordycepin. The first tag is shown on the card.
+
+      - label: Article
+        name: body
+        widget: markdown
+        hint: Use Heading 2 for sections and Heading 3 for sub-points. Do not use Heading 1. Add links to other pages of the site and add alt text to every image.
+
+      - label: FAQ (optional, adds FAQ rich results)
+        name: faq
+        widget: list
+        required: false
+        summary: "{{fields.q}}"
+        fields:
+          - { label: Question, name: q, widget: string }
+          - { label: Answer, name: a, widget: text }
+
+      # ------------------------------------------------ On-page SEO fields
+      - label: "SEO: title shown in Google"
+        name: seoTitle
+        widget: string
+        required: false
+        hint: Aim for 50 to 60 characters. Empty = "<Title> | Radhvan Origins".
+
+      - label: "SEO: meta description"
+        name: metaDescription
+        widget: text
+        required: false
+        hint: Aim for 140 to 160 characters. Write it like an invitation to click. Empty = the Summary above.
+
+      - label: "SEO: keywords"
+        name: keywords
+        widget: string
+        required: false
+        hint: Comma separated, optional. Google ignores it, some other search engines use it.
+
+      - label: "SEO: canonical URL"
+        name: canonical
+        widget: string
+        required: false
+        hint: Leave empty. Only fill it if the same article is published elsewhere first.
+
+      - label: "SEO: hide from Google (noindex)"
+        name: noindex
+        widget: boolean
+        default: false
+        hint: Turn ON only if search engines should not list this article.
+
+  # ------------------------------------------------- Existing pages (SEO)
+  - name: settings
+    label: Page SEO (existing pages)
+    files:
+      - name: pages
+        label: SEO for every page
+        file: content/seo/pages.json
+        format: json
+        fields:
+          - label: Pages
+            name: pages
+            widget: list
+            allow_add: false
+            allow_remove: false
+            summary: "{{fields.path}}"
+            hint: Open a page to edit its Google title, description, keywords and share image. Changes go live after the next deploy.
+            fields:
+              - label: Page path (do not change)
+                name: path
+                widget: string
+              - label: SEO title
+                name: title
+                widget: string
+                hint: Aim for 50 to 60 characters.
+              - label: Meta description
+                name: description
+                widget: text
+                hint: Aim for 140 to 160 characters.
+              - label: Keywords
+                name: keywords
+                widget: string
+                required: false
+              - label: Social share image URL
+                name: ogImage
+                widget: string
+                required: false
+                hint: Full URL, 1200 x 630 px. Shown on WhatsApp, Facebook, LinkedIn and X.
+              - label: Canonical URL
+                name: canonical
+                widget: string
+                required: false
+                hint: Leave as it is unless you know why you are changing it.
+              - label: Hide from Google (noindex)
+                name: noindex
+                widget: boolean
+                default: false
+                required: false
