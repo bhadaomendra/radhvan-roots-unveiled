@@ -960,7 +960,7 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-parchment/60">
             <li><Link to="/" className="transition-colors hover:text-ember">Home</Link></li>
             <li><Link to="/cordyceps-study" className="transition-colors hover:text-ember">Cordyceps Study</Link></li>
-            <li><Link to="/cultivation-training" className="transition-colors hover:text-ember">Cultivation &amp; Training</Link></li>
+            <li><Link to="/cultivation-training" className="transition-colors hover:text-ember">Cordyceps Training in India</Link></li>
             <li><Link to="/research-knowledge" className="transition-colors hover:text-ember">Research &amp; Knowledge</Link></li>
             <li><Link to="/why-radhvan" className="transition-colors hover:text-ember">Why Radhvan</Link></li>
           </ul>

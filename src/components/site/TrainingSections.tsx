@@ -23,7 +23,7 @@ export function TrainingHero() {
                 /
               </span>
               <span aria-current="page" className="text-ember">
-                Cultivation Training
+                Cordyceps Training in India
               </span>
             </li>
           </ol>
@@ -31,13 +31,13 @@ export function TrainingHero() {
         <Reveal>
           <p className="mt-10 eyebrow text-ember">Practical & Theoretical Training</p>
           <h1 className="mt-6 font-display text-[clamp(2.3rem,5.5vw,4.5rem)] leading-[0.98] text-bark">
-            Cordyceps Militaris Cultivation Training
+            Cordyceps Militaris Cultivation Training in India
           </h1>
           <p className="mt-4 font-display text-xl text-ember italic lg:text-2xl">
             Learn the Science. Understand the Process. Build Practical Confidence.
           </p>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground lg:text-lg">
-            Radhvan Origins offers a structured 2-day Cordyceps militaris cultivation training program in Jaipur, India — recognized among the most practical and comprehensive learning courses for mushroom cultivators in India.
+            Radhvan Origins offers a structured 2-day Cordyceps training in India — a Cordyceps militaris cultivation program held at our facility and laboratory in Jaipur, open to beginners, farmers and entrepreneurs from across the country.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground lg:text-base">
             The program combines one day of in-depth theoretical learning with one full day of hands-on practical training at our own facility and laboratory in Jaipur, Rajasthan.
@@ -51,7 +51,7 @@ export function TrainingHero() {
               </p>
             </div>
             <p className="mt-2.5 text-sm leading-relaxed text-bark/90 font-medium">
-              Radhvan Origins provides one of the best 2-Day Cordyceps Militaris Cultivation Training programs in India, conducted at our operational facility in Jaipur. The course delivers comprehensive theoretical mycology instruction and hands-on laboratory practicals covering liquid culture inoculation, substrate compounding, HEPA cleanroom sterilization, climate-controlled incubation, harvesting, and HPLC cordycepin assay verification.
+              Radhvan Origins provides a 2-Day Cordyceps Militaris Cultivation Training in India, conducted at our operational facility in Jaipur. The course delivers comprehensive theoretical mycology instruction and hands-on laboratory practicals covering liquid culture inoculation, substrate compounding, HEPA cleanroom sterilization, climate-controlled incubation, harvesting, and HPLC cordycepin assay verification.
             </p>
           </div>
 
@@ -261,7 +261,7 @@ export function TwoDayJourney() {
           <div className="text-center">
             <p className="eyebrow text-ember">Curriculum Overview</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.5rem)] text-bark">
-              2-Day Cordyceps Cultivation Training
+              2-Day Cordyceps Training in India: Curriculum
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
               A clean, structured learning progression combining theory and practical exposure.
@@ -446,7 +446,7 @@ export function LearnAtRadhvanJaipur() {
               Learn at Radhvan Origins, <span style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>J</span>aipur
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground lg:text-lg">
-              The training is conducted at the Radhvan Origins facility and laboratory in Jaipur, allowing participants to connect theoretical concepts with a real controlled cultivation environment.
+              The training is conducted at the Radhvan Origins facility and laboratory in Jaipur, with participants joining from across India, allowing them to connect theoretical concepts with a real controlled cultivation environment.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground lg:text-base">
               Rather than learning the cultivation process only through written material, participants can observe how cultivation principles are applied within an actual working environment.
@@ -595,8 +595,8 @@ export function TrainingFAQAccordion() {
       a: "The training is conducted at the Radhvan Origins facility and laboratory in Jaipur.",
     },
     {
-      q: "5. Can someone from outside Jaipur attend the training?",
-      a: "Yes. The regular training format is primarily offline in Jaipur. Participants travelling from other locations can attend scheduled training batches at the Radhvan Origins facility.",
+      q: "5. Can someone from outside Jaipur or across India attend the training?",
+      a: "Yes. Participants travel from all across India to Jaipur to attend scheduled Cordyceps cultivation training batches at the Radhvan Origins lab facility.",
     },
     {
       q: "6. Is online training available?",
@@ -631,7 +631,7 @@ export function TrainingFAQAccordion() {
       a: "Contact the Radhvan Origins team to check the upcoming batch, availability, training fee and registration process.",
     },
     {
-      q: "14. Why is Radhvan Origins considered one of the best Cordyceps training programs in India?",
+      q: "14. Why choose Radhvan Origins for Cordyceps training in India?",
       a: "Radhvan Origins provides hands-on practical cleanroom training inside an operational Cordyceps cultivation laboratory in Jaipur, India. Participants learn liquid culture preparation, sterilization, inoculation, environmental control, harvesting, and cordycepin testing with direct post-training setup guidance.",
     },
   ];

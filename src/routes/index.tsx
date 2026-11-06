@@ -4,9 +4,9 @@ import { SectionPreview, QuoteBlock } from "@/components/site/Layout";
 import { SpeciesSection } from "@/components/site/SpeciesSection";
 import { ContactCTA, Footer } from "@/components/site/Sections";
 
-const TITLE = "Radhvan Origins | Cordyceps Research & Cultivation";
+const TITLE = "Radhvan Origins | Cordyceps Training & Research in India";
 const DESC =
-  "Radhvan Origins explores Cordyceps militaris through research, cultivation education and practical knowledge, with a focus on responsible and traceable cultivation.";
+  "Cordyceps training in India at Radhvan Origins, Jaipur. Explore Cordyceps militaris research, lab cultivation education and responsible, traceable cultivation.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "Radhvan Origins, Cordyceps militaris, Cordyceps research, Cordyceps cultivation, Cordyceps India, lab grown cordyceps, fungal biotechnology" },
+      { name: "keywords", content: "Radhvan Origins, Cordyceps training in India, Cordyceps militaris, Cordyceps research, Cordyceps cultivation, Cordyceps India, lab grown cordyceps, fungal biotechnology" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: "https://radhvanorigins.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Radhvan Origins | Cordyceps Research & Cultivation" },
+      { property: "og:image:alt", content: TITLE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESC },
@@ -58,8 +58,8 @@ export const Route = createFileRoute("/")({
               ],
               "knowsAbout": [
                 "Cordyceps militaris",
+                "Cordyceps Training in India",
                 "Cordyceps Training in Jaipur",
-                "Best Cordyceps Training in Jaipur",
                 "Cordyceps Cultivation Jaipur Rajasthan",
                 "Cordyceps Farming India",
                 "Fungal Biotechnology",
@@ -80,8 +80,8 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Course",
-              "name": "Cordyceps Militaris Cultivation & Research Training in Jaipur",
-              "description": "Practical training, research-based knowledge and guidance for your cultivation journey in Jaipur, Rajasthan.",
+              "name": "Cordyceps Militaris Cultivation & Research Training in India",
+              "description": "Cordyceps training in India: practical training, research-based knowledge and guidance for your cultivation journey, held at our facility in Jaipur, Rajasthan.",
               "provider": {
                 "@id": "https://radhvanorigins.com/#organization"
               }
@@ -114,10 +114,10 @@ function Index() {
         <SpeciesSection />
         <SectionPreview
           eyebrow="Hands-on learning"
-          title="Cultivation & Training"
-          intro="Practical, research-based training for your cultivation journey — from substrate preparation to fruiting body development, taught step by step."
+          title="Cordyceps Training in India"
+          intro="Practical, research-based Cordyceps training in India — from substrate preparation to fruiting body development, taught step by step at our Jaipur lab."
           to="/cultivation-training"
-          cta="Explore training"
+          cta="Explore Cordyceps training"
         />
         <SectionPreview
           eyebrow="Evidence & knowledge"

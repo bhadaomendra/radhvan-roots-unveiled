@@ -8,7 +8,7 @@ const NAV = [
   { to: "/", label: "Home" },
   { to: "/why-radhvan", label: "Why Radhvan" },
   { to: "/cordyceps-study", label: "Cordyceps Study" },
-  { to: "/cultivation-training", label: "Cultivation & Training" },
+  { to: "/cultivation-training", label: "Cordyceps Training in India" },
   { to: "/research-knowledge", label: "Research & Knowledge" },
   { to: "/contact", label: "Contact" },
 ] as const;

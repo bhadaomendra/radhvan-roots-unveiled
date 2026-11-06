@@ -117,6 +117,16 @@ function RelatedGuides({ current }: { current: string }) {
             </Link>
           ))}
         </div>
+        <p className="mt-10 max-w-3xl text-base leading-relaxed text-muted-foreground">
+          Want to learn Cordyceps cultivation hands-on? Radhvan Origins runs a 2-day{" "}
+          <Link
+            to="/cultivation-training"
+            className="font-medium text-ember underline underline-offset-4 hover:text-bark"
+          >
+            Cordyceps training in India
+          </Link>{" "}
+          at its Jaipur laboratory, with theory, lab practicals and a certificate.
+        </p>
       </div>
     </section>
   );

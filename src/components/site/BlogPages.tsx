@@ -215,7 +215,7 @@ export function BlogPostPage({ slug }: { slug: string }) {
         title="Have a question about Cordyceps cultivation?"
         body="Tell us what you are working on. We reply personally on WhatsApp and email."
         primary={{ to: "/contact", label: "Get in touch" }}
-        secondary={{ to: "/cultivation-training", label: "See the training" }}
+        secondary={{ to: "/cultivation-training", label: "Cordyceps training in India" }}
       />
     </PageShell>
   );

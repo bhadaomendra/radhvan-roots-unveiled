@@ -16,7 +16,7 @@ Radhvan Origins is a cultivation and education studio based in India. We grow Co
 - [/](/): The Cordyceps Study - home page with a cinematic overview of the fungus, its compounds, research highlights and future range.
 - [/why-radhvan](/why-radhvan): Our philosophy, research approach, and story.
 - [/cordyceps-study](/cordyceps-study): Detailed biology of Cordyceps militaris.
-- [/cultivation-training](/cultivation-training): Practical hands-on training for commercial and research cultivation.
+- [/cultivation-training](/cultivation-training): Cordyceps training in India - 2-day hands-on Cordyceps militaris cultivation course (theory + lab practical) in Jaipur, open to learners from across India.
 - [/research-knowledge](/research-knowledge): Scientific research, compound markers, and fungal biotechnology.
 - [/cordyceps-vs-sinensis](/cordyceps-vs-sinensis): Cordyceps militaris vs Cordyceps sinensis - explains the difference between wild and cultivated species.
 - [/cordycepin](/cordycepin): Cordycepin explained - the nucleoside behind most Cordyceps research and how it is measured as a quality marker.
