@@ -2,7 +2,7 @@ import { useState } from "react";
 import { pushEvent } from "@/lib/datalayer";
 import { INQUIRY_ENDPOINT, submitInquiry } from "@/lib/inquiry";
 
-const WHATSAPP_NUMBER = "919950091528";
+const WHATSAPP_NUMBER = "919251191528";
 const PAGE = "/cultivation-training";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -120,8 +120,8 @@ export function BatchInquiryForm() {
             autoComplete="tel"
             maxLength={20}
             pattern="[0-9+\s\-]{8,20}"
-            title="Enter a valid phone number, e.g. +91 99500 91528"
-            placeholder="+91 99500 91528"
+            title="Enter a valid phone number, e.g. +91 92511 91528"
+            placeholder="+91 92511 91528"
             className={inputClass}
           />
         </div>

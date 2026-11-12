@@ -735,7 +735,7 @@ export function FinalCTASection() {
               Email: info@radhvanorigins.com
             </a>
             <a
-              href="https://wa.me/919950091528?text=Hello%20Radhvan%20Origins%2C%20I%20am%20interested%20in%20the%20Cordyceps%20Cultivation%20Training%20program."
+              href="https://wa.me/919251191528?text=Hello%20Radhvan%20Origins%2C%20I%20am%20interested%20in%20the%20Cordyceps%20Cultivation%20Training%20program."
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 text-sm font-bold tracking-[0.15em] text-bark uppercase transition-colors hover:text-ember"

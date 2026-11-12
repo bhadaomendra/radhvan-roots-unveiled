@@ -19,7 +19,7 @@ export function PageShell({ children }: { children: ReactNode }) {
 
 /* ---------------------------------------------------- Floating contact */
 
-const WHATSAPP_NUMBER = "919950091528";
+const WHATSAPP_NUMBER = "919251191528";
 const CONTACT_EMAIL = "info@radhvanorigins.com";
 
 export function FloatingContact() {

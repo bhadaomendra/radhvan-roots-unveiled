@@ -164,7 +164,7 @@ export const Route = createFileRoute("/cultivation-training")({
               "url": "https://radhvanorigins.com/",
               "logo": "https://radhvanorigins.com/og-image.png",
               "email": "info@radhvanorigins.com",
-              "telephone": "+91 99500 91528",
+              "telephone": "+91 92511 91528",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Jaipur",
@@ -175,7 +175,7 @@ export const Route = createFileRoute("/cultivation-training")({
                 "@type": "ContactPoint",
                 "contactType": "course enquiries",
                 "email": "info@radhvanorigins.com",
-                "telephone": "+91 99500 91528",
+                "telephone": "+91 92511 91528",
                 "availableLanguage": ["English", "Hindi"]
               }
             },
