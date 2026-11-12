@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { useWhatsAppUrl } from "@/lib/whatsapp";
 import { Reveal } from "./Reveal";
 import { BatchInquiryForm } from "./BatchInquiryForm";
 import lab from "@/assets/cultivation-room.jpg";
@@ -699,6 +700,9 @@ export function TrainingFAQAccordion() {
 /* ------------------------------------- 13. FINAL CTA SECTION */
 
 export function FinalCTASection() {
+  const whatsappUrl = useWhatsAppUrl(
+    "Hello Radhvan Origins, I am interested in the Cordyceps Cultivation Training program.",
+  );
   return (
     <section id="inquire" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
       <Reveal>
@@ -735,7 +739,7 @@ export function FinalCTASection() {
               Email: info@radhvanorigins.com
             </a>
             <a
-              href="https://wa.me/919251191528?text=Hello%20Radhvan%20Origins%2C%20I%20am%20interested%20in%20the%20Cordyceps%20Cultivation%20Training%20program."
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 text-sm font-bold tracking-[0.15em] text-bark uppercase transition-colors hover:text-ember"

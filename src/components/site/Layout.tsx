@@ -2,6 +2,7 @@ import { ReactNode, useState } from "react";
 import { Reveal } from "./Reveal";
 import { SiteNav } from "./Hero";
 import { Link } from "@tanstack/react-router";
+import { useWhatsAppUrl } from "@/lib/whatsapp";
 import { Footer } from "./Sections";
 import { BrandLeaves } from "./icons";
 
@@ -19,10 +20,10 @@ export function PageShell({ children }: { children: ReactNode }) {
 
 /* ---------------------------------------------------- Floating contact */
 
-const WHATSAPP_NUMBER = "919251191528";
 const CONTACT_EMAIL = "info@radhvanorigins.com";
 
 export function FloatingContact() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <div className="fixed right-4 bottom-4 z-[70] flex flex-col items-end gap-3 sm:right-6 sm:bottom-6">
       <a
@@ -37,7 +38,7 @@ export function FloatingContact() {
         </svg>
       </a>
       <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

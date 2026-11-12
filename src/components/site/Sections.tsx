@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { useWhatsAppUrl } from "@/lib/whatsapp";
 import { Reveal } from "./Reveal";
 import {
   IconStroma,
@@ -891,6 +892,7 @@ export function Newsletter() {
 }
 
 export function ContactCTA() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <section id="contact" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
       <Reveal>
@@ -919,7 +921,7 @@ export function ContactCTA() {
               info@radhvanorigins.com
             </a>
             <a
-              href="https://wa.me/919251191528" 
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 text-sm font-bold tracking-[0.15em] text-bark uppercase transition-colors hover:text-ember"
@@ -940,6 +942,7 @@ export function ContactCTA() {
 }
 
 export function Footer() {
+  const whatsappUrl = useWhatsAppUrl();
   return (
     <footer className="bg-[#1b1005] px-6 pt-16 pb-8 lg:px-10 lg:pt-20">
       <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
@@ -991,7 +994,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://wa.me/919251191528"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-ember"

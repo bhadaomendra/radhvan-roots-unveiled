@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { pushEvent } from "@/lib/datalayer";
 import { INQUIRY_ENDPOINT, submitInquiry } from "@/lib/inquiry";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_NUMBER = "919251191528";
 const PAGE = "/cultivation-training";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -12,11 +12,17 @@ const inputClass =
 const labelClass = "block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1";
 
 function openWhatsApp(name: string, phone: string, city: string, message: string) {
-  const text =
-    `Hello Radhvan Origins, I am interested in the Cordyceps Cultivation Training in Jaipur.%0A%0A` +
-    `Name: ${encodeURIComponent(name)}%0AMobile/WhatsApp: ${encodeURIComponent(phone)}%0A` +
-    `City: ${encodeURIComponent(city)}%0AMessage: ${encodeURIComponent(message)}`;
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
+  const url = buildWhatsAppUrl({
+    pathname: PAGE,
+    intro: "Hello Radhvan Origins, I am interested in the Cordyceps Cultivation Training in Jaipur.",
+    details: [
+      `Name: ${name}`,
+      `Mobile/WhatsApp: ${phone}`,
+      `City: ${city}`,
+      `Message: ${message}`,
+    ],
+  });
+  window.open(url, "_blank");
 }
 
 export function BatchInquiryForm() {
@@ -70,7 +76,10 @@ export function BatchInquiryForm() {
           training batches.
         </p>
         <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hello%20Radhvan%20Origins%2C%20I%20just%20submitted%20the%20training%20inquiry%20form.`}
+          href={buildWhatsAppUrl({
+            pathname: PAGE,
+            intro: "Hello Radhvan Origins, I just submitted the training inquiry form.",
+          })}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-block text-xs font-bold uppercase tracking-[0.15em] text-ember underline underline-offset-4"
